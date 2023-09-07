@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav className="flex justify-between items-center">
             <div>
-                <Image src="/csesoc_logo.svg" alt="CSESoc Logo" width={200} height={200} draggable={false} />
+                <Image src="/assets/csesoc_logo.svg" alt="CSESoc Logo" width={200} height={200} draggable={false} />
                 <p className="mt-3 text-xs">C:\INTERNAL STRUCTURE\HOME</p>
             </div>
             <div className="flex gap-36 text-right font-bold">
