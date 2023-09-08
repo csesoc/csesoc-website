@@ -134,6 +134,27 @@ const ResourcesAndContacts = () => {
                     </a>
                 </div>
             </div>
+
+            <div className="bg-[#080036] mt-20">
+                <div className="grid grid-cols-3 flex 1 gap-x-9 gap-y-5 p-5">
+                    <a href="#" target="_blank" className="col-span-1 flex justify-center pt-2 pb-2 border border-[#595F6D] rounded-sm hover:bg-gray-100 hover:bg-opacity-10">
+                        <p className="text-xl font-bold m-2">
+                            DISCORD
+                        </p>
+                    </a>
+                    <a href="#" target="_blank" className="col-span-1 flex justify-center pt-2 pb-2 border border-[#595F6D] rounded-sm hover:bg-gray-100 hover:bg-opacity-10">
+                        <p className="text-xl font-bold m-2">
+                            FACEBOOK
+                        </p>
+                    </a>
+                    <a href="#" target="_blank" className="col-span-1 flex justify-center pt-2 pb-2 border border-[#595F6D] rounded-sm hover:bg-gray-100 hover:bg-opacity-10">
+                        <p className="text-xl font-bold m-2">
+                            FACEBOOK GROUP
+                        </p>
+                    </a>
+                </div>
+
+            </div>
         </section>
     )
 }
