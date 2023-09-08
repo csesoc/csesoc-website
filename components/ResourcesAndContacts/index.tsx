@@ -139,19 +139,19 @@ const ResourcesAndContacts = () => {
 
             <div className="bg-[#080036] mt-20">
                 <div className="grid grid-cols-3 flex 1 gap-x-9 gap-y-5 p-5">
-                    <a href="#" target="_blank" className="col-span-1 flex justify-center pt-2 pb-2 border border-[#595F6D] rounded-sm hover:bg-gray-100 hover:bg-opacity-10">
+                    <a href="https://bit.ly/CSESocDiscord" target="_blank" className="col-span-1 flex justify-center pt-2 pb-2 border border-[#595F6D] rounded-sm hover:bg-gray-100 hover:bg-opacity-10">
                         <Image src="assets/discord_logo.svg" alt="" width={25} height={25} className="mr-1"/>
                         <p className="text-xl font-bold m-2">
                             DISCORD
                         </p>
                     </a>
-                    <a href="#" target="_blank" className="col-span-1 flex justify-center pt-2 pb-2 border border-[#595F6D] rounded-sm hover:bg-gray-100 hover:bg-opacity-10">
+                    <a href="https://www.facebook.com/csesoc/" target="_blank" className="col-span-1 flex justify-center pt-2 pb-2 border border-[#595F6D] rounded-sm hover:bg-gray-100 hover:bg-opacity-10">
                         <Image src="assets/fb_logo.svg" alt="" width={25} height={25} className="mr-1"/>
                         <p className="text-xl font-bold m-2">
                             FACEBOOK
                         </p>
                     </a>
-                    <a href="#" target="_blank" className="col-span-1 flex justify-center pt-2 pb-2 border border-[#595F6D] rounded-sm hover:bg-gray-100 hover:bg-opacity-10">
+                    <a href="https://www.facebook.com/groups/csesoc" target="_blank" className="col-span-1 flex justify-center pt-2 pb-2 border border-[#595F6D] rounded-sm hover:bg-gray-100 hover:bg-opacity-10">
                         <Image src="assets/group_icon.svg" alt="" width={25} height={25} className="mr-1"/>
                         <p className="text-xl font-bold m-2">
                             FACEBOOK GROUP
