@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const About = () => {
     return (
-        <section className="py-8 px-24">
+        <section className="py-8 px-24 min-h-screen">
             <div className="text-center my-10">
                 <p className="text-[#3977F8] font-game text-xl">01</p>
                 <h1 className="font-bold text-6xl">ABOUT</h1>
