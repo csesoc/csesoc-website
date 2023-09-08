@@ -7,10 +7,6 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    colors: {
-      bgmain: '#020337',
-      bglight: '#3977F8'
-    },
     extend: {
       fontFamily: {
         'game': "'Press Start 2P', cursive"

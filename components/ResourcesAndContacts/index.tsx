@@ -4,7 +4,7 @@ import Image from "next/image"
 const ResourcesAndContacts = () => {
     return (
         <section className="py-8 px-15 min-h-screen">
-             <div className="text-center my-10">
+            <div className="text-center my-10">
                 <p className="text-[#3977F8] font-game text-xl">03</p>
                 <h1 className="font-bold text-5xl">RESOURCES & CONTACTS</h1>
             </div>
@@ -124,9 +124,7 @@ const ResourcesAndContacts = () => {
                     <a 
                         href="https://media.csesoc.org.au/cse-enrol/" 
                         target="_blank"
-                        className="
-                            col-span-2 p-5 border border-[#595F6D] rounded-lg hover:bg-gray-100 hover:bg-opacity-10
-                        "
+                        className="block col-span-2 p-5 border border-[#595F6D] rounded-lg hover:bg-gray-100 hover:bg-opacity-10"
                     >
                         <h2 className="mt-1 text-3xl font-extrabold">Enrolment Guide</h2>
 
