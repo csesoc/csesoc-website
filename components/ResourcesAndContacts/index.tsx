@@ -3,10 +3,10 @@ import Image from "next/image"
 
 const ResourcesAndContacts = () => {
     return (
-        <section className="py-8 px-24 min-h-screen">
+        <section className="py-8 px-15 min-h-screen">
              <div className="text-center my-10">
                 <p className="text-[#3977F8] font-game text-xl">03</p>
-                <h1 className="font-bold text-4xl">RESOURCES & CONTACTS</h1>
+                <h1 className="font-bold text-5xl">RESOURCES & CONTACTS</h1>
             </div>
 
             <div className="py-8 px-24">
@@ -137,7 +137,7 @@ const ResourcesAndContacts = () => {
                 </div>
             </div>
 
-            <div className="bg-[#080036] mt-20">
+            <div className="bg-[#080036] mt-20 p-5 rounded-lg">
                 <div className="grid grid-cols-3 flex 1 gap-x-9 gap-y-5 p-5">
                     <a href="https://bit.ly/CSESocDiscord" target="_blank" className="col-span-1 flex justify-center pt-2 pb-2 border border-[#595F6D] rounded-sm hover:bg-gray-100 hover:bg-opacity-10">
                         <Image src="assets/discord_logo.svg" alt="" width={25} height={25} className="mr-1"/>
@@ -171,8 +171,7 @@ const ResourcesAndContacts = () => {
                     </a>
                     <a href="https://www.tiktok.com/@csesoc?lang=en" target="_blank">
                         <Image src="assets/tiktok_logo.svg" alt="TikTok" width={35} height={35} className="mr-1 fill-white"/>
-                    </a>
-                    
+                    </a>   
                     <a href="#" target="_blank">
                         <Image src="assets/wechat_logo.svg" alt="weChat" width={40} height={40} className="mr-1 fill-white"/>
                     </a>

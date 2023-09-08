@@ -35,7 +35,7 @@ const About = () => {
                 </div>
                 {/* RIGHT SIDE */}
                 <div className="col-span-4">
-                    <div className="rounded border border-[#595F6D] p-5 h-92 h-full">
+                    <div className="rounded border border-[#595F6D] p-5 h-92 h-3/5">
                         <p className="text-xs">csesoc/README<span className="text-[#7A8192]">.md</span></p>
                         <p className="mt-5">Lorem Ipsum</p>
                     </div>
