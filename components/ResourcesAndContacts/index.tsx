@@ -159,6 +159,27 @@ const ResourcesAndContacts = () => {
                     </a>
                 </div>
 
+                <div className="flex 1 justify-around ml-40 mr-40">
+                    <a href="https://twitter.com/csesoc?lang=en" target="_blank">
+                        <Image src="assets/x_twitter_icon.svg" alt="X/Twitter" width={35} height={35} className="mr-1 fill-white"/>
+                    </a>
+                    <a href="https://www.youtube.com/@CSESocUNSW" target="_blank">
+                        <Image src="assets/youtube_logo.svg" alt="Youtube" width={35} height={35} className="mr-1 fill-white"/>
+                    </a>
+                    <a href="https://www.instagram.com/csesoc_unsw/?hl=en" target="_blank">
+                        <Image src="assets/instagram_logo.svg" alt="Instagram" width={35} height={35} className="mr-1 fill-white"/>
+                    </a>
+                    <a href="https://www.tiktok.com/@csesoc?lang=en" target="_blank">
+                        <Image src="assets/tiktok_logo.svg" alt="TikTok" width={35} height={35} className="mr-1 fill-white"/>
+                    </a>
+                    
+                    <a href="#" target="_blank">
+                        <Image src="assets/wechat_logo.svg" alt="weChat" width={40} height={40} className="mr-1 fill-white"/>
+                    </a>
+                    <a href="https://www.linkedin.com/company/csesoc?originalSubdomain=au" target="_blank">
+                        <Image src="assets/linkedin_logo.svg" alt="LinkedIn" width={35} height={35} className="mr-1 fill-white"/>
+                    </a>
+                </div>
             </div>
         </section>
     )
