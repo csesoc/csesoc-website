@@ -8,7 +8,7 @@ const ResourcesAndContacts = () => {
                 <p className="text-[#3977F8] font-game text-xl">03</p>
                 <h1 className="font-bold text-5xl">RESOURCES & CONTACTS</h1>
             </div>
-
+            {/* <div className="py-8 px-24 bg-gradient-radial from-[#020337] via-[#3977F8] via-51% to-transparent to-55%"> */}
             <div className="py-8 px-24">
                 <div className="grid grid-cols-4 flex 1 gap-x-9 gap-y-5">
                     <a 
