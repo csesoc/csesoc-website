@@ -49,7 +49,7 @@ const About = () => {
                     <Image src="/assets/book_icon.svg" alt="Book" width={20} height={20} />
                     csesoc.unsw.edu.au/<span className="font-semibold">events</span>
                   </div>
-                  <div className="my-5">CSESoc's recent events</div>
+                  <div className="my-5">CSESoc&apos;s recent events</div>
                   <div className="rounded-full bg-[#CC5421] w-3 h-3" />
                 </div>
                 <div className="p-5 border border-[#595F6D] flex-1 rounded-lg w-full">
