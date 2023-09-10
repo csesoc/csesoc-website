@@ -2,7 +2,7 @@ import Navbar from "../Navbar";
 
 const Landing = () => {
   return (
-    <section className="flex flex-col min-h-screen justify-between py-8 px-24">
+    <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5" id="landing">
       <Navbar />
       <div className="flex justify-between items-end">
         <div>
@@ -19,7 +19,7 @@ const Landing = () => {
             <p>{"</h2>"}</p>
           </div>
         </div>
-        <div className="w-72 font-semibold text-xl">
+        <div className="w-72 font-semibold text-xl lg:block hidden">
           <p className="font-bold bg-[#3977F8] inline px-3 py-1">STATS</p>
           <hr className="mb-3 mt-5" />
           <div className="flex justify-between">
