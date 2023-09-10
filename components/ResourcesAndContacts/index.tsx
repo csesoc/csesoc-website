@@ -7,7 +7,7 @@ const socialsBoxStyling = "xl:col-span-1 col-span-3 flex justify-center pt-2 pb-
 const ResourcesAndContacts = () => {
   return (
     <section className="bg-no-repeat bg-center py-8 px-15 min-h-screen flex justify-center items-center">
-      <div className="2xl:w-[90rem] xl:w-[75rem] md:w-[40rem] sm:w-[30rem] w-[90%]">
+      <div className="2xl:w-[90rem] xl:w-[75rem] w-[90%]">
         <div className="relative">
           <Image src="assets/resources_bg.svg" alt="Background" className="-z-50 absolute" fill />
 
