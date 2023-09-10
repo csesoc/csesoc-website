@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between items-center">
+    <nav className="flex justify-between items-center relative z-10">
       <Link href="#landing">
         <Image src="/assets/csesoc_logo.svg" alt="CSESoc Logo" width={200} height={200} draggable={false} />
         <p className="mt-3 text-xs">C:\INTERNAL STRUCTURE\HOME</p>
