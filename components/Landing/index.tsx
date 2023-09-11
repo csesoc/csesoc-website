@@ -10,12 +10,12 @@ const Landing = () => {
         <div>
           <div className="font-semibold">
             <p>{"<h1>"}</p>
-            <h1 className="font-black text-8xl">Hello World!</h1>
+            <h1 className="font-black 2xl:text-8xl lg:text-6xl">Hello World!</h1>
             <p>{"</h1>"}</p>
           </div>
-          <div className="font-semibold my-10">
+          <div className="font-semibold mt-10">
             <p>{"<h2>"}</p>
-            <h2 className="font-bold text-3xl">
+            <h2 className="font-bold 2xl:text-3xl text-xl">
               We are the principal representative body for <span className="text-[#3977F9]">UNSW computing</span> students.
             </h2>
             <p>{"</h2>"}</p>
