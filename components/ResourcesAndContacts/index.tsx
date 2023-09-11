@@ -13,7 +13,7 @@ const ResourcesAndContacts = () => {
 
           <div className="text-center my-10">
             <p className="text-[#3977F8] font-game text-xl">03</p>
-            <h1 className="font-bold text-5xl">RESOURCES & CONTACTS</h1>
+            <h1 className="font-bold text-6xl">RESOURCES & CONTACTS</h1>
           </div>
 
           <div className="py-8 bg-no-repeat bg-center">
