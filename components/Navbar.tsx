@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav className="flex justify-between items-center relative z-10">
-      <Link href="#landing">
+      <Link href="/">
         <Image src="/assets/csesoc_logo.svg" alt="CSESoc Logo" width={200} height={200} draggable={false} />
         <p className="mt-3 text-xs">C:\INTERNAL STRUCTURE\HOME</p>
       </Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
             <p className="text-[0.6rem] text-[#C4C5C8]">03</p>
             <div>{"//"} resources</div>
           </Link>
-          <Link href="#sponsors">
+          <Link href="sponsors">
             <p className="text-[0.6rem] text-[#C4C5C8]">04</p>
             <div>{"//"} sponsors</div>
           </Link>
