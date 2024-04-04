@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const Event = () => {
-  return <section>
+  return (
      <section className="py-8 xl:px-24 sm:px-10 px-5" id="about">
       <div className="text-center my-10">
         <p className="text-[#3977F8] font-game text-xl">02</p>
@@ -15,8 +15,8 @@ const Event = () => {
       Placeholder
      </div>
       </div>
-    </section>
-  </section>;
+  </section>
+  );
 };
 
 export default Event;
