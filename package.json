@@ -8,7 +8,7 @@
     "start": "next start",
     "format": "prettier --check \"**/*.{ts,tsx}\"",
     "format:fix": "prettier --write \"**/*.{ts,tsx}\"",
-    "lint": "eslint ./**/*.{ts,tsx} && tsc --noemit",
+    "lint": "eslint ./**/*.{ts,tsx}",
     "lint:fix": "eslint --fix ./**/*.{ts,tsx}",
     "type-check": "tsc --noemit"
   },
