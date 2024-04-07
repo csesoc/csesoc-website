@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 const About = () => {
   return (
@@ -17,11 +17,16 @@ const About = () => {
             <h1 className="mt-10 text-3xl font-extrabold">CSESoc</h1>
             <p className="text-[#727B8C] font-medium">unsw-computer-science-soc</p>
             <button className="bg-[#444F6F] w-full my-5 py-2 rounded">Follow</button>
-            <p>We are one of the biggest and most active societies at UNSW, catering to over 3500 CSE students spanning across degrees in Computer Science, Software Engineering, Bioinformatics and Computer Engineering.</p>
+            <p>
+              We are one of the biggest and most active societies at UNSW, catering to over 3500 CSE
+              students spanning across degrees in Computer Science, Software Engineering,
+              Bioinformatics and Computer Engineering.
+            </p>
             <div className="my-4 flex gap-5">
               <Image src="/assets/people_icon.svg" alt="People" width={20} height={20} />
               <div>
-                432 <span className="text-[#727B8C]">members</span> · 342 <span className="text-[#727B8C]">subcom</span>
+                432 <span className="text-[#727B8C]">members</span> · 342{' '}
+                <span className="text-[#727B8C]">subcom</span>
               </div>
             </div>
             <div className="my-4 flex gap-5">
