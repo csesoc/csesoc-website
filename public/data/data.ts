@@ -1,3 +1,7 @@
+export const sponsorInfo: Record<string, string>[] = [
+    {}
+];
+
 export const diamondLinks: Record<string, string>[] = [
     {
         href: 'https://www.janestreet.com/',
