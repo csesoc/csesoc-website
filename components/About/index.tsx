@@ -5,7 +5,7 @@ const About = () => {
     <section className="py-8 xl:px-24 sm:px-10 px-5" id="about">
       <div className="text-center my-10">
         <p className="text-[#3977F8] font-game text-xl">01</p>
-        <h1 className="font-bold text-6xl">ABOUT</h1>
+        <h2 className="font-bold text-6xl">ABOUT</h2>
       </div>
       <div className="flex justify-center items-center">
         <div className="lg:grid grid-cols-6 flex-1 max-w-[90rem]">
@@ -14,7 +14,7 @@ const About = () => {
             <div className="flex items-center justify-center">
               <Image src="/assets/csesoc_icon.svg" alt="CSESoc Icon" width={150} height={150} />
             </div>
-            <h1 className="mt-10 text-3xl font-extrabold">CSESoc</h1>
+            <h2 className="mt-10 text-3xl font-extrabold">CSESoc</h2>
             <p className="text-[#727B8C] font-medium">unsw-computer-science-soc</p>
             <button className="bg-[#444F6F] w-full my-5 py-2 rounded">Follow</button>
             <p>
@@ -40,7 +40,7 @@ const About = () => {
           </div>
           {/* RIGHT SIDE */}
           <div className="col-span-4 lg:mt-0 mt-10">
-            <div className="rounded border border-[#595F6D] p-5 2xl:h-80 xl:h-64 lg:h-48 sm:h-36 h-32 h-full">
+            <div className="rounded border border-[#595F6D] p-5 2xl:h-80 xl:h-64 lg:h-48 sm:h-36 h-full">
               <p className="text-xs">
                 csesoc/README<span className="text-[#7A8192]">.md</span>
               </p>
