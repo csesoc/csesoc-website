@@ -1,5 +1,9 @@
 const Event = () => {
-  return <section></section>;
+  return (
+    <section>
+
+    </section>
+  );
 };
 
 export default Event;
