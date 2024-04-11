@@ -1,0 +1,16 @@
+.logo-container-outer {
+    display: flex;
+    flex-direction: row;
+    background-color: red !important;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    background-color: red !important;
+}
+
+.logo-container a {
+    gap: 20px;
+    background-color: red !important;
+}
