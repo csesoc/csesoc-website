@@ -1,4 +1,4 @@
-# Discord Bot
+# CSESoc Website
 
 ## How to run locally
 - Install dependencies with `npm install`
