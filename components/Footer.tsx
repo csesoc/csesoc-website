@@ -29,13 +29,13 @@ const Footer = () => {
             />
           </div>
           <div className="grid grid-cols-8 gap-4">
-          {socialLinks.map((item, index) => {
-            return (
-              <a key={index} className="" href={item.href}>
-                <img className="h-4" src={item.src} alt={item.alt} />
-              </a>
-            );
-          })}
+            {socialLinks.map((item, index) => {
+              return (
+                <a key={index} className="" href={item.href}>
+                  <img className="h-4" src={item.src} alt={item.alt} />
+                </a>
+              );
+            })}
           </div>
         </div>
         <div className="flex flex-col max-w-[14rem] sm:mt-0 mt-10 font-light">
