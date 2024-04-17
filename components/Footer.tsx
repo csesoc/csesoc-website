@@ -1,5 +1,4 @@
 import Link from 'next/link';
-//import SponsorLinks from './Sponsors/sponsorlinks';
 import Image from 'next/image';
 import { socialLinks } from '../public/data/data';
 
@@ -9,8 +8,8 @@ const Footer = () => {
       <div className="sm:flex justify-between pb-10">
         <div className="flex flex-col gap-10">
           <div className="flex items-center">
-            <Image src="assets/csesoc_logo_white.svg" width={231} height={53} alt="CSESoc Logo" />
-            <Link href="/flag/ollie_is_hiding.png" target="_blank" className="sm:hidden block">
+            <Link href="/" className="flex">
+              <Image src="assets/csesoc_logo_white.svg" width={231} height={53} alt="CSESoc Logo" />
               <Image
                 src="/flag/ollie_is_hiding.png"
                 alt="Ollie"
@@ -20,14 +19,6 @@ const Footer = () => {
                 className="ml-10"
               />
             </Link>
-            <Image
-              src="/flag/ollie_is_hiding.png"
-              alt="Ollie"
-              draggable="false"
-              width={60}
-              height={60}
-              className="ml-10 sm:block hidden"
-            />
           </div>
           <div className="grid grid-cols-8 gap-4">
             {socialLinks.map((item, index) => {
