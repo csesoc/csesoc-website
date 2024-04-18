@@ -13,7 +13,7 @@ const Landing = () => {
         <div>
           <div className="font-semibold">
             <p>{'<h1>'}</p>
-            <h1 className="font-black 2xl:text-8xl lg:text-6xl text-4xl">Hello World!</h1>
+            <h2 className="font-black 2xl:text-8xl lg:text-6xl text-4xl">Hello World!</h2>
             <p>{'</h1>'}</p>
           </div>
           <div className="font-semibold mt-10">
