@@ -8,7 +8,7 @@ const Sponsors = () => {
     'xl:p-16 p-10 flex justify-center items-center xl:col-span-3 sm:col-span-5 col-span-10 xl:row-start-2 xl:row-end-3 sm:row-start-4 sm:row-end-5 sm:h-auto h-36';
 
   return (
-    <section className="flex flex-col min-h-screen py-8 xl:px-24 sm:px-10 px-8 relative mt-20">
+    <section className="flex flex-col min-h-screen py-8 xl:px-24 sm:px-10 px-8 relative mt-20" id="sponsors">
       <div className="text-center">
         <p className="text-[#3977F8] font-game text-xl">04</p>
         <h2 className="font-bold text-6xl">SUPPORT CSESOC</h2>
