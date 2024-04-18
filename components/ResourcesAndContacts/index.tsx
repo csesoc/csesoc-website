@@ -15,7 +15,7 @@ const ResourcesAndContacts = () => {
 
           <div className="text-center my-10">
             <p className="text-[#3977F8] font-game text-xl">03</p>
-            <h1 className="font-bold text-6xl">RESOURCES & CONTACTS</h1>
+            <h2 className="font-bold text-6xl">RESOURCES & CONTACTS</h2>
           </div>
 
           <div className="py-8 bg-no-repeat bg-center">
@@ -122,7 +122,13 @@ const ResourcesAndContacts = () => {
         <div className="md:mt-10 mt-5">
           <div className="grid grid-cols-3 1 gap-x-9 gap-y-5 mb-10">
             <a href="https://bit.ly/CSESocDiscord" target="_blank" className={socialsBoxStyling}>
-              <Image src="assets/discord_logo.svg" alt="" width={25} height={25} className="mr-1" />
+              <Image
+                src="assets/discord_logo.svg"
+                alt="discord logo"
+                width={25}
+                height={25}
+                className="mr-1"
+              />
               <p className="text-xl font-bold m-2">DISCORD</p>
             </a>
             <a
@@ -130,7 +136,13 @@ const ResourcesAndContacts = () => {
               target="_blank"
               className={socialsBoxStyling}
             >
-              <Image src="assets/fb_logo.svg" alt="" width={25} height={25} className="mr-1" />
+              <Image
+                src="assets/fb_logo.svg"
+                alt="facebook logo"
+                width={25}
+                height={25}
+                className="mr-1"
+              />
               <p className="text-xl font-bold m-2">FACEBOOK</p>
             </a>
             <a
@@ -138,7 +150,13 @@ const ResourcesAndContacts = () => {
               target="_blank"
               className={socialsBoxStyling}
             >
-              <Image src="assets/group_icon.svg" alt="" width={25} height={25} className="mr-1" />
+              <Image
+                src="assets/group_icon.svg"
+                alt="facebook group"
+                width={25}
+                height={25}
+                className="mr-1"
+              />
               <p className="text-xl font-bold m-2">FACEBOOK GROUP</p>
             </a>
           </div>

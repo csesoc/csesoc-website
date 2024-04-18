@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Footer = () => {
@@ -5,9 +6,9 @@ const Footer = () => {
     <section>
       <div className="sm:flex justify-between">
         <div className="flex items-center">
-          <img src="assets/csesoc_logo_white.svg" alt="CSESoc Logo" />
+          <Image src="assets/csesoc_logo_white.svg" alt="CSESoc Logo" />
           <Link href="/flag/ollie_is_hiding.png" target="_blank" className="sm:hidden block">
-            <img
+            <Image
               src="/flag/ollie_is_hiding.png"
               alt="Ollie"
               draggable="false"
@@ -16,7 +17,7 @@ const Footer = () => {
               className="ml-10"
             />
           </Link>
-          <img
+          <Image
             src="/flag/ollie_is_hiding.png"
             alt="Ollie"
             draggable="false"
@@ -30,7 +31,7 @@ const Footer = () => {
           <p>© 2021 — CSESoc UNSW</p>
         </div>
       </div>
-      <img
+      <Image
         src="assets/sponsors_backdrop.svg"
         alt="Sponsors backdrop"
         className="absolute bottom-0 left-0 w-screen -z-10"
