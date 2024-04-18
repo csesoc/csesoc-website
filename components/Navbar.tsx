@@ -42,8 +42,8 @@ const Navbar = () => {
             <div>{'//'} sponsors</div>
           </Link>
         </div>
-        <div className='md:hidden xl:hidden lg:hidden text-right font-bold block'>
-          <Hamburger/>
+        <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
+          <Hamburger />
         </div>
       </div>
     </nav>

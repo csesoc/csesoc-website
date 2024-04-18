@@ -1,13 +1,17 @@
-import React from "react";
-import { AnimatePresence, motion, useCycle } from "framer-motion";
-import Link from "next/link";
+import React from 'react';
+import { AnimatePresence, motion, useCycle } from 'framer-motion';
+import Link from 'next/link';
 
-export default function Hamburger () {
-
+export default function Hamburger() {
   const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <button onClick={() => {toggleOpen()}} className="focus:outline-none">
+    <button
+      onClick={() => {
+        toggleOpen();
+      }}
+      className="focus:outline-none"
+    >
       <svg
         className="w-6 h-6"
         fill="none"
@@ -30,13 +34,21 @@ export default function Hamburger () {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
             className="absolute top-16 right-0 bg-[#3977F9] p-4 shadow-lg w-40 rounded-2xl"
-            style={{height: "85vh"}}
+            style={{ height: '85vh' }}
           >
             <ul>
-              <li className="py-2"><Link href={"#about"}>About Us</Link></li>
-              <li className="py-2"><Link href={"#events"}>Events</Link></li>
-              <li className="py-2"><Link href={"/resources"}>Resources</Link></li>
-              <li className="py-2"><Link href={"#sponsors"}>Sponsors</Link></li>
+              <li className="py-2">
+                <Link href={'#about'}>About Us</Link>
+              </li>
+              <li className="py-2">
+                <Link href={'#events'}>Events</Link>
+              </li>
+              <li className="py-2">
+                <Link href={'/resources'}>Resources</Link>
+              </li>
+              <li className="py-2">
+                <Link href={'#sponsors'}>Sponsors</Link>
+              </li>
             </ul>
           </motion.div>
         )}
