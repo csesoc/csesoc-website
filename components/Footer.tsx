@@ -6,7 +6,7 @@ const Footer = () => {
     <section>
       <div className="sm:flex justify-between">
         <div className="flex items-center">
-          <Image src="assets/csesoc_logo_white.svg" alt="CSESoc Logo" />
+          <img src="assets/csesoc_logo_white.svg" alt="CSESoc Logo" />
           <Link href="/flag/ollie_is_hiding.png" target="_blank" className="sm:hidden block">
             <Image
               src="/flag/ollie_is_hiding.png"
@@ -31,7 +31,7 @@ const Footer = () => {
           <p>© 2021 — CSESoc UNSW</p>
         </div>
       </div>
-      <Image
+      <img
         src="assets/sponsors_backdrop.svg"
         alt="Sponsors backdrop"
         className="absolute bottom-0 left-0 w-screen -z-10"
