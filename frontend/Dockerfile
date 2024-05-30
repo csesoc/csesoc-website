@@ -6,7 +6,7 @@ WORKDIR /app
 COPY . .
 
 # Install dependencies and build the project
-RUN npm install
+RUN npm ci
 RUN npm run build
 
 # Run on port 3000
