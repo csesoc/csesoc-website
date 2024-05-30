@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React from 'react';
-import Footer from '../Footer';
+import Footer from '@/components/Footer';
 
 const Sponsors = () => {
   const firstRowBoxesStyling =
