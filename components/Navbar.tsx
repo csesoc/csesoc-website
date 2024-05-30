@@ -25,7 +25,7 @@ const Navbar = () => {
       </Link>
       <div>
         <div className="md:flex xl:gap-36 lg:gap-20 md:gap-10 text-right font-bold hidden">
-          <Link href="about us">
+          <Link href="about">
             <p className="text-[0.6rem] text-[#C4C5C8]">01</p>
             <div>{'//'} about us</div>
           </Link>
