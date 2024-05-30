@@ -10,7 +10,6 @@ export default function Hamburger() {
       onClick={() => {
         toggleOpen();
       }}
-      // className="focus:outline-none w-20 h-20"
     >
       <svg
         className="w-10 h-10"
