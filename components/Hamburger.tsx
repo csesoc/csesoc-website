@@ -10,10 +10,10 @@ export default function Hamburger() {
       onClick={() => {
         toggleOpen();
       }}
-      className="focus:outline-none"
+      // className="focus:outline-none w-20 h-20"
     >
       <svg
-        className="w-6 h-6"
+        className="w-10 h-10"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -34,20 +34,19 @@ export default function Hamburger() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
             className="absolute top-16 right-0 bg-[#3977F9] p-4 shadow-lg w-40 rounded-2xl"
-            style={{ height: '85vh' }}
           >
             <ul>
-              <li className="py-2">
-                <Link href={'#about'}>About Us</Link>
+              <li className="py-2 text-lg">
+                <Link href={'./about'}>About Us</Link>
               </li>
-              <li className="py-2">
-                <Link href={'#events'}>Events</Link>
+              <li className="py-2 text-lg">
+                <Link href={'./events'}>Events</Link>
               </li>
-              <li className="py-2">
-                <Link href={'/resources'}>Resources</Link>
+              <li className="py-2 text-lg">
+                <Link href={'./resources'}>Resources</Link>
               </li>
-              <li className="py-2">
-                <Link href={'#sponsors'}>Sponsors</Link>
+              <li className="py-2 text-lg">
+                <Link href={'./sponsors'}>Sponsors</Link>
               </li>
             </ul>
           </motion.div>
