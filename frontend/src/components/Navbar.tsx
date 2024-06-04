@@ -29,7 +29,7 @@ const Navbar = () => {
             <p className="text-[0.6rem] text-[#C4C5C8]">01</p>
             <div>{'//'} about us</div>
           </Link>
-          <Link href="#events">
+          <Link href="events">
             <p className="text-[0.6rem] text-[#C4C5C8]">02</p>
             <div>{'//'} events</div>
           </Link>

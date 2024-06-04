@@ -1,5 +1,5 @@
-import Background from '../Background';
-import Navbar from '../Navbar';
+import Background from '@/components/Background';
+import Navbar from '@/components/Navbar';
 
 const Landing = () => {
   return (
