@@ -1,12 +1,12 @@
 {
   "extends": [
-    "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    // "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+    // "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
-  "rules": {
-    "prettier/prettier": ["error", { "endOfLine": "auto" }]
-  }
+  "plugins": ["@typescript-eslint"]
+  // "rules": {
+    // "prettier/prettier": ["error", { "endOfLine": "auto" }]
+  // }
 }
