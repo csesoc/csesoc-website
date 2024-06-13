@@ -78,13 +78,13 @@ const ResourcesAndContacts = () => {
               </a>
 
               <a
-                href="https://compclub.org/"
+                href="https://learn.csesoc.org.au/"
                 target="_blank"
                 className={`md:col-span-2 col-span-4 p-5 ${boxStyling}`}
               >
-                <h2 className="mt-1 text-3xl font-extrabold">CompClub</h2>
+                <h2 className="mt-1 text-3xl font-extrabold">CSESoc Learn</h2>
 
-                <p className="mt-7 text-lg mb-5">Promoting computing to high school students</p>
+                <p className="mt-7 text-lg mb-5">Your learning outside the classroom starts here</p>
               </a>
 
               <a
