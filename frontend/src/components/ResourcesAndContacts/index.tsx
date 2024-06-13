@@ -97,7 +97,7 @@ const ResourcesAndContacts = () => {
               </a>
 
               <a
-                href="https://media.csesoc.org.au/fyg-2023/"
+                href="https://media.csesoc.org.au/first-year-guide-2024/"
                 target="_blank"
                 className={`md:col-span-2 col-span-4 p-5 ${boxStyling}`}
               >
