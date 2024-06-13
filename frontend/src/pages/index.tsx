@@ -7,9 +7,9 @@ import Resources from '@/components/Resources';
 export default function Home() {
   return (
     <section>
-      <Landing />
-      <About />
-      <Event />
+      <Landing/>
+      <About/>
+      <Event/>
       <Resources />
       <Sponsors />
     </section>
