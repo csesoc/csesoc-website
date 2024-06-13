@@ -1,3 +1,4 @@
+import Contacts from '@/components/Contacts';
 import Footer from '@/components/Footer';
 import Hamburger from '@/components/Hamburger';
 import Navbar from '@/components/Navbar';
@@ -51,14 +52,15 @@ export default function ContactUs() {
             <iframe className='w-full h-[80vh]' src='https://forms.gle/7kk3RRBJbXo3Sip86'></iframe>
           </li>
         </ul>
-
       </section>
       <section className='py-5'>
         <p className='text-xl'>
           And be sure to follow us on social media to be notified of upcoming events and
           opportunities!
         </p>
+    <Contacts/>
       </section>
+      
       <Footer />
     </section>
   );
