@@ -10,6 +10,16 @@ export type socialInfo = {
   alt: string;
 };
 
+export type eventInfo = {
+  title: string;
+  startTime: string;
+  endTime: string;
+  location: string;
+  description: string;
+  image: string;
+  link: string;
+};
+
 export const diamondLinks: sponsorInfo[] = [
   {
     href: 'https://www.janestreet.com/',
@@ -149,5 +159,26 @@ export const socialLinks: socialInfo[] = [
     href: 'https://www.linkedin.com/company/csesoc?originalSubdomain=au',
     src: 'assets/linkedin_logo.svg',
     alt: 'LinkedIn'
+  }
+];
+
+export const events: eventInfo[] = [
+  {
+    title: 'Rookie Code Rumble - Capture The Flag (CTF) Competition',
+    startTime: 'Wednesday, 19 June 2024 16:00:00',
+    endTime: '23:45 22 June 2024',
+    location: 'Columbo Theatre A, UNSW',
+    description: 'Want to learn how to hack the mainframe❓ Want to explore security❓ Join us for the Rookie Code Rumble Capture The Flag on June 19th‼️ 🚀\nWin prizes from a $450 Prize Pool🏆 Teams of up to 3 allowed. Beginners welcomed, no prior experience required and students who haven\'t done security courses are especially welcomed.',
+    image: 'https://scontent.fsyd10-1.fna.fbcdn.net/v/t39.30808-6/448249337_964318925477719_4689171588021736660_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=f7DlIly-QDgQ7kNvgHT9Fw9&_nc_ht=scontent.fsyd10-1.fna&oh=00_AYDFXHym0otALqZ18_Rxfvm2eLtQ4E8MgmojLxFhsG_H4w&oe=6670BC75',
+    link: 'https://www.facebook.com/events/427443166914907',
+  },
+  {
+    title: 'Open Dev Workshop 1',
+    startTime: 'Thursday, 13 June 2024 14:00:00',
+    endTime: 'Thursday, 13 June 2024 16:00:00',
+    location: 'Civil Engineering Building 102, UNSW',
+    description: 'Feeling the FOMO to start your own side projects😖?? But don\'t know where or how to start??🧐 We have the solution for you: Open Dev Workshop!! 💻\nOpen Dev Workshop is an introductory workshop focusing on HTML/CSS and Javascript. With no prior knowledge required, bring your laptop and an eagerness to learn.❤️‍🔥\nDon\'t miss out on this exciting opportunity and let\'s turn your ideas into reality, one line at a time!! 🔥',
+    image: 'https://scontent.fsyd10-2.fna.fbcdn.net/v/t39.30808-6/446935726_959621305947481_1708375961476055751_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Eb--uYtnevgQ7kNvgEtNpvA&_nc_ht=scontent.fsyd10-2.fna&oh=00_AYA3B55iger5ZGu1aa1gvZHfLKrfk7YZ2g7QxaqSZf9q2A&oe=6670DED6',
+    link: 'https://www.facebook.com/events/1020624239688532',
   }
 ];
