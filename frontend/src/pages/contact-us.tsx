@@ -7,10 +7,6 @@ export default function ContactUs() {
     <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
       <Navbar />
       <section>
-        <img
-          style={{ padding: '10rem' }}
-          src="https://media.csesoc.org.au/content/images/size/w2000/2020/09/contact-1.jpg"
-        ></img>
         <p>
           CSESoc is the official representative body of computing students at UNSW. We are here to
           fulfil the social, personal and professional needs of CSE students, and promote computing
@@ -53,8 +49,10 @@ export default function ContactUs() {
                 this form
               </a>
             </p>
+            <iframe className='w-full h-[80vh]' src='https://forms.gle/7kk3RRBJbXo3Sip86'></iframe>
           </li>
         </ul>
+
       </section>
       <section className='py-5'>
         <p className='text-xl'>
