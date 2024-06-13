@@ -1,4 +1,4 @@
-import { diamondLinks, goldLinks, silverLinks } from '../../public/data/data';
+import { diamondLinks, goldLinks, silverLinks } from '../../../public/data/data';
 //import '/styles/sponsorLinks.module.css';
 const logostyle = 'h-14';
 const logodiv = 'block gap-y-8 h-14';

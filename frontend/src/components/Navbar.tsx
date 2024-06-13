@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import Hamburger from './Hamburger';
 
 const Navbar = () => {
   const [path, setPath] = useState<string>('');
@@ -40,6 +41,9 @@ const Navbar = () => {
             <p className="text-[0.6rem] text-[#C4C5C8]">04</p>
             <div>{'//'} sponsors</div>
           </Link>
+        </div>
+        <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
+          <Hamburger />
         </div>
       </div>
     </nav>

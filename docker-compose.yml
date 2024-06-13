@@ -1,0 +1,22 @@
+services:
+  frontend:
+    build: ./frontend
+    container_name: csesoc-website-frontend
+    ports:
+      - "3000:3000"
+    restart: always
+    networks:
+      - csesoc-website-network
+
+  backend:
+    build: ./backend
+    container_name: csesoc-website-backend
+    ports:
+      - "9000:9000"
+    restart: always
+    networks:
+      - csesoc-website-network
+
+networks:
+  csesoc-website-network:
+    driver: bridge
