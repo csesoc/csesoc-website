@@ -48,6 +48,11 @@ export const goldLinks: sponsorInfo[] = [
     href: 'https://safetyculture.com/',
     svg: 'assets/safetyculture_logo.svg',
     alt: 'SafetyCulture logo'
+  },
+  {
+    href: 'https://www.thetradedesk.com/',
+    svg: 'assets/The_Trade_Desk.svg',
+    alt: 'TradeDesk logo'
   }
 ];
 
