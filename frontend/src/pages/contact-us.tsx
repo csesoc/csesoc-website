@@ -7,16 +7,15 @@ export default function ContactUs() {
     <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
       <Navbar />
       <section>
-        <p>
+        <p className='text-xl pt-10'>
           CSESoc is the official representative body of computing students at UNSW. We are here to
           fulfil the social, personal and professional needs of CSE students, and promote computing
           through a variety of forms.
         </p>
-        <h2>Contact</h2>
         <ul>
           <li>
             <h3 className='text-2xl font-bold pt-5'>For general enquiries or feedback on our society</h3>
-            <p>
+            <p className='text-xl'>
               Please email{' '}
               <a className="underline" href="mailto:info@csesoc.org.au">
                 info@csesoc.org.au
@@ -25,7 +24,7 @@ export default function ContactUs() {
           </li>
           <li>
             <h3 className='text-2xl font-bold pt-5'>For feedback on CSESoc Media</h3>
-            <p>
+            <p className='text-xl'>
               Please email{' '}
               <a className="underline" href="mailto:media@csesoc.org.au">
                 media@csesoc.org.au
@@ -34,7 +33,7 @@ export default function ContactUs() {
           </li>
           <li>
             <h3 className='text-2xl font-bold pt-5'>For enquiries about sponsorship</h3>
-            <p>
+            <p className='text-xl'>
               Please email{' '}
               <a className="underline" href="mailto:sponsorship@csesoc.org.au">
                 sponsorship@csesoc.org.au
@@ -43,7 +42,7 @@ export default function ContactUs() {
           </li>
           <li>
             <h3 className='text-2xl font-bold pt-5'>For sharing opportunities with our members</h3>
-            <p>
+            <p className='text-xl'>
               Please fill out{' '}
               <a className="underline" href="https://forms.gle/7kk3RRBJbXo3Sip86">
                 this form
