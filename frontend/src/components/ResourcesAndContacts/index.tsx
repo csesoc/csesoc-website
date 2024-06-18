@@ -29,7 +29,7 @@ const ResourcesAndContacts = () => {
                     target="_blank"
                     className={`col-span-4 p-5 ${boxStyling} flex`}
                   >
-                    <div className="flex justify-center align-middle items-center pl-2 pr-8">
+                    <div className="flex justify-center align-middle items-center pl-2 pr-10">
                       <Image src={item.svg} alt={item.alt} draggable="false" width={item.width} height={item.height}/>
                     </div>
                     <div>
@@ -65,7 +65,7 @@ const ResourcesAndContacts = () => {
                     target="_blank"
                     className={`md:col-span-2 col-span-4 p-5 ${boxStyling} flex`}
                   >
-                    <div className='flex align-middle items-center pt-2 pb-4 pr-8'>
+                    <div className='flex align-middle items-center pt-2 pb-4 pr-10'>
                       <Image src={item.svg} alt={item.alt} draggable="false" width={item.width} height={item.height} className='rounded-md'/>
                     </div>
                     <div>
