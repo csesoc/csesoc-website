@@ -27,8 +27,8 @@ export const stage2: resourceCards[] = [
     alt: 'Structs',
     title: 'Structs',
     desc: 'An educational data structures and algorithms platform',
-    width: 60,
-    height: 60
+    width: 70,
+    height: 70
   },
   {
     href: 'https://jobsboard.csesoc.unsw.edu.au/',
@@ -45,8 +45,8 @@ export const stage2: resourceCards[] = [
     alt: 'Notangles',
     title: 'Notangles',
     desc: 'Trimester timetabling tool - no more timetable tangles!',
-    width: 60,
-    height: 60
+    width: 70,
+    height: 70
   },
   {
     href: 'https://unilectives.csesoc.app/',
@@ -54,8 +54,8 @@ export const stage2: resourceCards[] = [
     alt: 'Uni-lectives',
     title: 'Uni-lectives',
     desc: 'Read course electives to help you pick your electives or even write your own!',
-    width: 60,
-    height: 60
+    width: 80,
+    height: 80
   }
 ];
 
