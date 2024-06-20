@@ -2,6 +2,18 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import axios from 'axios';
 
+// interface EventTileProps {
+//   eventName: 
+// }
+
+const EventTile = () => {
+  return (
+    <div>
+      
+    </div>
+  );
+};
+
 export default function EventsPage() {
   const pingBackend = async () => {
     axios
@@ -16,6 +28,7 @@ export default function EventsPage() {
     <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
       <Navbar />
       <button onClick={() => pingBackend()}>Ping backend</button>
+      {EventTile()}
       <Footer />
     </section>
   );
