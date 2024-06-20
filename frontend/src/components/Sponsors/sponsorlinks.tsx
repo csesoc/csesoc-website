@@ -26,7 +26,6 @@ function SponsorLinks() {
           {diamondLinks.map((item, index) => {
             return (
               <div key={index} className={`${logodiv}`} 
-              // href={item.href}
               onClick={() => {
                 setInformation(item);
                 setShowModal(true);
@@ -49,7 +48,6 @@ function SponsorLinks() {
                 setInformation(item);
                 setShowModal(true);
               }}
-              // href={item.href}
               >
                 <img className="h-6" src={item.svg} alt={item.alt} />
               </div>
@@ -63,9 +61,14 @@ function SponsorLinks() {
           <h2 className="text-4xl font-black">Silver Sponsors</h2>
           {silverLinks.map((item, index) => {
             return (
-              <a key={index} className="h-14" href={item.href}>
+              <div key={index} className="h-14" 
+              onClick={() => {
+                setInformation(item);
+                setShowModal(true);
+              }}
+              >
                 <img className="h-8" src={item.svg} alt={item.alt} />
-              </a>
+              </div>
             );
           })}
         </div>
