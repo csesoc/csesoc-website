@@ -17,11 +17,16 @@ export default function SponsorModal(props: { sponsorInfo: sponsorInfo | null; s
       }}
     >
       <div className="bg-[#3977f8] mx-[10vw] py-10 rounded-xl overflow-auto flex flex-col items-center justify-center w-[800px]">
-        <a className='m-10' href={props.sponsorInfo.href}>
+        <a className="m-10" href={props.sponsorInfo.href}>
           <img src={`./${props.sponsorInfo.svg}`} alt={props.sponsorInfo.alt} />
         </a>
         <h3 className="mx-10 py-10">{props.sponsorInfo.description}</h3>
-      <button onClick={props.setFalse} className='bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[70%] xl:h-12 h-10'>close</button>
+        <button
+          onClick={props.setFalse}
+          className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[70%] xl:h-12 h-10"
+        >
+          close
+        </button>
       </div>
     </div>
   );
