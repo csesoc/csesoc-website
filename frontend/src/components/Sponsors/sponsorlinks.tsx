@@ -14,7 +14,6 @@ function SponsorLinks() {
   return (
     <div className="flex justify-center items-center my-20">
       <div className="w-100 flex flex-col gap-16">
-        {/* @ts-ignore */}
         {showModal && (
           <SponsorModal
             sponsorInfo={information}

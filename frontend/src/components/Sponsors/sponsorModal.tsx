@@ -1,6 +1,6 @@
-import { setFlagsFromString } from 'v8';
+import { MouseEventHandler } from 'react';
 import { sponsorInfo } from '../../../public/data/data';
-//@ts-ignore
+
 export default function SponsorModal(props: { sponsorInfo: sponsorInfo | null; setFalse: any }) {
   if (props.sponsorInfo === null) {
     return (
