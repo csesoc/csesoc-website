@@ -27,9 +27,9 @@ export const stage2: resourceCards[] = [
     id: 's2-1',
     href: 'https://structs.sh/',
     svg: '/assets/structs_logo.svg',
-    alt: 'Structs',
-    title: 'Structs',
-    desc: 'An educational data structures and algorithms platform',
+    alt: 'Structs.sh',
+    title: 'Structs.sh',
+    desc: 'An educational data structures and algorithms platform.',
     width: 70,
     height: 70
   },
@@ -68,13 +68,13 @@ export const stage2: resourceCards[] = [
 export const stage3: resourceCards[] = [
   {
     id: 's3-1',
-    href: 'https://compclub.org/',
-    svg: '/assets/compclub_logo.svg',
-    alt: 'CompClub',
-    title: 'CompClub',
-    desc: 'Promoting computing to high school students',
-    width: 60,
-    height: 60
+    href: 'https://learn.csesoc.org.au/',
+    svg: '/assets/csesoclearn_logo.svg',
+    alt: 'CSESoc Learn',
+    title: 'CSESoc Learn',
+    desc: 'Your learning outside the classroom starts here',
+    width: 50,
+    height: 50
   },
   {
     id: 's3-2',
