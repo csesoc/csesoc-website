@@ -1,4 +1,5 @@
 export type resourceCards = {
+  id: string;
   href: string;
   svg: string;
   alt: string;
@@ -10,6 +11,7 @@ export type resourceCards = {
 
 export const stage1: resourceCards[] = [
   {
+    id: 's1-1',
     href: 'https://circles.csesoc.app/course-selector',
     svg: '/assets/circles_logo.svg',
     alt: 'Circles',
@@ -22,6 +24,7 @@ export const stage1: resourceCards[] = [
 
 export const stage2: resourceCards[] = [
   {
+    id: 's2-1',
     href: 'https://structs.sh/',
     svg: '/assets/structs_logo.svg',
     alt: 'Structs',
@@ -31,6 +34,7 @@ export const stage2: resourceCards[] = [
     height: 70
   },
   {
+    id: 's2-2',
     href: 'https://jobsboard.csesoc.unsw.edu.au/',
     svg: '/assets/jobsboard_logo.svg',
     alt: 'JobsBoard',
@@ -40,6 +44,7 @@ export const stage2: resourceCards[] = [
     height: 60
   },
   {
+    id: 's2-3',
     href: 'https://notangles.csesoc.app/',
     svg: '/assets/notangles_logo.svg',
     alt: 'Notangles',
@@ -49,6 +54,7 @@ export const stage2: resourceCards[] = [
     height: 70
   },
   {
+    id: 's2-4',
     href: 'https://unilectives.csesoc.app/',
     svg: '/assets/unilectives_logo.svg',
     alt: 'Uni-lectives',
@@ -61,6 +67,7 @@ export const stage2: resourceCards[] = [
 
 export const stage3: resourceCards[] = [
   {
+    id: 's3-1',
     href: 'https://compclub.org/',
     svg: '/assets/compclub_logo.svg',
     alt: 'CompClub',
@@ -70,6 +77,7 @@ export const stage3: resourceCards[] = [
     height: 60
   },
   {
+    id: 's3-2',
     href: 'https://media.csesoc.org.au/',
     svg: '/assets/csesocmedia_logo.svg',
     alt: 'CSESoc Media',
@@ -79,6 +87,7 @@ export const stage3: resourceCards[] = [
     height: 60
   },
   {
+    id: 's3-3',
     href: 'https://media.csesoc.org.au/first-year-guide-2024/',
     svg: '/assets/firstyearguide.svg',
     alt: 'First Year Guide',
@@ -88,6 +97,7 @@ export const stage3: resourceCards[] = [
     height: 60
   },
   {
+    id: 's3-4',
     href: 'https://media.csesoc.org.au/cse-enrol/',
     svg: '/assets/enrolmentguide.svg',
     alt: 'Enrolment Guide',

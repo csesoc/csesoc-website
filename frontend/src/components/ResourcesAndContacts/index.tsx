@@ -1,6 +1,6 @@
 // import DiscordLogo from "@/public/assets/discord_logo.svg"
 import Image from 'next/image';
-import { stage1, stage2, stage3 } from '../../public/data/resourceCards';
+import { stage1, stage2, stage3 } from '/public/data/resourceCards';
 
 const boxStyling =
   'border border-[#595F6D] rounded-lg hover:border-[#788093] hover:bg-[#070034] hover:bg-opacity-75 transition-all duration-300';
@@ -22,9 +22,10 @@ const ResourcesAndContacts = () => {
           <div className="py-8 bg-no-repeat bg-center">
             <div className="grid grid-cols-4 1 gap-x-9 gap-y-5">
 
-              {stage1.map((item) => {
+              {stage1.map((item: any) => {
                 return (
                   <a
+                    key={item.id}
                     href={item.href}
                     target="_blank"
                     className={`col-span-4 p-5 ${boxStyling} flex`}
@@ -40,13 +41,10 @@ const ResourcesAndContacts = () => {
                 );
               })}
 
-<<<<<<< HEAD:frontend/src/components/ResourcesAndContacts/index.tsx
-              {stage2.map((item) => {
-=======
-              {stage2.map((item, index) => {
->>>>>>> 6094fceb53e408022bf7a1eaec2e9b6c394e7b59:components/ResourcesAndContacts/index.tsx
+              {stage2.map((item: any) => {
                 return (
                   <a
+                    key={item.id}
                     href={item.href}
                     target="_blank"
                     className={`xl:col-span-1 col-span-4 p-5 ${boxStyling}`}
@@ -62,13 +60,10 @@ const ResourcesAndContacts = () => {
                 );
               })}
 
-<<<<<<< HEAD:frontend/src/components/ResourcesAndContacts/index.tsx
-              {stage3.map((item) => {
-=======
-              {stage3.map((item, index) => {
->>>>>>> 6094fceb53e408022bf7a1eaec2e9b6c394e7b59:components/ResourcesAndContacts/index.tsx
+              {stage3.map((item: any) => {
                 return (
                   <a
+                    key={item.id}
                     href={item.href}
                     target="_blank"
                     className={`md:col-span-2 col-span-4 p-5 ${boxStyling} flex`}
