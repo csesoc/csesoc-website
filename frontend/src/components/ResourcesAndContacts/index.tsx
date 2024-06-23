@@ -1,6 +1,6 @@
 // import DiscordLogo from "@/public/assets/discord_logo.svg"
 import Image from 'next/image';
-import { stage1, stage2, stage3 } from '/public/data/resourceCards';
+import { stage1, stage2, stage3 } from '../../../public/data/resourceCards';
 
 const boxStyling =
   'border border-[#595F6D] rounded-lg hover:border-[#788093] hover:bg-[#070034] hover:bg-opacity-75 transition-all duration-300';
