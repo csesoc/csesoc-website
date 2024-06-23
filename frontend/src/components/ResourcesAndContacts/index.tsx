@@ -40,7 +40,11 @@ const ResourcesAndContacts = () => {
                 );
               })}
 
+<<<<<<< HEAD:frontend/src/components/ResourcesAndContacts/index.tsx
               {stage2.map((item) => {
+=======
+              {stage2.map((item, index) => {
+>>>>>>> 6094fceb53e408022bf7a1eaec2e9b6c394e7b59:components/ResourcesAndContacts/index.tsx
                 return (
                   <a
                     href={item.href}
@@ -58,7 +62,11 @@ const ResourcesAndContacts = () => {
                 );
               })}
 
+<<<<<<< HEAD:frontend/src/components/ResourcesAndContacts/index.tsx
               {stage3.map((item) => {
+=======
+              {stage3.map((item, index) => {
+>>>>>>> 6094fceb53e408022bf7a1eaec2e9b6c394e7b59:components/ResourcesAndContacts/index.tsx
                 return (
                   <a
                     href={item.href}
