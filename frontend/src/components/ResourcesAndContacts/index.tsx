@@ -1,6 +1,6 @@
 // import DiscordLogo from "@/public/assets/discord_logo.svg"
 import Image from 'next/image';
-import { stage1, stage2, stage3 } from '../../../public/data/resourceCards';
+import { resourceCards, stage1, stage2, stage3 } from '../../../public/data/resourceCards';
 
 const boxStyling =
   'border border-[#595F6D] rounded-lg hover:border-[#788093] hover:bg-[#070034] hover:bg-opacity-75 transition-all duration-300';
@@ -22,7 +22,7 @@ const ResourcesAndContacts = () => {
           <div className="py-8 bg-no-repeat bg-center">
             <div className="grid grid-cols-4 1 gap-x-9 gap-y-5">
 
-              {stage1.map((item: any) => {
+              {stage1.map((item: resourceCards) => {
                 return (
                   <a
                     key={item.id}
@@ -41,7 +41,7 @@ const ResourcesAndContacts = () => {
                 );
               })}
 
-              {stage2.map((item: any) => {
+              {stage2.map((item: resourceCards) => {
                 return (
                   <a
                     key={item.id}
@@ -60,7 +60,7 @@ const ResourcesAndContacts = () => {
                 );
               })}
 
-              {stage3.map((item: any) => {
+              {stage3.map((item: resourceCards) => {
                 return (
                   <a
                     key={item.id}
