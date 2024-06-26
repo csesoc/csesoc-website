@@ -44,7 +44,28 @@ const About = () => {
               <p className="text-xs">
                 csesoc/README<span className="text-[#7A8192]">.md</span>
               </p>
-              <p className="mt-5">Lorem Ipsum</p>
+              <p className="mt-5">
+                We're UNSW's Computer Science and Engineering (CSE) Society. We meet the social, personal, and professional needs of CSE students, and promote computing by:
+              </p>
+                <ul>
+                  <li>
+                    - Runing weekly events, like trivia, movies, board
+                    games nights, LAN parties, workshops, coding competitions, tech talks, and our free weekly BBQ.
+                  </li>
+                  <li>
+                    - Create Podcasts, articles, YouTube videos,
+                    and live streams
+                  </li>
+                  <li>
+                    - Run events like First Year Camp and Peer Mentoring programs.
+                  </li>
+                  <li>
+                    - Engage students with our industry sponsors and representatives.
+                  </li>
+                  <li>
+                    - Develop open-source projects to learn and give to our community.
+                  </li>
+                </ul>
             </div>
             <div className="mt-10">
               Pinned
