@@ -1,6 +1,6 @@
 import { sponsorInfo } from '../../../public/data/data';
 
-export default function SponsorModal(props: { sponsorInfo: sponsorInfo | null; setFalse: any }) {
+export default function SponsorModal(props: { sponsorInfo: sponsorInfo | null; setFalse: () => void }) {
   if (props.sponsorInfo === null) {
     return (
       <div>
