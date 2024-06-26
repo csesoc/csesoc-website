@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { diamondLinks, goldLinks, silverLinks, sponsorInfo } from '../../../public/data/data';
 import SponsorModal from './sponsorModal';
+
 //import '/styles/sponsorLinks.module.css';
 const logostyle = 'h-14';
 const logodiv = 'block gap-y-8 h-14';
