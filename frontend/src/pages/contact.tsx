@@ -62,7 +62,7 @@ export default function ContactUs() {
           And be sure to follow us on social media to be notified of upcoming events and
           opportunities!
         </p>
-        <div className='pb-40'>
+        <div className='pb-28'>
           <Contacts />
         </div>
       </section>
