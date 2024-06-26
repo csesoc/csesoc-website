@@ -1,6 +1,5 @@
 import Contacts from '@/components/Contacts';
 import Footer from '@/components/Footer';
-import Hamburger from '@/components/Hamburger';
 import Navbar from '@/components/Navbar';
 
 export default function ContactUs() {
