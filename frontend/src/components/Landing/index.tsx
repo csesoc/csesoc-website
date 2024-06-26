@@ -25,22 +25,6 @@ const Landing = () => {
             <p>{'</h2>'}</p>
           </div>
         </div>
-        <div className="w-72 font-semibold text-xl lg:block hidden">
-          <p className="font-bold bg-[#3977F8] inline px-3 py-1">STATS</p>
-          <hr className="mb-3 mt-5" />
-          <div className="flex justify-between">
-            <p>323,000</p>
-            <p>Members</p>
-          </div>
-          <div className="flex justify-between">
-            <p>300</p>
-            <p>Team Members</p>
-          </div>
-          <div className="flex justify-between">
-            <p>52</p>
-            <p>Events held</p>
-          </div>
-        </div>
       </div>
     </section>
   );
