@@ -1,4 +1,3 @@
-import { MouseEventHandler } from 'react';
 import { sponsorInfo } from '../../../public/data/data';
 
 export default function SponsorModal(props: { sponsorInfo: sponsorInfo | null; setFalse: any }) {
