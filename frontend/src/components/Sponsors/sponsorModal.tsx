@@ -24,7 +24,7 @@ export default function SponsorModal(props: { sponsorInfo: sponsorInfo | null; s
           onClick={props.setFalse}
           className="bg-white border absolute bottom-10 text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[70%] xl:h-12 h-10"
         >
-          close
+          Close
         </button>
       </div>
     </div>
