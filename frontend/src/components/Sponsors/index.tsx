@@ -13,7 +13,6 @@ const Sponsors = () => {
       id="sponsors"
     >
       <div className="text-center">
-        <p className="text-[#3977F8] font-game text-xl">03</p>
         <h2 className="font-bold text-6xl">SUPPORT CSESOC</h2>
       </div>
       <div className="flex-1 flex justify-center items-center my-20">
