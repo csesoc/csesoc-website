@@ -41,6 +41,10 @@ const Navbar = () => {
             <p className="text-[0.6rem] text-[#C4C5C8]">04</p>
             <div>{'//'} sponsors</div>
           </Link>
+          <Link href="contact">
+            <p className="text-[0.6rem] text-[#C4C5C8]">05</p>
+            <div>{'//'} contact Us</div>
+          </Link>
         </div>
         <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
           <Hamburger />
