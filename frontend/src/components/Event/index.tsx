@@ -2,7 +2,6 @@ const Event = () => {
   return (
     <section className="py-8 xl:px-24 sm:px-10 px-5" id="events">
       <div className="text-center my-10">
-        <p className="text-[#3977F8] font-game text-xl">02</p>
         <h1 className="font-bold text-6xl">UPCOMING EVENTS</h1>
       </div>
       <div className="flex items-center">
