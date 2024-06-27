@@ -4,7 +4,6 @@ const About = () => {
   return (
     <section className="py-8 xl:px-24 sm:px-10 px-5" id="about">
       <div className="text-center my-10">
-        <p className="text-[#3977F8] font-game text-xl">01</p>
         <h2 className="font-bold text-6xl">ABOUT</h2>
       </div>
       <div className="flex justify-center items-center">

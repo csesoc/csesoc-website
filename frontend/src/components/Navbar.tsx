@@ -26,16 +26,16 @@ const Navbar = () => {
       <div>
         <div className="md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
           <Link href="about">
-            <div>{'//'} about us</div>
+            <div className="text-xl">{'//'} about us</div>
           </Link>
           <Link href="events">
-            <div>{'//'} events</div>
+            <div className="text-xl">{'//'} events</div>
           </Link>
           <Link href="resources">
-            <div>{'//'} resources</div>
+            <div className="text-xl">{'//'} resources</div>
           </Link>
           <Link href="sponsors">
-            <div>{'//'} sponsors</div>
+            <div className="text-xl">{'//'} sponsors</div>
           </Link>
         </div>
         <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
