@@ -24,7 +24,7 @@ const Navbar = () => {
         <p className="mt-3 text-xs">C:\INTERNAL STRUCTURE\{path}</p>
       </Link>
       <div>
-        <div className="md:flex xl:gap-36 lg:gap-20 md:gap-10 text-right font-bold hidden">
+        <div className="md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
           <Link href="about">
             <div>{'//'} about us</div>
           </Link>
