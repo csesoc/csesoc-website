@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { diamondLinks, goldLinks, silverLinks, sponsorInfo } from '../../../public/data/data';
-import SponsorModal from './sponsorModal';
+import SponsorModal from './SponsorModal';
 
 //import '/styles/sponsorLinks.module.css';
-const logostyle = 'h-14';
+const logostyle = 'grow-on-hover cursor-pointer transform transition-transform duration-300 hover:scale-105';
 const logodiv = 'block gap-y-8 h-14';
 const background = 'rgba(57, 119, 248, 0.6)';
 // const outer = 'rounded-[4rem] w-[90rem] flex flex-col pl-14 py-14 gap-16';
@@ -38,7 +38,7 @@ function SponsorLinks() {
                   setShowModal(true);
                 }}
               >
-                <img className={`${logostyle}`} src={item.svg} alt={item.alt} />
+                <img className={`h-14 ${logostyle}`} src={item.svg} alt={item.alt} />
               </div>
             );
           })}
@@ -58,7 +58,7 @@ function SponsorLinks() {
                   setShowModal(true);
                 }}
               >
-                <img className="h-6" src={item.svg} alt={item.alt} />
+                <img className={`h-6 ${logostyle}`} src={item.svg} alt={item.alt} />
               </div>
             );
           })}
@@ -78,7 +78,7 @@ function SponsorLinks() {
                   setShowModal(true);
                 }}
               >
-                <img className="h-8" src={item.svg} alt={item.alt} />
+                <img className={`h-8 ${logostyle}`} src={item.svg} alt={item.alt} />
               </div>
             );
           })}
