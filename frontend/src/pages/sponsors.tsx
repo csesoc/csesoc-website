@@ -1,6 +1,6 @@
-import SponsorLinks from '@/components/Sponsors/sponsorlinks';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SponsorLinks from '@/components/Sponsors/SponsorLinks';
 
 export default function SponsorsPage() {
   return (
