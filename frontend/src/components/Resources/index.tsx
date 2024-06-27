@@ -1,4 +1,3 @@
-// import DiscordLogo from "@/public/assets/discord_logo.svg"
 import Image from 'next/image';
 
 const boxStyling =
@@ -15,7 +14,7 @@ const Resources = () => {
 
           <div className="text-center my-10">
             <p className="text-[#3977F8] font-game text-xl">03</p>
-            <h2 className="font-bold text-6xl">RESOURCES & CONTACTS</h2>
+            <h2 className="font-bold text-6xl">RESOURCES</h2>
           </div>
 
           <div className="py-8 bg-no-repeat bg-center">
