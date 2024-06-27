@@ -1,4 +1,3 @@
-// import DiscordLogo from "@/public/assets/discord_logo.svg"
 import Image from 'next/image';
 
 const boxStyling =
