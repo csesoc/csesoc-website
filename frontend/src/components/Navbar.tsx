@@ -25,17 +25,20 @@ const Navbar = () => {
       </Link>
       <div>
         <div className="md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
-          <Link href="about">
+          <Link href="/about">
             <div className="text-xl">{'//'} about us</div>
           </Link>
-          <Link href="events">
+          <Link href="/events">
             <div className="text-xl">{'//'} events</div>
           </Link>
-          <Link href="resources">
+          <Link href="/resources">
             <div className="text-xl">{'//'} resources</div>
           </Link>
-          <Link href="sponsors">
+          <Link href="/sponsors">
             <div className="text-xl">{'//'} sponsors</div>
+          </Link>
+          <Link href="/contact-us">
+            <div className="text-xl">{'//'} contact us</div>
           </Link>
         </div>
         <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">

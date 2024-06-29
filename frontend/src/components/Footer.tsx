@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { socialLinks } from '../../public/data/data';
+import { socialLinks } from '@/../public/data/data';
 
 const Footer = () => {
   return (
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col max-w-[14rem] sm:mt-0 mt-10 font-light">
           <p className="mb-6">B03 CSE Building K17, UNSW csesoc@csesoc.org.au</p>
-          <p>© 2021 — CSESoc UNSW</p>
+          <p>© 2024 — CSESoc UNSW</p>
         </div>
       </div>
       <Image
