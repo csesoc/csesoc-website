@@ -50,7 +50,7 @@ const Contacts = () => {
     </div>
 
     <div className="flex 1 justify-around xl:mx-40">
-      <a href="https://twitter.com/csesoc?lang=en" target="_blank">
+      <a href="https://x.com/csesoc?lang=en" target="_blank">
         <Image
           src="assets/x_twitter_icon.svg"
           alt="X/Twitter"
@@ -83,15 +83,6 @@ const Contacts = () => {
           alt="TikTok"
           width={35}
           height={35}
-          className="mr-1 fill-white hover:scale-105 transition-all"
-        />
-      </a>
-      <a href="#" target="_blank">
-        <Image
-          src="assets/wechat_logo.svg"
-          alt="weChat"
-          width={40}
-          height={40}
           className="mr-1 fill-white hover:scale-105 transition-all"
         />
       </a>
