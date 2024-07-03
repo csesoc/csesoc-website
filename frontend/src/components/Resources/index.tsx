@@ -14,7 +14,6 @@ const Resources = () => {
           <Image src="assets/resources_bg.svg" alt="Background" className="-z-50 absolute" fill />
 
           <div className="text-center my-10">
-            <p className="text-[#3977F8] font-game text-xl">03</p>
             <h2 className="font-bold text-6xl">RESOURCES</h2>
           </div>
 
