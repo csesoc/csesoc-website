@@ -18,7 +18,7 @@ export default function Custom404() {
         </motion.div>
         <a href="/">
           <button className="mt-10 bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[30%] xl:h-12 h-10">
-            Back to saftey
+            Back to safety
           </button>
         </a>
       </div>
