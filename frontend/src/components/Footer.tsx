@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { socialLinks } from '@/../public/data/data';
+import { socialLinks } from '@/../public/data/socialInfos';
 
 const Footer = () => {
   return (

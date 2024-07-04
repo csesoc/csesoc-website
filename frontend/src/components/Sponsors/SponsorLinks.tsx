@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import { diamondLinks, goldLinks, silverLinks, sponsorInfo } from '../../../public/data/data';
+import { diamondLinks, goldLinks, silverLinks, sponsorInfo } from '../../../public/data/sponsorInfos';
 import SponsorModal from './SponsorModal';
 
-//import '/styles/sponsorLinks.module.css';
 const logostyle = 'grow-on-hover cursor-pointer transform transition-transform duration-300 hover:scale-105';
 const logodiv = 'block gap-y-8 h-14';
 const background = 'rgba(57, 119, 248, 0.6)';
-// const outer = 'rounded-[4rem] w-[90rem] flex flex-col pl-14 py-14 gap-16';
 
 function SponsorLinks() {
   const [showModal, setShowModal] = useState(false);

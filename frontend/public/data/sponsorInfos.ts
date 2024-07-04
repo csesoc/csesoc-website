@@ -5,12 +5,6 @@ export type sponsorInfo = {
   description: string;
 };
 
-export type socialInfo = {
-  href: string;
-  src: string;
-  alt: string;
-};
-
 export const diamondLinks: sponsorInfo[] = [
   {
     href: 'https://www.janestreet.com/',
@@ -23,7 +17,6 @@ export const diamondLinks: sponsorInfo[] = [
     svg: '/assets/tiktok_logo.svg',
     alt: 'Tiktok logo',
     description: "TikTok is a social media platform for creating, sharing and discovering short videos",
-
   }
 ];
 
@@ -33,7 +26,6 @@ export const goldLinks: sponsorInfo[] = [
     svg: '/assets/atlassian_logo.svg',
     alt: 'Atlassian logo',
     description: "Atlassian Corporation is an Australian-American software company that develops products for software developers, and project managers among other groups",
-
   },
   {
     href: 'https://www.citadel.com/',
@@ -130,43 +122,5 @@ export const silverLinks: sponsorInfo[] = [
     svg: '/assets/canva_logo.svg',
     alt: 'Canva logo',
     description: "Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more."
-  }
-];
-
-export const socialLinks: socialInfo[] = [
-  {
-    href: 'https://bit.ly/CSESocDiscord',
-    src: '/assets/discord_logo.svg',
-    alt: 'Discord'
-  },
-  {
-    href: 'https://www.facebook.com/csesoc/',
-    src: '/assets/fb_logo.svg',
-    alt: 'Facebook'
-  },
-  {
-    href: 'https://twitter.com/csesoc?lang=en',
-    src: '/assets/x_twitter_icon.svg',
-    alt: 'X/Twitter'
-  },
-  {
-    href: 'https://www.youtube.com/@CSESocUNSW',
-    src: '/assets/youtube_logo.svg',
-    alt: 'Youtube'
-  },
-  {
-    href: 'https://www.instagram.com/csesoc_unsw/?hl=en',
-    src: '/assets/instagram_logo.svg',
-    alt: 'Instagram'
-  },
-  {
-    href: 'https://www.tiktok.com/@csesoc?lang=en',
-    src: '/assets/tiktok_logo.svg',
-    alt: 'TikTok'
-  },
-  {
-    href: 'https://www.linkedin.com/company/csesoc?originalSubdomain=au',
-    src: '/assets/linkedin_logo.svg',
-    alt: 'LinkedIn'
   }
 ];

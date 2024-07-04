@@ -1,5 +1,6 @@
-import { sponsorInfo } from '../../../public/data/data';
+import { sponsorInfo } from '../../../public/data/sponsorInfos';
 import {motion} from 'framer-motion'
+
 export default function SponsorModal(props: { sponsorInfo: sponsorInfo | null; setFalse: () => void }) {
   if (props.sponsorInfo === null) {
     return (
