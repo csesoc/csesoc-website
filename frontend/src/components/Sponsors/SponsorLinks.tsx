@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { diamondLinks, goldLinks, silverLinks, sponsorInfo } from '../../../public/data/sponsorInfos';
+import { diamondLinks, goldLinks, silverLinks, sponsorInfo } from '@/../public/data/sponsorInfos';
 import SponsorModal from './SponsorModal';
 
 const logostyle = 'grow-on-hover cursor-pointer transform transition-transform duration-300 hover:scale-105';

@@ -1,10 +1,8 @@
 import Image from 'next/image';
-import { resourceCards, stage1, stage2, stage3 } from '../../../public/data/resourceCards';
+import { resourceCards, stage1, stage2, stage3 } from '@/../public/data/resourceCards';
 
 const boxStyling =
   'border border-[#595F6D] rounded-lg hover:border-[#788093] hover:bg-[#070034] hover:bg-opacity-75 transition-all duration-300';
-const socialsBoxStyling =
-  'xl:col-span-1 col-span-3 flex justify-center pt-2 pb-2 border border-[#595F6D] hover:border-[#788093] rounded-lg hover:bg-[#070034] hover:bg-opacity-75 transition-all duration-300';
 
 const Resources = () => {
   return (
