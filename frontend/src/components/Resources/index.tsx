@@ -12,15 +12,12 @@ const Resources = () => {
       <div className="2xl:w-[90rem] xl:w-[75rem] w-[90%]">
         <div className="relative">
           <Image src="assets/resources_bg.svg" alt="Background" className="-z-50 absolute" fill />
-
           <div className="text-center my-10">
-            <p className="text-[#3977F8] font-game text-xl">03</p>
             <h2 className="font-bold text-6xl">RESOURCES</h2>
           </div>
 
           <div className="py-8 bg-no-repeat bg-center">
             <div className="grid grid-cols-4 1 gap-x-9 gap-y-5">
-
               {stage1.map((item: resourceCards) => {
                 return (
                   <a
@@ -30,7 +27,13 @@ const Resources = () => {
                     className={`col-span-4 p-5 ${boxStyling} flex`}
                   >
                     <div className="flex justify-center align-middle items-center pl-2 pr-10">
-                      <Image src={item.svg} alt={item.alt} draggable="false" width={item.width} height={item.height}/>
+                      <Image
+                        src={item.svg}
+                        alt={item.alt}
+                        draggable="false"
+                        width={item.width}
+                        height={item.height}
+                      />
                     </div>
                     <div>
                       <h2 className="mt-5 text-3xl font-extrabold">{item.title}</h2>
@@ -48,8 +51,14 @@ const Resources = () => {
                     target="_blank"
                     className={`xl:col-span-1 col-span-4 p-5 ${boxStyling}`}
                   >
-                    <div className='flex align-middle items-center pt-2 pb-4'>
-                      <Image src={item.svg} alt={item.alt} draggable="false" width={item.width} height={item.height}/>
+                    <div className="flex align-middle items-center pt-2 pb-4">
+                      <Image
+                        src={item.svg}
+                        alt={item.alt}
+                        draggable="false"
+                        width={item.width}
+                        height={item.height}
+                      />
                     </div>
                     <div>
                       <h2 className="mt-5 text-3xl font-extrabold">{item.title}</h2>
@@ -67,8 +76,15 @@ const Resources = () => {
                     target="_blank"
                     className={`md:col-span-2 col-span-4 p-5 ${boxStyling} flex`}
                   >
-                    <div className='flex align-middle items-center pt-2 pb-4 pr-10'>
-                      <Image src={item.svg} alt={item.alt} draggable="false" width={item.width} height={item.height} className='rounded-md'/>
+                    <div className="flex align-middle items-center pt-2 pb-4 pr-10">
+                      <Image
+                        src={item.svg}
+                        alt={item.alt}
+                        draggable="false"
+                        width={item.width}
+                        height={item.height}
+                        className="rounded-md"
+                      />
                     </div>
                     <div>
                       <h2 className="mt-5 text-3xl font-extrabold">{item.title}</h2>

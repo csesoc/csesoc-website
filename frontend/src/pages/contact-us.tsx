@@ -8,7 +8,6 @@ export default function ContactUs() {
       <Navbar />
       <section className="py-8 xl:px-24 sm:px-10 px-5" id="contact-us">
         <div className="text-center my-10">
-          <p className="text-[#3977F8] font-game text-xl">05</p>
           <h1 className="font-bold text-6xl">CONTACT US</h1>
         </div>
 
@@ -54,10 +53,6 @@ export default function ContactUs() {
               </a>
               .
             </p>
-            {/* <iframe
-              className="w-1/2 h-[80vh] self-center"
-              src="https://forms.gle/7kk3RRBJbXo3Sip86"
-            ></iframe> */}
           </li>
         </ul>
 

@@ -24,26 +24,21 @@ const Navbar = () => {
         <p className="mt-3 text-xs">C:\INTERNAL STRUCTURE\{path}</p>
       </Link>
       <div>
-        <div className="md:flex xl:gap-36 lg:gap-20 md:gap-10 text-right font-bold hidden">
+        <div className="md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
           <Link href="/about">
-            <p className="text-[0.6rem] text-[#C4C5C8]">01</p>
-            <div>{'//'} about us</div>
+            <div className="text-xl">{'//'} about us</div>
           </Link>
           <Link href="/events">
-            <p className="text-[0.6rem] text-[#C4C5C8]">02</p>
-            <div>{'//'} events</div>
+            <div className="text-xl">{'//'} events</div>
           </Link>
           <Link href="/resources">
-            <p className="text-[0.6rem] text-[#C4C5C8]">03</p>
-            <div>{'//'} resources</div>
+            <div className="text-xl">{'//'} resources</div>
           </Link>
           <Link href="/sponsors">
-            <p className="text-[0.6rem] text-[#C4C5C8]">04</p>
-            <div>{'//'} sponsors</div>
+            <div className="text-xl">{'//'} sponsors</div>
           </Link>
           <Link href="/contact-us">
-            <p className="text-[0.6rem] text-[#C4C5C8]">05</p>
-            <div>{'//'} contact us</div>
+            <div className="text-xl">{'//'} contact us</div>
           </Link>
         </div>
         <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
