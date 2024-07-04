@@ -58,7 +58,7 @@ const About = () => {
                 <div className="p-5 border border-[#595F6D] flex-1 rounded-lg mr-5 w-full sm:mb-0 mb-5">
                   <div className="flex text-[#3A76F8]">
                     <Image src="/assets/book_icon.svg" alt="Book" width={20} height={20} className="mr-2" />
-                    <Link href="/about/execs-directors-subcommittees">
+                    <Link href="/about/execs-directors-subcoms">
                       <span className="font-semibold hover:underline">execs-directors-subcoms</span>
                     </Link>
                   </div>

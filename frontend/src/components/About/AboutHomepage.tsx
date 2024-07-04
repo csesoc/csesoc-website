@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+
 export default function AboutHomePage() {
     return (
         <section className="py-8 xl:px-24 sm:px-10 px-5" id="about">

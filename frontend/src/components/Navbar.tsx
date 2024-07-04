@@ -4,11 +4,11 @@ import { useEffect, useState } from 'react';
 import Hamburger from './Hamburger';
 
 const Navbar = () => {
-  const [path, setPath] = useState<string>('');
+  const [path, setPath] = useState<string[]>([]);
   useEffect(() => {
-    const item: string | undefined = window.location.href.split('/').pop();
-    if (item == '' || item == undefined) setPath('HOME');
-    else setPath(item.toUpperCase());
+    const pathSegments: string[] | undefined = window.location.pathname.split('/').filter(segment => segment);
+    if (pathSegments === undefined) setPath([]);
+    else setPath(pathSegments.map(segment => segment.toUpperCase()));
   }, []);
 
   return (
@@ -21,7 +21,13 @@ const Navbar = () => {
           height={200}
           draggable={false}
         />
-        <p className="mt-3 text-xs">C:\INTERNAL STRUCTURE\{path}</p>
+        <p className="font-mono mt-3 text-s font-bold">
+          <span className="text-green-500">csesoc@unsw</span>
+          <span>:</span>
+          <span className="text-blue-500">~{path.map(segment => '/' + segment.toLowerCase())}</span>
+          <span>$ </span>
+          <span id="cursor" className="text-gray-400 inline-block animate-blink">_</span>
+        </p>
       </Link>
       <div>
         <div className="md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
@@ -44,7 +50,7 @@ const Navbar = () => {
         <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
           <Hamburger />
         </div>
-      </div>
+      </div>  
     </nav>
   );
 };
