@@ -1,11 +1,9 @@
 import Contacts from '@/components/Contacts';
-import Footer from '@/components/Footer';
-import Navbar from '@/components/Navbar';
+import Layout from '@/components/Layout';
 
 export default function ContactUs() {
   return (
-    <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
-      <Navbar />
+    <Layout>
       <section className="py-8 xl:px-24 sm:px-10 px-5" id="contact-us">
         <div className="text-center my-10">
           <h1 className="font-bold text-6xl">CONTACT US</h1>
@@ -66,7 +64,6 @@ export default function ContactUs() {
           </div>
         </div>
       </section>
-      <Footer />
-    </section>
+    </Layout>
   );
 }

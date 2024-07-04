@@ -21,7 +21,7 @@ const Navbar = () => {
           height={200}
           draggable={false}
         />
-        <p className="font-mono mt-3 text-s font-bold">
+        <p className="font-mono mt-3 font-bold">
           <span className="text-green-500">csesoc@unsw</span>
           <span>:</span>
           <span className="text-blue-500">~{path.map(segment => '/' + segment.toLowerCase())}</span>
