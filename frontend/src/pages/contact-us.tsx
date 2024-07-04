@@ -1,7 +1,7 @@
 import Contacts from '@/components/Contacts';
 import Layout from '@/components/Layout';
 
-export default function ContactUs() {
+export default function ContactUsPage() {
   return (
     <Layout>
       <section className="py-8 xl:px-24 sm:px-10 px-5" id="contact-us">

@@ -37,10 +37,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col max-w-[14rem] sm:mt-0 mt-10 font-light">
-          <p className="mb-6">
-            <p>B03 CSE Building K17, UNSW</p>
+          <div className="mb-6">
+            <div>B03 CSE Building K17, UNSW</div>
             <a href="mailto:csesoc@csesoc.org.au" className="hover:underline">csesoc@csesoc.org.au</a>
-          </p>
+          </div>
           <p>© 2024 — CSESoc UNSW</p>
         </div>
       </div>
