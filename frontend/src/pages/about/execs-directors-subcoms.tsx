@@ -1,13 +1,12 @@
 import Layout from "@/components/Layout";
+import PageBody from "@/components/PageBody";
+import PageTitle from "@/components/PageTitle";
 
-const ExecsDirectorsSubcommittees = () => {
+const ExecsDirectorsSubcommitteesPage = () => {
   return (
     <Layout>
-      <section className="py-8 xl:px-24 sm:px-10 px-5" id="execs-directors-subcommittees">
-        <div className="text-center my-10">
-          <h1 className="font-bold text-6xl">EXECS, DIRECTORS & SUBCOMMITTEES</h1>
-        </div>
-
+      <PageTitle title="EXECS, DIRECTORS & SUBCOMMITTEES" />
+      <PageBody>
         {/* CSESOC TEAM */}
         <div>
           <p className="text-xl my-5">
@@ -244,9 +243,9 @@ const ExecsDirectorsSubcommittees = () => {
               </p>
           </div>
         </div>
-      </section>
+      </PageBody>
     </Layout>
   );
 }
 
-export default ExecsDirectorsSubcommittees;
+export default ExecsDirectorsSubcommitteesPage;

@@ -1,13 +1,12 @@
 import Layout from "@/components/Layout";
+import PageBody from "@/components/PageBody";
+import PageTitle from "@/components/PageTitle";
 
-export default function Constitution() {
+const ConstitutionPage = () => {
   return (
     <Layout>
-      <section className="py-8 xl:px-24 sm:px-10 px-5" id="constitution">
-        <div className="text-center my-10">
-          <h1 className="font-bold text-6xl">CONSTITUTION</h1>
-        </div>
-
+      <PageTitle title="CONSTITUTION" />
+      <PageBody>
         <div>
           <p className="text-xl my-5">
             Since the end of 2013, the constitution has been hosted on Github. The constitution by which CSESoc runs can be found here:
@@ -48,7 +47,9 @@ export default function Constitution() {
             </li>
           </ul>
         </div>
-      </section>
+      </PageBody>
   </Layout>
   );
 }
+
+export default ConstitutionPage;

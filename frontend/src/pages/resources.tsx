@@ -1,6 +1,7 @@
 import Layout from '@/components/Layout';
 import Image from 'next/image';
 import { resourceCards, stage1, stage2, stage3 } from '@/../public/data/resourceCards';
+import PageTitle from '@/components/PageTitle';
 
 export default function ResourcesPage() {
   const boxStyling =
@@ -8,13 +9,12 @@ export default function ResourcesPage() {
 
   return (
     <Layout>
+      <PageTitle title="RESOURCES" />
+      
       <section className="bg-no-repeat bg-center py-8 px-15 min-h-screen flex justify-center items-center">
         <div className="2xl:w-[90rem] xl:w-[75rem] w-[90%]">
           <div className="relative">
             <Image src="assets/resources_bg.svg" alt="Background" className="-z-50 absolute" fill />
-            <div className="text-center my-10">
-              <h2 className="font-bold text-6xl">RESOURCES</h2>
-            </div>
 
             <div className="py-8 bg-no-repeat bg-center">
               <div className="grid grid-cols-4 1 gap-x-9 gap-y-5">

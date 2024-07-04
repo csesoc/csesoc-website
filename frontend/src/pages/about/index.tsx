@@ -1,14 +1,13 @@
 import Layout from "@/components/Layout";
+import PageTitle from "@/components/PageTitle";
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function AboutPage() {
   return (
     <Layout>
-      <section className="py-8 xl:px-24 sm:px-10 px-5" id="about">
-        <div className="text-center my-10">
-          <h2 className="font-bold text-6xl">ABOUT US</h2>
-        </div>
+      <PageTitle title="ABOUT US" />
+      <section className="py-8 xl:px-24 sm:px-10 px-5">
         <div className="flex justify-center items-center">
           <div className="lg:grid grid-cols-6 flex-1 max-w-[90rem]">
             {/* LEFT SIDE */}

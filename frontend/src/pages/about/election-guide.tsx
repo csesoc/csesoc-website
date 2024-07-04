@@ -1,13 +1,12 @@
 import Layout from "@/components/Layout";
+import PageBody from "@/components/PageBody";
+import PageTitle from "@/components/PageTitle";
 
-const ElectionGuide = () => {
+const ElectionGuidePage = () => {
   return (
     <Layout>
-      <section className="py-8 xl:px-24 sm:px-10 px-5" id="election-guide">
-        <div className="text-center my-10">
-          <h1 className="font-bold text-6xl">ELECTION NOMINATION GUIDE</h1>
-        </div>
-
+      <PageTitle title="ELECTION GUIDE" />
+      <PageBody>
         <div>
           <p className="text-lg my-5">
             Before considering any executive position for CSESoc, it 
@@ -108,9 +107,9 @@ const ElectionGuide = () => {
             </ul>
           </div>
         </div>
-      </section>
+      </PageBody>
     </Layout>
   );
 };
 
-export default ElectionGuide;
+export default ElectionGuidePage;

@@ -1,18 +1,15 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Layout from "@/components/Layout";
+import PageBody from "@/components/PageBody";
+import PageTitle from "@/components/PageTitle";
 
-const OurHistory = () => {
+const OurHistoryPage = () => {
   // Years from 2020 to 2007
   const years: number[] = Array.from({ length: 14 }, (_, i) => 2020 - i);
 
   return (
-    <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
-      <Navbar />
-      <section className="py-8 xl:px-24 sm:px-10 px-5" id="our-history">
-        <div className="text-center my-10">
-          <h1 className="font-bold text-6xl">OUR HISTORY</h1>
-        </div>
-
+    <Layout>
+      <PageTitle title="OUR HISTORY" />
+      <PageBody>
         <div>
           <p className="text-xl my-5">
             CSESoc was formed in October 2006 from the old CompSoc and SESoc societies. 
@@ -50,10 +47,9 @@ const OurHistory = () => {
             </div>
           </div>
         ))}
-      </section>
-      <Footer />
-    </section>
-  )
+      </PageBody>
+    </Layout>
+  );
 }
 
-export default OurHistory;
+export default OurHistoryPage;

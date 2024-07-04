@@ -1,14 +1,14 @@
 import Contacts from '@/components/Contacts';
 import Layout from '@/components/Layout';
+import PageBody from '@/components/PageBody';
+import PageTitle from '@/components/PageTitle';
 
 export default function ContactUsPage() {
   return (
     <Layout>
-      <section className="py-8 xl:px-24 sm:px-10 px-5" id="contact-us">
-        <div className="text-center my-10">
-          <h1 className="font-bold text-6xl">CONTACT US</h1>
-        </div>
-
+      <PageTitle title="CONTACT US" />
+      
+      <PageBody>
         <ul>
           <li>
             <h3 className="text-2xl font-semibold pt-5">
@@ -63,7 +63,7 @@ export default function ContactUsPage() {
             <Contacts />
           </div>
         </div>
-      </section>
+      </PageBody>
     </Layout>
   );
 }

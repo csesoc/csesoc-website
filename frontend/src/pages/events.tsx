@@ -1,4 +1,5 @@
 import Layout from '@/components/Layout';
+import PageTitle from '@/components/PageTitle';
 import axios from 'axios';
 
 export default function EventsPage() {
@@ -13,6 +14,7 @@ export default function EventsPage() {
 
   return (
     <Layout>
+      <PageTitle title="EVENTS" />
       <button onClick={() => pingBackend()}>Ping backend</button>
     </Layout>
   );
