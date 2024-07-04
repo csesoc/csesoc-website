@@ -1,7 +1,6 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Resources from '@/components/Resources';
-import Contacts from '@/components/Contacts';
 
 export default function ResourcesPage() {
   return (

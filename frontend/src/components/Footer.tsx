@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-col gap-10">
           <div className="flex items-center">
             <Link href="/" className="flex">
-              <Image src="assets/csesoc_logo_white.svg" width={231} height={53} alt="CSESoc Logo" />
+              <Image src="/assets/csesoc_logo_white.svg" width={231} height={53} alt="CSESoc Logo" />
               <Image
                 src="/flag/ollie_is_hiding.png"
                 alt="Ollie"
@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </div>
       <Image
-        src="assets/sponsors_backdrop.svg"
+        src="/assets/sponsors_backdrop.svg"
         alt="Sponsors backdrop"
         height={0}
         width={0}
