@@ -1,9 +1,14 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useState } from "react";
+
+const MIN_YEAR = 2007;
+const MAX_YEAR = 2020;
+const DEFAULT_YEAR = 2020;
 
 const OurHistory = () => {
-  // Years from 2020 to 2007
-  const years: number[] = Array.from({ length: 14 }, (_, i) => 2020 - i);
+  const [year, setYear] = useState(DEFAULT_YEAR);
+  const [shouldDisplayTip, setShouldDisplayTip] = useState(true);
 
   return (
     <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
@@ -42,14 +47,35 @@ const OurHistory = () => {
 
         <div className="border-t border-gray-300 my-5"></div>
 
-        {years.map((year: number) => (
-          <div key={year} className="mb-4">
-            <div className="flex flex-col items-center mb-5">
-              <h2 className="text-2xl font-semibold mb-2">{year}</h2>
-              <img src={`/images/csesoc-team-${year}.png`} alt={`CSESoc Team ${year}`} height={600} width={600}/>
-            </div>
+        <div className="flex flex-col items-center mt-5">
+          <h2 className="text-4xl font-semibold mb-5">{year}</h2>
+
+          <input 
+            id="history-year-slider"
+            type="range"
+            min={MIN_YEAR}
+            max={MAX_YEAR}
+            defaultValue={DEFAULT_YEAR}
+            step={1}
+            className="w-full h-2 bg-blue-300 rounded-lg appearance-none cursor-pointer"
+            onChange={(e) => {
+              setYear(parseInt(e.target.value))
+              setShouldDisplayTip(false)
+            }}
+          />
+          <div className="flex flex-row w-full justify-between mt-1">
+            <p>{MIN_YEAR}</p>
+            <p>{MAX_YEAR}</p>
           </div>
-        ))}
+
+          {shouldDisplayTip && (
+            <p className="mt-5">Use the slider to see the teams from past years!</p>
+          )}
+
+          <div key={year} className="h-[600px] w-[600px] mt-10">
+            <img src={`/images/csesoc-team-${year}.png`} alt={`CSESoc Team ${year}`}/>
+          </div>
+        </div>
       </section>
       <Footer />
     </section>
