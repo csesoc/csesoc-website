@@ -17,7 +17,9 @@ export default function AboutPage() {
               </div>
               <h2 className="mt-10 text-3xl font-extrabold">CSESoc</h2>
               <p className="text-[#727B8C] font-medium">unsw-computer-science-engineering-society</p>
-              <button className="bg-[#444F6F] w-full my-5 py-2 rounded">Follow</button>
+              <a href="https://www.facebook.com/csesoc/" target="_blank">
+                <button className="bg-[#444F6F] w-full my-5 py-2 rounded">Follow</button>
+              </a>
               <p>
                 CSESoc is the principal representative body for UNSW computing students.
               </p>
@@ -34,7 +36,7 @@ export default function AboutPage() {
               </div>
               <div className="flex gap-5">
                 <Image src="/assets/mail_icon.svg" alt="Mail" width={20} height={20} />
-                info@csesoc.org.au
+                <a href="mailto:info@csesoc.org.au" className="hover:underline">info@csesoc.org.au</a>
               </div>
             </div>
             {/* RIGHT SIDE */}
