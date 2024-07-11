@@ -40,6 +40,16 @@ const Navbar = () => {
           <Link href="/contact-us">
             <div className="text-xl">{'//'} contact us</div>
           </Link>
+          <a href="https://csesoc-merch.square.site/" className='flex xl:gap-3 lg:gap-1.5 md:gap-0.8 duration-300 hover:scale-105'>
+            <div className="text-xl">{'//'} merch store</div>
+            <Image
+              src="/assets/merch-store-icon.svg"
+              alt="Merchandise Store Icon"
+              width={30}
+              height={30}
+              draggable={false}
+            />
+          </a>
         </div>
         <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
           <Hamburger />

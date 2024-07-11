@@ -50,6 +50,9 @@ export default function Hamburger() {
               <li className="py-2 text-lg">
                 <Link href={'./contact-us'}>Contact Us</Link>
               </li>
+              <li className="py-2 text-lg">
+                <a href="https://csesoc-merch.square.site/">Merchandise</a>
+              </li>
             </ul>
           </motion.div>
         )}
