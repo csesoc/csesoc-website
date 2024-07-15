@@ -2,12 +2,8 @@ import Image from 'next/image';
 import { resourceCards, stage1, stage2, stage3 } from '../../../public/data/resourceCards';
 
 const boxStyling =
-  'border border-[#595F6D] rounded-lg hover:border-[#788093] hover:bg-[#070034] hover:bg-opacity-75 transition-all duration-300';
-// const socialsBoxStyling =
-//   'xl:col-span-1 col-span-3 flex justify-center pt-2 pb-2 border border-[#595F6D] hover:border-[#788093] rounded-lg hover:bg-[#070034] hover:bg-opacity-75 transition-all duration-300';
-const logostyle =
-  'grow-on-hover cursor-pointer transform transition-transform duration-300 hover:scale-105';
-
+    'border border-[#595F6D] rounded-lg hover:border-[#788093] hover:bg-[#070034] hover:bg-opacity-75 transition-all duration-300';
+  
 const Resources = () => {
   return (
     <section className="bg-no-repeat bg-center py-8 px-15 min-h-screen flex justify-center items-center">
@@ -60,7 +56,9 @@ const Resources = () => {
           </div>
 
           <a href="https://devsoc.app/" target="_blank" rel="noopener noreferrer">
-            <div className={`flex ${logostyle}`}>
+            <div
+              className={`flex grow-on-hover cursor-pointer transform transition-transform duration-300 hover:scale-105`}
+            >
               <span className="text-lg">Made by</span>
               <Image
                 src="/assets/devsoc_logo.svg"
