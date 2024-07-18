@@ -16,6 +16,61 @@ export default function ResourcesPage() {
           <div className="relative">
             <Image src="assets/resources_bg.svg" alt="Background" className="-z-50 absolute" fill />
 
+            <div className="flex">
+              <span className="text-lg">Made by</span>
+              <Image
+                src="/assets/csesoc_logo.svg"
+                alt="CSESoc Logo"
+                width={100}
+                height={100}
+                className="pl-2"
+              />
+            </div>
+
+            <div className="py-8 bg-no-repeat bg-center">
+              <div className="grid grid-cols-4 1 gap-x-9 gap-y-5">
+                {stage3.map((item: resourceCards) => {
+                  return (
+                    <a
+                      key={item.id}
+                      href={item.href}
+                      target="_blank"
+                      className={`md:col-span-2 col-span-4 p-5 ${boxStyling} flex`}
+                    >
+                      <div className="flex align-middle items-center pt-2 pb-4 pr-10">
+                        <Image
+                          src={item.svg}
+                          alt={item.alt}
+                          draggable="false"
+                          width={item.width}
+                          height={item.height}
+                          className="rounded-md"
+                        />
+                      </div>
+                      <div>
+                        <h2 className="mt-5 text-3xl font-extrabold">{item.title}</h2>
+                        <p className="mt-7 text-lg mb-5">{item.desc}</p>
+                      </div>
+                    </a>
+                  );
+                })}
+              </div>
+            </div>
+
+            <a href="https://devsoc.app/" target="_blank" rel="noopener noreferrer">
+              <div
+                className={`flex grow-on-hover cursor-pointer transform transition-transform duration-300 hover:scale-105`}
+              >
+                <span className="text-lg">Made by</span>
+                <Image
+                  src="/assets/devsoc_logo.svg"
+                  alt="DevSoc Logo"
+                  width={110}
+                  height={110}
+                  className="pl-1"
+                />
+              </div>
+            </a>
             <div className="py-8 bg-no-repeat bg-center">
               <div className="grid grid-cols-4 1 gap-x-9 gap-y-5">
                 {stage1.map((item: resourceCards) => {
@@ -58,32 +113,6 @@ export default function ResourcesPage() {
                           draggable="false"
                           width={item.width}
                           height={item.height}
-                        />
-                      </div>
-                      <div>
-                        <h2 className="mt-5 text-3xl font-extrabold">{item.title}</h2>
-                        <p className="mt-7 text-lg mb-5">{item.desc}</p>
-                      </div>
-                    </a>
-                  );
-                })}
-
-                {stage3.map((item: resourceCards) => {
-                  return (
-                    <a
-                      key={item.id}
-                      href={item.href}
-                      target="_blank"
-                      className={`md:col-span-2 col-span-4 p-5 ${boxStyling} flex`}
-                    >
-                      <div className="flex align-middle items-center pt-2 pb-4 pr-10">
-                        <Image
-                          src={item.svg}
-                          alt={item.alt}
-                          draggable="false"
-                          width={item.width}
-                          height={item.height}
-                          className="rounded-md"
                         />
                       </div>
                       <div>
