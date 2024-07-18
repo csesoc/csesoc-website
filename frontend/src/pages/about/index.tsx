@@ -46,12 +46,22 @@ export default function AboutPage() {
                   csesoc/README<span className="text-[#7A8192]">.md</span>
                 </p>
                 <p className="mt-5">
-                  CSESoc is one of the biggest and most active societies at UNSW, catering to over 3500 CSE
-                  students spanning across degrees in Computer Science, Software Engineering,
-                  Bioinformatics and Computer Engineering. 
+                  CSESoc is the official representative body of computing students at UNSW. We are one of the 
+                  largest and most active societies at UNSW, and the largest computing society in the southern hemisphere. 
+                  CSESoc comprises ~10k members spanning across degrees in Computer Science, Software Engineering, 
+                  Bioinformatics and Computer Engineering. We are here to fulfil the social, personal and professional 
+                  needs of CSE students, and promote computing through a variety of forms.
                   <br /><br />
-                  We are here to fulfil the social, personal and 
-                  professional needs of CSE students, and promote computing through a variety of forms.
+                  We are a society for the students, by the students. Here’s an overview of what we do:
+
+                  <ul className="list-disc">
+                    <li className="ml-6">Run weekly social and educational events, including trivia, movie, boardgames nights, LAN parties, workshops, coding competitions, tech talks, and our famous free weekly BBQ</li>
+                    <li className="ml-6">Create original media content, including Podcasts, articles, YouTube videos, and live streams</li>
+                    <li className="ml-6">Run a highly successful First Year Camp and Peer Mentoring program, offering new CSE students (both undergraduate and postgraduate) a chance to meet and mingle with other newcomers</li>
+                    <li className="ml-6">Engage students with industry sponsors and representatives to develop their professional capacity and curiosity</li>
+                    <li className="ml-6">Develop our own open-source projects for students to get learn new skills and develop tools for our community</li>
+                    <li className="ml-6">Facilitate an online community of ~8k Discord users, ~9.5k Facebook followers, ~1.9k YouTube subs, and ~7.7k Instagram followers</li>
+                  </ul>
                 </p>
               </div>
               <div className="mt-10">
