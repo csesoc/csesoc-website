@@ -8,10 +8,14 @@ export default function Custom404() {
         <Navbar />
         <h1 className="text-5xl font-bold pt-24">404 - Page Not Found</h1>
         <p className="text-4xl pt-10">
-          Sorry! We can't find the page you're looking for!
+          Oops! This page must have been garbage collected.
           <br />
         </p>
-        <motion.div className="opacity-0" whileHover={{ opacity: 1 }} transition={{duration: 0.2}}>
+        <motion.div
+          className="opacity-0"
+          whileHover={{ opacity: 1 }}
+          transition={{ duration: 0.2 }}
+        >
           <p className="text-2xl pt-10">
             While we may have found some tomfoolery, we haven't found your page :'(
           </p>
