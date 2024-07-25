@@ -1,15 +1,12 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Layout from "@/components/Layout";
+import PageBody from "@/components/PageBody";
+import PageTitle from "@/components/PageTitle";
 
-const ElectionGuide = () => {
+const ElectionGuidePage = () => {
   return (
-    <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
-      <Navbar />
-      <section className="py-8 xl:px-24 sm:px-10 px-5" id="election-guide">
-        <div className="text-center my-10">
-          <h1 className="font-bold text-6xl">ELECTION NOMINATION GUIDE</h1>
-        </div>
-
+    <Layout>
+      <PageTitle title="ELECTION GUIDE" />
+      <PageBody>
         <div>
           <p className="text-lg my-5">
             Before considering any executive position for CSESoc, it 
@@ -110,10 +107,9 @@ const ElectionGuide = () => {
             </ul>
           </div>
         </div>
-      </section>
-      <Footer />
-    </section>
+      </PageBody>
+    </Layout>
   );
 };
 
-export default ElectionGuide;
+export default ElectionGuidePage;

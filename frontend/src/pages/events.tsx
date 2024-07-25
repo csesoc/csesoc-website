@@ -1,5 +1,5 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Layout from '@/components/Layout';
+import PageTitle from '@/components/PageTitle';
 import axios from 'axios';
 
 export default function EventsPage() {
@@ -13,10 +13,9 @@ export default function EventsPage() {
   };
 
   return (
-    <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
-      <Navbar />
+    <Layout>
+      <PageTitle title="EVENTS" />
       <button onClick={() => pingBackend()}>Ping backend</button>
-      <Footer />
-    </section>
+    </Layout>
   );
 }

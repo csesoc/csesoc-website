@@ -1,5 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
+
 export default function AboutHomePage() {
     return (
         <section className="py-8 xl:px-24 sm:px-10 px-5" id="about">
@@ -30,7 +30,7 @@ export default function AboutHomePage() {
                     We are here to fulfil the social, personal and 
                     professional needs of CSE students, and promote computing through a variety of forms.
                     <br/><br/>
-                    Learn more <a href="about" className="text-[#3977F9]">about us!</a>
+                    Learn more <a href="/about" className="text-[#3977F9]">about us!</a>
                   </p>
 
                 </div>

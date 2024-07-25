@@ -3,7 +3,7 @@ import Sponsors from '@/components/Sponsors/index';
 import Event from '@/components/Event';
 import AboutHomePage from '@/components/About/AboutHomepage';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <section>
       <Landing />
