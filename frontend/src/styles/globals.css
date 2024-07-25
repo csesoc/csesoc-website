@@ -21,3 +21,11 @@ body {
 .animate-blink {
   animation: blink 1s step-end infinite;
 }
+
+.hover-animate {
+  transition: transform 0.3s ease;
+}
+
+.hover-animate:hover {
+  transform: scale(1.01);
+}
