@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Stats from '../Stats';
 
 const About = () => {
   return (
@@ -9,16 +10,17 @@ const About = () => {
         <h2 className="font-bold text-6xl">ABOUT</h2>
       </div>
       <div className="flex justify-center items-center">
-        <div className="lg:grid grid-cols-6 flex-1 max-w-[90rem]">
+        <div className="lg:grid grid-cols-2 flex-1 max-w-[90rem]">
           {/* LEFT SIDE */}
-          <div className="col-span-2 md:mx-5">
-            <div className="flex items-center justify-center">
+          <div className="col-span-2">
+{/*            <div className="flex items-center justify-center">
               <Image src="/assets/csesoc_icon.svg" alt="CSESoc Icon" width={150} height={150} />
-            </div>
-            <h2 className="mt-10 text-3xl font-extrabold">CSESoc</h2>
-            <p className="text-[#727B8C] font-medium">unsw-computer-science-engineering-society</p>
-            <button className="bg-[#444F6F] w-full my-5 py-2 rounded">Follow</button>
-            <p>
+            </div>*/}
+{/*            <h2 className="mt-10 text-3xl font-extrabold">CSESoc</h2>
+            <p className="text-[#727B8C] font-medium">unsw-computer-science-engineering-society</p>*/}
+            <Stats/>
+{/*            <button className="bg-[#444F6F] w-full my-5 py-2 rounded">Follow</button>*/}
+{/*            <p>
               CSESoc is the principal representative body for UNSW computing students.
             </p>
             <div className="my-4 flex gap-5">
@@ -35,11 +37,11 @@ const About = () => {
             <div className="flex gap-5">
               <Image src="/assets/mail_icon.svg" alt="Mail" width={20} height={20} />
               info@csesoc.org.au
-            </div>
+            </div>*/}
           </div>
           {/* RIGHT SIDE */}
-          <div className="col-span-4 lg:mt-0 mt-10">
-            <div className="rounded border border-[#595F6D] p-5 h-auto">
+          <div className="col-span-4 lg:mt-0 mt-10 pt-8">
+{/*            <div className="rounded border border-[#595F6D] p-5 h-auto">
               <p className="text-xs">
                 csesoc/README<span className="text-[#7A8192]">.md</span>
               </p>
@@ -51,8 +53,8 @@ const About = () => {
                 We are here to fulfil the social, personal and 
                 professional needs of CSE students, and promote computing through a variety of forms.
               </p>
-            </div>
-            <div className="mt-10">
+            </div>*/}
+            <div className="mt-10 mb-32">
               Pinned
               {/* TODO: refactor all of this */}
               <div className="sm:flex my-5">
