@@ -45,14 +45,18 @@ export default function AboutPage() {
                 <p className="text-xs">
                   csesoc/README<span className="text-[#7A8192]">.md</span>
                 </p>
-                <p className="mt-5">
-                  CSESoc is the official representative body of computing students at UNSW. We are one of the 
-                  largest and most active societies at UNSW, and the largest computing society in the southern hemisphere. 
-                  CSESoc comprises ~10k members spanning across degrees in Computer Science, Software Engineering, 
-                  Bioinformatics and Computer Engineering. We are here to fulfil the social, personal and professional 
-                  needs of CSE students, and promote computing through a variety of forms.
-                  <br /><br />
-                  We are a society for the students, by the students. Here’s an overview of what we do:
+                <div className="mt-5">
+                  <p>
+                    CSESoc is the official representative body of computing students at UNSW. We are one of the 
+                    largest and most active societies at UNSW, and the largest computing society in the southern hemisphere. 
+                    CSESoc comprises ~10k members spanning across degrees in Computer Science, Software Engineering, 
+                    Bioinformatics and Computer Engineering. We are here to fulfil the social, personal and professional 
+                    needs of CSE students, and promote computing through a variety of forms.
+                  </p>
+                  <br />
+                  <p>
+                    We are a society for the students, by the students. Here’s an overview of what we do:
+                  </p>
 
                   <ul className="list-disc">
                     <li className="ml-6">Run weekly social and educational events, including trivia, movie, boardgames nights, LAN parties, workshops, coding competitions, tech talks, and our famous free weekly BBQ</li>
@@ -62,7 +66,7 @@ export default function AboutPage() {
                     <li className="ml-6">Develop our own open-source projects for students to get learn new skills and develop tools for our community</li>
                     <li className="ml-6">Facilitate an online community of ~8k Discord users, ~9.5k Facebook followers, ~1.9k YouTube subs, and ~7.7k Instagram followers</li>
                   </ul>
-                </p>
+                </div>
               </div>
               <div className="mt-10">
                 Pinned

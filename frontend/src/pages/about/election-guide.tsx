@@ -26,9 +26,11 @@ const ElectionGuidePage = () => {
             to either nominate yourself for a position or be nominated by someone else.
           </p>
 
-          <p className="text-lg my-5">
-            Once nominations are open, you will be able to submit your nomination by 
-            emailing <a href="mailto:copresidents@csesoc.org.au" className="text-blue-500 hover:underline">copresidents@csesoc.org.au</a> with:
+          <div className="text-lg my-5">
+            <p>
+              Once nominations are open, you will be able to submit your nomination by 
+              emailing <a href="mailto:copresidents@csesoc.org.au" className="text-blue-500 hover:underline">copresidents@csesoc.org.au</a> with:
+            </p>
             <ul className="list-disc ml-6">
               <li>Your full name and zID, or the full name and zID of the person you are nominating</li>
               <li>The position you or the person you are nominating is going for</li>
@@ -40,7 +42,7 @@ const ElectionGuidePage = () => {
                 their nomination). Be sure to use a zID email!
               </li>
             </ul>
-          </p>
+          </div>
 
           <p className="text-lg my-5">
             If you're planning on running for multiple positions, then make sure you include your preference 
