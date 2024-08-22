@@ -95,6 +95,15 @@ const Contacts = () => {
           className="mr-1 fill-white hover:scale-105 transition-all"
         />
       </a>
+      <a href="https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VxAQAU" target="_blank">
+        <Image
+          src="assets/arc_logo.svg"
+          alt="Arc Membership Portal"
+          width={35}
+          height={35}
+          className="mr-1 fill-white hover:scale-105 transition-all"
+        />
+      </a>
     </div>
   </div>
   );
