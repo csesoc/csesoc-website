@@ -39,5 +39,10 @@ export const socialLinks: socialInfo[] = [
     href: 'https://www.linkedin.com/company/csesoc?originalSubdomain=au',
     src: '/assets/linkedin_logo.svg',
     alt: 'LinkedIn'
+  },
+  {
+    href: 'https://member.arc.unsw.edu.au/s/clubdetail?clubid=0016F0000371VxAQAU',
+    src: '/assets/arc_logo.svg',
+    alt: 'Arc Membership Portal'
   }
 ];
