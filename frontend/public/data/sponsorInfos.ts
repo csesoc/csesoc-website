@@ -52,6 +52,12 @@ export const goldLinks: sponsorInfo[] = [
     svg: '/assets/safetyculture_logo.svg',
     alt: 'SafetyCulture logo',
     description: "Get to the root cause of workplace trends with total visibility across your organization. Use data from completed inspections, reported incidents, sensors, and asset history to keep workers safe, and prevent things from happening in the first place"
+  },
+  {
+    href: 'https://www.zurich.com.au/',
+    svg: '/assets/zurich_logo.svg',
+    alt: 'Zurich logo',
+    description: "Zurich is one of the world's most experienced insurers whose strategy focuses on providing the right general insurance and life insurance solutions for its clients"
   }
 ];
 
@@ -67,6 +73,12 @@ export const silverLinks: sponsorInfo[] = [
     svg: '/assets/flowtraders_logo.svg',
     alt: 'FlowTraders logo',
     description: "Flow Traders is a proprietary trading firm. A market maker, it provides liquidity in the securities market by using high frequency and quantitative trading strategies",
+  },
+  {
+    href: 'https://www.jds.net.au/',
+    svg: '/assets/jds_logo.svg',
+    alt: 'jds logo',
+    description: "JDS Australia delivers specialist services in a set of technologies and capabilities that ensure critical IT systems work",
   },
   {
     href: 'https://www.macquarie.com.au/',
