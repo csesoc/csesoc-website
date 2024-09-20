@@ -46,6 +46,15 @@ const Navbar = () => {
           <Link href="/contact-us">
             <div className="text-xl">{'//'} contact us</div>
           </Link>
+          <a target="_blank" href="https://csesoc-merch.square.site/" className='flex'>
+            <Image
+              src="/assets/merch-store-icon.svg"
+              alt="Merchandise Store Icon"
+              width={29}
+              height={29}
+              draggable={false}
+            />
+          </a>
         </div>
         <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
           <Hamburger />
