@@ -58,7 +58,7 @@ export default function SponsorsPage() {
                 {['Diamond', 'Gold', 'Silver'].map(category => (
                   <h2
                     key={category}
-                    className={`text-2xl mb-4 cursor-pointer transform transition-transform duration-300 ease-in-out ${
+                    className={`text-3xl font-semibold mb-4 cursor-pointer transform transition-transform duration-300 ease-in-out ${
                       currentCategory === category ? 'text-green-500 scale-110' : 'text-white'
                     } hover:scale-105`}
                     onClick={() => handleCategoryChange(category as 'Diamond' | 'Gold' | 'Silver')}
