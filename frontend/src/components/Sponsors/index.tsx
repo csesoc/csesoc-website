@@ -1,11 +1,27 @@
 import React from 'react';
 import Footer from '@/components/Footer';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const Sponsors = () => {
-  const firstRowBoxesStyling =
-    'xl:p-16 p-10 flex justify-center items-center xl:col-span-3 sm:col-span-5 col-span-10 xl:row-start-1 xl:row-end-2 sm:row-start-3 sm:row-end-4 sm:h-auto h-36';
-  const secondRowBoxesStyling =
-    'xl:p-16 p-10 flex justify-center items-center xl:col-span-3 sm:col-span-5 col-span-10 xl:row-start-2 xl:row-end-3 sm:row-start-4 sm:row-end-5 sm:h-auto h-36';
+  const responsive = {
+    superLargeDesktop: {
+      breakpoint: { max: 4000, min: 1024 },
+      items: 3,
+    },
+    desktop: {
+      breakpoint: { max: 1024, min: 768 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 768, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
   return (
     <section
@@ -15,21 +31,59 @@ const Sponsors = () => {
       <div className="text-center">
         <h2 className="font-bold text-6xl">SUPPORT CSESOC</h2>
       </div>
-      <div className="flex-1 flex justify-center items-center my-20">
+      <div className="flex-1 flex justify-center items-center">
         <div
-          style={{
-            backgroundImage:
-              'radial-gradient(50% 50% at 50% 50%, rgba(235, 1, 255, 0.6) 0%, rgba(121, 73, 255, 0.6) 48.96%, rgba(57, 119, 248, 0.6) 100%)'
-          }}
-          className="overflow-hidden rounded-[4rem] w-[90rem] grid grid-cols-10 xl:grid-row-2 sm:grid-row-5"
+          className="rounded border border-[#595F6D] p-5 h-auto overflow-hidden w-[90rem] flex flex-col gap-8 py-8"
         >
-          <div className="flex flex-col justify-center items-center xl:col-span-4 col-span-10 row-start-1 row-end-3 xl:my-0 my-12">
+          <div className="flex flex-col justify-center items-center">
+              <h2 className="text-center text-4xl font-black">Our sponsors</h2>
+          </div>
+
+          <Carousel
+            responsive={responsive}
+            infinite={true}
+            autoPlay={true}
+            arrows={false}
+            autoPlaySpeed={3000}
+            keyBoardControl={false}
+            transitionDuration={500}
+            pauseOnHover={false}
+            containerClass="carousel-container my-16"
+          >
+            <div className="sponsor-item">
+                <img src="assets/tiktok_logo.svg" alt="TikTok logo" />
+            </div>
+            <div className="sponsor-item">
+                <img src="assets/janestreet_logo.svg" alt="Jane Street logo" />
+            </div>
+            <div className="sponsor-item">
+                <img src="assets/atlassian_logo.svg" alt="Atlassian logo" />
+            </div>
+            <div className="sponsor-item">
+                <img src="assets/citadel_logo.svg" alt="Citadel logo" />
+            </div>
+            <div className="sponsor-item">
+                <img src="assets/imc_logo.svg" alt="IMC logo" />
+            </div>
+            <div className="sponsor-item">
+                <img src="assets/neara_logo.svg" alt="Neara logo" />
+            </div>
+          </Carousel>
+
+          <div className="flex justify-center items-center">
+            <a href="sponsors">
+              <button className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[20rem] xl:h-12 h-10 hover-animate">
+                Learn More
+              </button>
+            </a>
+          </div>
+          {/* <div className="flex flex-col justify-center items-center xl:col-span-4 col-span-10 row-start-1 row-end-3 xl:my-0 my-12">
             <div className="max-w-[15rem]">
-              <h2 className="text-4xl font-black">Our sponsors</h2>
+              <h2 className="text-4xl font-black text-center">Our sponsors</h2>
               <p className="xl:my-10 my-3 text-lg">Check out our very cool sponsors.</p>
               <a href="sponsors">
                 <button className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[100%] xl:h-12 h-10">
-                  View our sponsors
+                  Learn More
                 </button>
               </a>
             </div>
@@ -45,7 +99,7 @@ const Sponsors = () => {
           </div>
           <div className={`${secondRowBoxesStyling} bg-[rgba(122, 137, 236, 0.27)]`}>
             <img src="assets/microsoft_logo.svg" alt="Microsoft logo" />
-          </div>
+          </div> */}
         </div>
       </div>
       <Footer />

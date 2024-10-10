@@ -29,3 +29,18 @@ body {
 .hover-animate:hover {
   transform: scale(1.01);
 }
+
+.sponsor-item {
+  padding: 16px; 
+  margin: 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-item img {
+  width: 24rem; 
+  height: 8rem; 
+  object-fit: contain; 
+  filter: brightness(0) invert(1);
+}
