@@ -77,29 +77,6 @@ const Sponsors = () => {
               </button>
             </a>
           </div>
-          {/* <div className="flex flex-col justify-center items-center xl:col-span-4 col-span-10 row-start-1 row-end-3 xl:my-0 my-12">
-            <div className="max-w-[15rem]">
-              <h2 className="text-4xl font-black text-center">Our sponsors</h2>
-              <p className="xl:my-10 my-3 text-lg">Check out our very cool sponsors.</p>
-              <a href="sponsors">
-                <button className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[100%] xl:h-12 h-10">
-                  Learn More
-                </button>
-              </a>
-            </div>
-          </div>
-          <div className={`${firstRowBoxesStyling} bg-[rgba(0, 71, 255, 0.33)]`}>
-            <img src="assets/atlassian_logo.svg" alt="Atlassian logo" />
-          </div>
-          <div className={`${firstRowBoxesStyling} bg-[rgba(82, 130, 255, 0.47)]`}>
-            <img src="assets/google_logo.svg" alt="Google logo" />
-          </div>
-          <div className={`${secondRowBoxesStyling} bg-[rgba(48, 93, 255, 0.2)]`}>
-            <img src="assets/freelancer_logo.svg" alt="Freelancer logo" />
-          </div>
-          <div className={`${secondRowBoxesStyling} bg-[rgba(122, 137, 236, 0.27)]`}>
-            <img src="assets/microsoft_logo.svg" alt="Microsoft logo" />
-          </div> */}
         </div>
       </div>
       <Footer />
