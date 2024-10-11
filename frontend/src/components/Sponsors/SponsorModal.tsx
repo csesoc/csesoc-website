@@ -15,8 +15,7 @@ export default function SponsorModal(props: { sponsorInfo: sponsorInfo | null; s
         props.setFalse();
       }}
     >
-      
-      <div className="bg-[#3977f8] relative w-[800px] h-[550px] mb-10 mx-10 rounded-xl flex flex-col items-center justify-center">
+      <div className="bg-[#4b5e80] relative w-[800px] h-[550px] mb-10 mx-10 rounded-xl flex flex-col items-center justify-center">
         <a
           className="w-4/5 m-10 flex flex-col items-center justify-center transform transition-transform duration-300 hover:scale-105"
           href={props.sponsorInfo.href}
