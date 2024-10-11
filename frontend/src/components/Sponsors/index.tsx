@@ -28,7 +28,7 @@ const Sponsors = () => {
               <h2 className="text-4xl font-black">Our sponsors</h2>
               <p className="xl:my-10 my-3 text-lg">Check out our very cool sponsors.</p>
               <a href="sponsors">
-                <button className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[100%] xl:h-12 h-10">
+                <button className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[100%] xl:h-12 h-10 hover-animate">
                   View our sponsors
                 </button>
               </a>
