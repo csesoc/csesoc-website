@@ -14,7 +14,7 @@ export default function AboutHomePage() {
                   <Image src="/assets/csesoc_icon.svg" alt="CSESoc Icon" width={150} height={150} />
                 </div>
                 <h2 className="text-3xl font-extrabold">CSESoc</h2>
-                <button className="bg-[#444F6F] w-full my-5 py-2 rounded hover-animate">Follow</button>
+                <button className="bg-[#444F6F] w-full my-5 py-2 rounded">Follow</button>
               </div>
               {/* RIGHT SIDE */}
               <div className="col-span-4 lg:mt-0 mt-10">
