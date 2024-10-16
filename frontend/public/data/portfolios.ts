@@ -13,7 +13,7 @@ export type PortfolioMember = {
 export enum PortfolioRole {
     DIRECTOR = "Director",
     SUBCOM = "Subcommittee",
-};
+}
 
 export const PORTFOLIOS: PortfolioData[] = [
     {
