@@ -86,13 +86,6 @@ export const silverLinks: sponsorInfo[] = [
     href: 'https://www.jds.net.au/',
     svg: '/assets/jds_logo.svg',
     alt: 'jds logo',
-    description:
-      'JDS Australia delivers specialist services in a set of technologies and capabilities that ensure critical IT systems work'
-  },
-  {
-    href: 'https://www.jds.net.au/',
-    svg: '/assets/jds_logo.svg',
-    alt: 'jds logo',
     description: "JDS Australia delivers specialist services in a set of technologies and capabilities that ensure critical IT systems work",
   },
   {

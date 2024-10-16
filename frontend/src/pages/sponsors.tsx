@@ -46,7 +46,7 @@ export default function SponsorsPage() {
                 }}
               />
             )}
-            <div className="flex flex-wrap rounded-[1rem] px-14 py-10 gap-16 justify-center rounded border border-[#595F6D] my-10">
+            <div className="flex flex-wrap rounded-[1rem] px-14 py-10 mb-14 gap-16 justify-center rounded border-2 border-[#595F6D] my-10">
               {diamondLinks.map((item, index) => {
                 return (
                   <div
@@ -65,7 +65,7 @@ export default function SponsorsPage() {
         </div>
         <h2 className="text-4xl font-black text-center font-bold">Gold Sponsors</h2>
         <div>
-          <div className="flex flex-wrap rounded-[1rem] px-14 py-10 gap-16 justify-evenly rounded border border-[#595F6D] my-10">
+          <div className="flex flex-wrap rounded-[1rem] px-14 py-10 mb-14 gap-16 justify-evenly rounded border-2 border-[#595F6D] my-10">
             {goldLinks.map((item, index) => {
               return (
                 <div
@@ -83,7 +83,7 @@ export default function SponsorsPage() {
         </div>
         <h2 className="text-4xl font-black text-center font-bold">Silver Sponsors</h2>
         <div>
-          <div className="flex flex-wrap rounded-[1rem] px-14 py-10 gap-16 justify-evenly rounded border border-[#595F6D] mt-10">
+          <div className="flex flex-wrap rounded-[1rem] px-14 py-10 mb-14 gap-16 justify-evenly rounded border-2 border-[#595F6D] mt-10">
             {silverLinks.map((item, index) => {
               return (
                 <div
