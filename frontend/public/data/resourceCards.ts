@@ -39,7 +39,7 @@ export const stage2: resourceCards[] = [
     svg: '/assets/freerooms_logo.svg',
     alt: 'Freerooms',
     title: 'Freerooms',
-    desc: 'A place where CSESoc students can look for relevant job opportunities.',
+    desc: 'A tool for browsing rooms and timetable schedules on campus.',
     width: 70,
     height: 70
   },
