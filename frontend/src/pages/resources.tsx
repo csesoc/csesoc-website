@@ -16,7 +16,9 @@ export default function ResourcesPage() {
           <div className="relative">
             <Image src="assets/resources_bg.svg" alt="Background" className="-z-50 absolute" fill />
 
-            <div className="flex">
+            <div
+              className={`flex grow-on-hover transform transition-transform duration-300 hover:scale-105`}
+            >
               <span className="text-lg">Made by</span>
               <Image
                 src="/assets/csesoc_logo.svg"

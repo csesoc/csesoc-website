@@ -12,7 +12,7 @@ export type resourceCards = {
 export const stage1: resourceCards[] = [
   {
     id: 's1-1',
-    href: 'https://circles.csesoc.app/course-selector',
+    href: 'https://circles.devsoc.app/',
     svg: '/assets/circles_logo.svg',
     alt: 'Circles',
     title: 'Circles',
@@ -35,17 +35,17 @@ export const stage2: resourceCards[] = [
   },
   {
     id: 's2-2',
-    href: 'https://jobsboard.csesoc.unsw.edu.au/',
-    svg: '/assets/jobsboard_logo.svg',
-    alt: 'JobsBoard',
-    title: 'Jobs Board',
+    href: 'https://freerooms.devsoc.app/',
+    svg: '/assets/freerooms_logo.svg',
+    alt: 'Freerooms',
+    title: 'Freerooms',
     desc: 'A place where CSESoc students can look for relevant job opportunities.',
-    width: 60,
-    height: 60
+    width: 70,
+    height: 70
   },
   {
     id: 's2-3',
-    href: 'https://notangles.csesoc.app/',
+    href: 'https://notangles.devsoc.app/',
     svg: '/assets/notangles_logo.svg',
     alt: 'Notangles',
     title: 'Notangles',
@@ -55,13 +55,13 @@ export const stage2: resourceCards[] = [
   },
   {
     id: 's2-4',
-    href: 'https://unilectives.csesoc.app/',
+    href: 'https://unilectives.devsoc.app/',
     svg: '/assets/unilectives_logo.svg',
-    alt: 'Uni-lectives',
-    title: 'Uni-lectives',
+    alt: 'unilectives',
+    title: 'unilectives',
     desc: 'Read course electives to help you pick your electives or even write your own!',
-    width: 80,
-    height: 80
+    width: 70,
+    height: 70
   }
 ];
 
