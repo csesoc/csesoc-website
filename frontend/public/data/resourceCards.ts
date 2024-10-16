@@ -59,7 +59,7 @@ export const stage2: resourceCards[] = [
     svg: '/assets/unilectives_logo.svg',
     alt: 'unilectives',
     title: 'unilectives',
-    desc: 'Read course electives to help you pick your electives or even write your own!',
+    desc: 'Read course reviews to help you pick your electives or even write your own!',
     width: 70,
     height: 70
   }
