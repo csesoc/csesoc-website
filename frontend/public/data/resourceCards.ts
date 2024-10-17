@@ -57,8 +57,8 @@ export const stage2: resourceCards[] = [
     id: 's2-4',
     href: 'https://unilectives.devsoc.app/',
     svg: '/assets/unilectives_logo.svg',
-    alt: 'unilectives',
-    title: 'unilectives',
+    alt: 'Unilectives',
+    title: 'Unilectives',
     desc: 'Read course reviews to help you pick your electives or even write your own!',
     width: 70,
     height: 70
