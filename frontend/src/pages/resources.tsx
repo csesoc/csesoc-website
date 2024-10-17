@@ -23,7 +23,7 @@ export default function ResourcesPage() {
                 alt="CSESoc Logo"
                 width={100}
                 height={100}
-                className="pl-2"
+                className="pl-2 transform transition-transform duration-300 hover:scale-105"
               />
             </div>
 
@@ -58,16 +58,14 @@ export default function ResourcesPage() {
             </div>
 
             <a href="https://devsoc.app/" target="_blank" rel="noopener noreferrer">
-              <div
-                className={`flex grow-on-hover cursor-pointer transform transition-transform duration-300 hover:scale-105`}
-              >
+              <div className="flex">
                 <span className="text-lg">Made by</span>
                 <Image
                   src="/assets/devsoc_logo.svg"
                   alt="DevSoc Logo"
                   width={110}
                   height={110}
-                  className="pl-1"
+                  className="pl-1 transform transition-transform duration-300 hover:scale-105"
                 />
               </div>
             </a>

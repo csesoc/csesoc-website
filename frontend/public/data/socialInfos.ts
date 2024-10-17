@@ -32,7 +32,7 @@ export const socialLinks: socialInfo[] = [
   },
   {
     href: 'https://www.tiktok.com/@csesoc?lang=en',
-    src: '/assets/tiktok_logo_footer.svg',
+    src: '/assets/tiktok_logo_no_text.svg',
     alt: 'TikTok'
   },
   {

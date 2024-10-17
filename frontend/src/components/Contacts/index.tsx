@@ -79,7 +79,7 @@ const Contacts = () => {
       </a>
       <a href="https://www.tiktok.com/@csesoc?lang=en" target="_blank">
         <Image
-          src="assets/tiktok_logo.svg"
+          src="assets/tiktok_logo_no_text.svg"
           alt="TikTok"
           width={35}
           height={35}
