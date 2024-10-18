@@ -16,7 +16,7 @@ const ExecsDirectorsSubcommitteesPage = () => {
             Execs are elected annually by CSE students at the end of the preceding year and Directors are selected by Execs.
           </p>
           <p className="text-xl my-5">
-            The CSESoc Executive and Director team for 2024 is:
+            The CSESoc Executive and Director team for 2024:
           </p>
           <div className="flex justify-center items-center">
             <img src="/images/csesoc-team-2024.jpeg" alt="CSESoc Team 2024" width={700} height={700} />
@@ -45,7 +45,7 @@ const ExecsDirectorsSubcommitteesPage = () => {
           <div>
             <h2 className="text-xl font-semibold mb-2">Directors & Subcommitees</h2>
             <p className="text-lg">
-              Subcommittees are the teams led by Directors that run CSESoc and its events to the benefit of all UNSW Computing students. Click to see the members of each!
+              Subcommittees are the teams led by Directors that run CSESoc and its events to the benefit of all UNSW Computing students. Click to see the directors of each team!
             </p>
           </div>
 

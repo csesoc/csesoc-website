@@ -81,7 +81,7 @@ export const PORTFOLIOS: PortfolioData[] = [
     },
     {
         name: "Education",
-        description: "Teaches interesting technical skills to the community, whether that's through workshops, articles or programs.",
+        description: "Teaches interesting technical skills to the community, whether that's through workshops, articles, or programs.",
         members: [
             {
                 name: "Alina Jin",
@@ -102,7 +102,7 @@ export const PORTFOLIOS: PortfolioData[] = [
     },
     {
         name: "Events",
-        description: "Plan a diverse range of large-scale activities while focusing on creating an enjoyable and fun experiences for all participants!",
+        description: "Plans a diverse range of large-scale activities while focusing on creating an enjoyable and fun experiences for all participants!",
         members: [
             {
                 name: "Emma Nguyen",
@@ -144,7 +144,7 @@ export const PORTFOLIOS: PortfolioData[] = [
     },
     {
         name: "IT",
-        description: "Oversees the development of the CSESoc's internal projects and infrastructure. Plays an active role in the technical aspects of our society.",
+        description: "Oversees the development of the CSESoc's internal projects and plays an active role in the technical aspects of our society.",
         members: [
             {
                 name: "Derek Xu",
@@ -160,7 +160,7 @@ export const PORTFOLIOS: PortfolioData[] = [
     },
     {
         name: "Marketing",
-        description: "Promotes CSESoc on our social media as well as create supplementary marketing material to engage our audience.",
+        description: "Promotes CSESoc on our social media as well as creating supplementary marketing material to engage our audience.",
         members: [
             {
                 name: "Aaron Lee",
@@ -202,7 +202,7 @@ export const PORTFOLIOS: PortfolioData[] = [
     },
     {
         name: "Online",
-        description: "Expands CSESoc's vibrant community into the virtual world. Includes running events online and managing our online spaces to make sure everyone feels welcomed in our community.",
+        description: "Expands CSESoc's vibrant community into the virtual world, running online events and managing our online spaces to make sure everyone feels welcomed in our community.",
         members: [
             {
                 name: "Amy Tian",
