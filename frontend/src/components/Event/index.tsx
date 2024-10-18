@@ -11,10 +11,10 @@ const Event = () => {
           listings, check out the CSESoc Discord or our Facebook page!
         </p>
         <a href="events">
-                <button className="mt-10 bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[60%] xl:h-12 h-10 hover-animate">
-                  See all events
-                </button>
-              </a>
+          <button className="mt-10 bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[60%] xl:h-12 h-10 hover-animate">
+            See all events
+          </button>
+        </a>
         </div>
         <div className="bg-blue-500 w-4/5 h-96 ml-80">Placeholder</div>
       </div>

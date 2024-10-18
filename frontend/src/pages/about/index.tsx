@@ -26,8 +26,8 @@ export default function AboutPage() {
               <div className="my-4 flex gap-5">
                 <Image src="/assets/people_icon.svg" alt="People" width={20} height={20} />
                 <div>
-                  432 <span className="text-[#727B8C]">members</span> · 342{' '}
-                  <span className="text-[#727B8C]">subcom</span>
+                  16k <span className="text-[#727B8C]">members</span> · 146{' '}
+                  <span className="text-[#727B8C]">internal members</span>
                 </div>
               </div>
               <div className="my-4 flex gap-5">
@@ -49,7 +49,7 @@ export default function AboutPage() {
                   <p>
                     CSESoc is the official representative body of computing students at UNSW. We are one of the 
                     largest and most active societies at UNSW, and the largest computing society in the southern hemisphere. 
-                    CSESoc comprises ~10k members spanning across degrees in Computer Science, Software Engineering, 
+                    CSESoc comprises over 16k members spanning across various degrees including Computer Science, Software Engineering, 
                     Bioinformatics and Computer Engineering. We are here to fulfil the social, personal and professional 
                     needs of CSE students, and promote computing through a variety of forms.
                   </p>
