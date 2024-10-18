@@ -17,7 +17,7 @@ export default function AboutPage() {
               </div>
               <h2 className="mt-10 text-3xl font-extrabold">CSESoc</h2>
               <p className="text-[#727B8C] font-medium">unsw-computer-science-engineering-society</p>
-              <a href="https://www.facebook.com/csesoc/" target="_blank">
+              <a href="https://github.com/csesoc/" target="_blank">
                 <button className="bg-[#444F6F] w-full my-5 py-2 rounded hover-animate">Follow</button>
               </a>
               <p>

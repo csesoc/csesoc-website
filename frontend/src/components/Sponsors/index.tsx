@@ -1,50 +1,27 @@
 import React from 'react';
 import Footer from '@/components/Footer';
+import SponsorCarousel from './SponsorCarousel';
 
 const Sponsors = () => {
-  const firstRowBoxesStyling =
-    'xl:p-16 p-10 flex justify-center items-center xl:col-span-3 sm:col-span-5 col-span-10 xl:row-start-1 xl:row-end-2 sm:row-start-3 sm:row-end-4 sm:h-auto h-36';
-  const secondRowBoxesStyling =
-    'xl:p-16 p-10 flex justify-center items-center xl:col-span-3 sm:col-span-5 col-span-10 xl:row-start-2 xl:row-end-3 sm:row-start-4 sm:row-end-5 sm:h-auto h-36';
-
   return (
     <section
       className="flex flex-col min-h-screen py-8 xl:px-24 sm:px-10 px-8 relative mt-20"
       id="sponsors"
     >
       <div className="text-center">
-        <h2 className="font-bold text-6xl">SUPPORT CSESOC</h2>
+        <h2 className="font-bold text-6xl">OUR SPONSORS</h2>
       </div>
-      <div className="flex-1 flex justify-center items-center my-20">
+      <div className="flex-1 flex justify-center items-center my-15">
         <div
-          style={{
-            backgroundImage:
-              'radial-gradient(50% 50% at 50% 50%, rgba(235, 1, 255, 0.6) 0%, rgba(121, 73, 255, 0.6) 48.96%, rgba(57, 119, 248, 0.6) 100%)'
-          }}
-          className="overflow-hidden rounded-[4rem] w-[90rem] grid grid-cols-10 xl:grid-row-2 sm:grid-row-5"
+          className="rounded border border-[#595F6D] h-auto overflow-hidden w-[90rem] flex flex-col gap-8 py-8"
         >
-          <div className="flex flex-col justify-center items-center xl:col-span-4 col-span-10 row-start-1 row-end-3 xl:my-0 my-12">
-            <div className="max-w-[15rem]">
-              <h2 className="text-4xl font-black">Our sponsors</h2>
-              <p className="xl:my-10 my-3 text-lg">Check out our very cool sponsors.</p>
-              <a href="sponsors">
-                <button className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[100%] xl:h-12 h-10 hover-animate">
-                  View our sponsors
-                </button>
-              </a>
-            </div>
-          </div>
-          <div className={`${firstRowBoxesStyling} bg-[rgba(0, 71, 255, 0.33)]`}>
-            <img src="assets/atlassian_logo.svg" alt="Atlassian logo" />
-          </div>
-          <div className={`${firstRowBoxesStyling} bg-[rgba(82, 130, 255, 0.47)]`}>
-            <img src="assets/google_logo.svg" alt="Google logo" />
-          </div>
-          <div className={`${secondRowBoxesStyling} bg-[rgba(48, 93, 255, 0.2)]`}>
-            <img src="assets/freelancer_logo.svg" alt="Freelancer logo" />
-          </div>
-          <div className={`${secondRowBoxesStyling} bg-[rgba(122, 137, 236, 0.27)]`}>
-            <img src="assets/microsoft_logo.svg" alt="Microsoft logo" />
+          <SponsorCarousel />
+          <div className="flex justify-center items-center">
+            <a href="sponsors">
+              <button className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[20rem] xl:h-12 h-10 hover-animate">
+                Learn More
+              </button>
+            </a>
           </div>
         </div>
       </div>
