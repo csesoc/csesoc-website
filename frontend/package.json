@@ -22,6 +22,7 @@
     "eslint-config-next": "13.4.19",
     "framer-motion": "^11.2.13",
     "next": "13.4.12",
+    "next-emoji-rain": "^1.0.2",
     "postcss": "8.4.29",
     "react": "18.2.0",
     "react-dom": "18.2.0",

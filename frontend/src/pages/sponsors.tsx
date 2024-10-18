@@ -2,6 +2,7 @@ import Layout from '@/components/Layout';
 import { useState } from 'react';
 import { diamondLinks, goldLinks, silverLinks, sponsorInfo } from '@/../public/data/sponsorInfos';
 import SponsorModal from '@/components/Sponsors/SponsorModal';
+import { EmojiRain } from 'next-emoji-rain';
 
 export default function SponsorsPage() {
   const logostyle =
@@ -15,10 +16,27 @@ export default function SponsorsPage() {
     setShowModal(true);
   };
 
+  const handleRainClick = (type: string) => {
+    const rainElement = document.getElementById(`${type}Rain`);
+
+    if (!rainElement) return;
+
+    rainElement.classList.toggle('opacity-0', false);
+    setTimeout(() => {
+      rainElement.classList.toggle('opacity-0', true);
+    }, 4000);
+  };
+
   return (
     <Layout>
+      <div id="diamondRain" className="opacity-0">
+        <EmojiRain emoji="💎" />
+      </div>
+      <div id="goldRain" className="opacity-0">
+        <EmojiRain emoji="🪙" />
+      </div>
       <section className="py-8">
-        <h2 className="text-4xl font-black text-center font-bold">DIAMOND SPONSORS</h2>
+        <h2 className="text-4xl font-black text-center font-bold" onClick={() => handleRainClick('diamond')}>DIAMOND SPONSORS</h2>
         <div>
           <div className="w-100 flex flex-col gap-16">
             {showModal && (
@@ -38,7 +56,7 @@ export default function SponsorsPage() {
             </div>
           </div>
         </div>
-        <h2 className="text-4xl font-black text-center font-bold">GOLD SPONSORS</h2>
+        <h2 className="text-4xl font-black text-center font-bold" onClick={() => handleRainClick('gold')}>GOLD SPONSORS</h2>
         <div>
           <div className="flex flex-wrap rounded-[1rem] px-14 py-10 mb-14 gap-16 justify-evenly rounded border-2 border-[#595F6D] my-10">
             {goldLinks.map((item, index) => {
