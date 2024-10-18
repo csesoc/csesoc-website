@@ -5,8 +5,8 @@
     // "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"]
-  // "rules": {
+  "plugins": ["@typescript-eslint"],
+  "rules": {
     // "prettier/prettier": ["error", { "endOfLine": "auto" }]
-  // }
+  }
 }

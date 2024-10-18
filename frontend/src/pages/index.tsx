@@ -1,16 +1,14 @@
 import Landing from '@/components/Landing';
 import Sponsors from '@/components/Sponsors/index';
-import About from '@/components/About';
 import Event from '@/components/Event';
-import ResourcesAndContacts from '@/components/ResourcesAndContacts';
+import AboutHomePage from '@/components/About/AboutHomepage';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <section>
       <Landing />
-      <About />
+      <AboutHomePage />
       <Event />
-      <ResourcesAndContacts />
       <Sponsors />
     </section>
   );

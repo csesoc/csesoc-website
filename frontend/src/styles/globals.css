@@ -11,3 +11,21 @@ body {
   background: #000031;
   font-family: 'Raleway', sans-serif;
 }
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.hover-animate {
+  transition: transform 0.3s ease;
+}
+
+.hover-animate:hover {
+  transform: scale(1.03);
+}
