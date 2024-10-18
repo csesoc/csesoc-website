@@ -41,7 +41,7 @@ const Event = () => {
         </div>
       }
       <div className="flex items-center justify-start mt-10">
-        <p className="text-4xl font-bold pb-10">
+        <p className="text-4xl font-bold">
           Previous events
         </p>
       </div>

@@ -7,8 +7,8 @@ const EventGallery = () => {
     <div className="flex flex-wrap px-14 py-10 mb-14 gap-16 justify-center my-10">
       {previousEvents.map((event, index) => {
         return (
-          <div>
-            <div key={index} className="w-full h-40 text-center">
+          <div key={index}>
+            <div className="w-full h-40 text-center">
               <a href={event.link} target="_blank" rel="noopener noreferrer" className="relative block w-full h-64 group transition-opacity duration-3000">
                 <img
                   src={event.image}
