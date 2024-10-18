@@ -12,7 +12,7 @@ const PortfolioDisplay = () => {
       <div className="flex justify-between max-w-full h-10 my-6 snap-x snap-mandatory overflow-auto hide-scrollbar">
         {names.map((name) => (
           <button 
-            className={`grow text-center border border-white ${name === selectedPortfolio ? "bg-blue-400" : "bg-blue-700"} p-2`} 
+            className={`grow text-center border border-white ${name === selectedPortfolio ? "bg-[#3977F9]" : ""} p-2`} 
             key={`btn-${name}`}
             onClick={() => setSelectedPortfolio(name)}
           >
