@@ -11,22 +11,70 @@ export type eventInfo = {
 
 export const events: eventInfo[] = [
   {
-    title: 'Rookie Code Rumble - Capture The Flag (CTF) Competition',
-    startTime: 'Wednesday, 19 June 2024 16:00:00',
-    endTime: '23:45 22 June 2024',
-    location: 'Columbo Theatre A, UNSW',
-    description: 'Want to learn how to hack the mainframe❓ Want to explore security❓ Join us for the Rookie Code Rumble Capture The Flag on June 19th‼️ 🚀\nWin prizes from a $450 Prize Pool🏆 Teams of up to 3 allowed. Beginners welcomed, no prior experience required and students who haven\'t done security courses are especially welcomed.',
-    image: 'https://scontent.fsyd14-1.fna.fbcdn.net/v/t39.30808-6/448249337_964318925477719_4689171588021736660_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=ORdXB7beljwQ7kNvgGK3EgT&_nc_zt=23&_nc_ht=scontent.fsyd14-1.fna&_nc_gid=AJPQZFI3KDjqlUXpEXj0g4n&oh=00_AYCqsRE9By_qBvBJ5bRLKnci9t6gSiHUGfmIkSQS4WG2LA&oe=67135575',
-    link: 'https://www.facebook.com/events/427443166914907',
+    title: 'CSESoc Hoodie General Release 2024',
+    startTime: 'Monday, 7 Oct 2024 12:00:00',
+    endTime: 'Friday, 18 Oct 2024 23:59:59',
+    location: 'Online',
+    description: 'After much anticipated wait 🤩, from your design submissions and personal input, our 2024 CSESoc Shell hoodies are now available for order! 🥳',
+    image: 'https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/462221120_1045429977366613_3924200758993686299_n.jpg?stp=dst-jpg_s960x960&_nc_cat=107&ccb=1-7&_nc_sid=75d36f&_nc_ohc=tt-N_Bd5fd4Q7kNvgFdY5yk&_nc_zt=23&_nc_ht=scontent.fsyd11-2.fna&_nc_gid=AG_QiCaGBWyXh0lwZdZZ73k&oh=00_AYD8zSJw_LFOHaIG7oOFtws9uIbXrCyRwIS0IZkh6ipInQ&oe=67182124',
+    link: 'https://www.facebook.com/events/858016553106187',
   },
   {
-    title: 'Open Dev Workshop 1',
-    startTime: 'Thursday, 13 June 2024 14:00:00',
-    endTime: 'Thursday, 13 June 2024 16:00:00',
-    location: 'Civil Engineering Building 102, UNSW',
-    description: 'Feeling the FOMO to start your own side projects😖?? But don\'t know where or how to start??🧐 We have the solution for you: Open Dev Workshop!! 💻\nOpen Dev Workshop is an introductory workshop focusing on HTML/CSS and Javascript. With no prior knowledge required, bring your laptop and an eagerness to learn.❤️‍🔥\nDon\'t miss out on this exciting opportunity and let\'s turn your ideas into reality, one line at a time!! 🔥',
-    image: 'https://scontent.fsyd14-1.fna.fbcdn.net/v/t39.30808-6/446935726_959621305947481_1708375961476055751_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=75d36f&_nc_ohc=Y8wgeRzW8DkQ7kNvgEllCg0&_nc_zt=23&_nc_ht=scontent.fsyd14-1.fna&_nc_gid=AemXrjsPaAsS0Jo7t3wNPst&oh=00_AYCFB70t_M0h8epdZ7UKq8LVWL4vqtGIkSC9kGUes1ssvQ&oe=671377D6',
-    link: 'https://www.facebook.com/events/1020624239688532',
+    title: 'HUMANS OF CSE OCTOBER ARTICLE - TRANSFERRING DEGREES',
+    startTime: 'Monday, 14 Oct 2024, 20:00:00',
+    endTime: 'Monday, 21 Oct 2024, 23:00:00',
+    location: 'Online',
+    description: 'Come along with us in this month\'s article 🌎, as we follow the journey of CSE students who made the switch to these degrees! 🔄 We explore how they decided to transfer 📜 , what challenges there were getting started, and all the exciting things they\'re up to now! 🚀',
+    image: 'https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/463321890_1051317113444566_587573735370794997_n.jpg?stp=dst-jpg_s960x960&_nc_cat=103&ccb=1-7&_nc_sid=75d36f&_nc_ohc=5o-MEkKeoecQ7kNvgEVDfXP&_nc_zt=23&_nc_ht=scontent.fsyd11-2.fna&_nc_gid=Ama2uSCPexSL8fx4vEvJSzh&oh=00_AYAwBP-EHTZUai43wHVQQZ7JRVGuZ4RdOih_C9ocLR1tqw&oe=67182C1D',
+    link: 'https://www.facebook.com/events/544877388231818/'
+  },
+  {
+    title: 'Meet the Arista Warriors - BBQ And Talk',
+    startTime: 'Wednesday, 23 Oct 2024, 12:00:00',
+    endTime: 'Wednesday, 23 Oct 2024, 16:00:00',
+    location: 'John Lions Garden, UNSW',
+    description: "Ready to meet the creators of the fastest switches in the world? ⚡ Join us for an interactive talk with the Arista Warriors! 👥 Get a behind-the-scenes look at their network switches 🖥️, learn how their advanced software drives the performance 💻, and meet the talented teams that make it all happen 👨‍💻!",
+    image: 'https://scontent.fsyd11-1.fna.fbcdn.net/v/t39.30808-6/463219819_1051611690081775_3133232766646231661_n.jpg?stp=dst-jpg_s960x960&_nc_cat=110&ccb=1-7&_nc_sid=75d36f&_nc_ohc=DmRNYX-_AtQQ7kNvgFnwOCH&_nc_zt=23&_nc_ht=scontent.fsyd11-1.fna&_nc_gid=AqkzDMqF36HWZbR7hgWA7AK&oh=00_AYDepVjHbmg5wNZvnIh92P49ESA1i-MyUSBA7G09lSQd-g&oe=67181093',
+    link: 'https://www.facebook.com/events/1739162536859227/'
+  },
+  {
+    title: 'Nostalgia Night',
+    startTime: 'Wednesday, 23 Oct 2024, 17:00:00',
+    endTime: 'Wednesday, 23 Oct 2024, 19:00:00',
+    location: 'Design Next Studio, Level 5, J17, UNSW',
+    description: 'Feeling trapped in the endless cycle of assignments and uni commitments? 📚😓 Longing for simpler times when your biggest worry was whether you should watch Giggle and Hoot or make loom bands with your sibling? 📺🍭 Well, dust off your Pokémon cards and polish those yo-yos, because CSESoc is about to send you back to the past with NOSTALGIA NIGHT! 🚀⏰',
+    image: 'https://scontent.fsyd11-1.fna.fbcdn.net/v/t39.30808-6/462701368_1048050000437944_2801863201980347260_n.jpg?stp=dst-jpg_s960x960&_nc_cat=104&ccb=1-7&_nc_sid=75d36f&_nc_ohc=m4Sy0L-V9i8Q7kNvgGYoF5X&_nc_zt=23&_nc_ht=scontent.fsyd11-1.fna&_nc_gid=A2nTAu82YR1NE7-13Zxaw3n&oh=00_AYAk4v2MHtB9pFASHYQe2wnY153oxVDZ8qaI_my6JMPL0Q&oe=671828EA',
+    link: 'https://www.facebook.com/events/1244647416584933/',
+  },
+  {
+    title: 'CSESoc x EngSoc: Hallo-Wasted',
+    startTime: 'Friday, 1 Nov 2024, 19:00:00',
+    endTime: 'Friday, 1 Nov 2024, 23:00:00',
+    location: 'Scruffy Murphy\'s',
+    description: 'Fear no more — or even more 🫣, as CSESoc and EngSoc invites you to crawl out 🐺🕷️ from your study dungeons for the most nerve-wrecking night you won’t forget — at the Hallo-Wasted Party! 🍾🙀',
+    image: 'https://scontent.fsyd11-1.fna.fbcdn.net/v/t39.30808-6/462393945_1046485953927682_3594406987464705203_n.jpg?stp=dst-jpg_s960x960&_nc_cat=104&ccb=1-7&_nc_sid=75d36f&_nc_ohc=TlCztpaxbygQ7kNvgG9Iqn6&_nc_zt=23&_nc_ht=scontent.fsyd11-1.fna&_nc_gid=AYwaFSvxbBBT3KlbgOVDc1U&oh=00_AYC6aVx3Qlo-fxE8spGoEIAHE6rkAcguZivNCYKLy-d3hQ&oe=67182060',
+    link: 'https://www.facebook.com/events/903031551735450/',
+  }
+];
+
+export const previousEvents: eventInfo[] = [
+  {
+    title: "Tech n' Tonic",
+    startTime: 'Monday, 14 Oct 2024 18:00:00',
+    endTime: 'Monday, 14 Oct 2024 20:00:00',
+    location: 'Hilton Hotel Sydney George St',
+    description: "Starry skies ✨ and business ties 👔 - are you ready for an evening of cocktails and connections at Tech 'n Tonic?",
+    image: 'https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/462109432_1042899677619643_4447945625462875474_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=75d36f&_nc_ohc=LldgnyrrPzoQ7kNvgEkT9rZ&_nc_zt=23&_nc_ht=scontent.fsyd11-2.fna&_nc_gid=A4abttUIAM0znnZ5DhCSuH6&oh=00_AYCoja001nrw11TBm65CTUy7YeC7qUDzLQWZvPb8pAGXLw&oe=6718235B',
+    link: 'https://www.facebook.com/events/1078496197200589/'
+  },
+  {
+    title: "CSESoc Director Recruitment 2025",
+    startTime: 'Wednesday, 9 Oct 2024 23:00:00',
+    endTime: 'Wednesday, 16 Oct 2024 23:59:59',
+    location: 'Online',
+    description: 'OUR DIRECTOR RECRUITMENT APPLICATIONS HAVE OPENED 📝 📭',
+    image: 'https://scontent.fsyd11-1.fna.fbcdn.net/v/t39.30808-6/462491605_1047315693844708_8503531889535504643_n.jpg?stp=dst-jpg_s960x960&_nc_cat=106&ccb=1-7&_nc_sid=75d36f&_nc_ohc=lREBeWLY_uEQ7kNvgGzvZGT&_nc_zt=23&_nc_ht=scontent.fsyd11-1.fna&_nc_gid=AMGGaNEtlriGsleeiuMvJrs&oh=00_AYAeOSpSszxjzFvQsoLcT72TDooiJ27Ec9X-hhOU0RAnaA&oe=67183209',
+    link: 'https://www.facebook.com/events/882759546829988/'
   },
   {
     title: '2024 FMAA STEM Alternative Pathways Evening',
@@ -45,44 +93,5 @@ export const events: eventInfo[] = [
     description: 'Looking for a creative way to celebrate diversity?🤔🌟 Come along for an afternoon of fun where you’ll get to design and decorate your own gift box 🎁 filled with cultural sweets from around the world!🌏 Try new flavours and treats as you craft your masterpiece for a friend, family member or yourself 😋',
     image: 'https://scontent.fsyd14-1.fna.fbcdn.net/v/t39.30808-6/461677000_1040949901147954_3024711492723797720_n.jpg?stp=dst-jpg_s960x960&_nc_cat=100&ccb=1-7&_nc_sid=75d36f&_nc_ohc=zY_RqNGeg50Q7kNvgH4izQ8&_nc_zt=23&_nc_ht=scontent.fsyd14-1.fna&_nc_gid=AEzNe6W68jyyD37bJY9us2s&oh=00_AYAwuI1WXfZjhpeWSbHT1clhl05xVZdo0E-3nMCXo-Ndkw&oe=67139F71',
     link: 'https://www.facebook.com/events/9261495757199727',
-  }
-];
-
-export const previousEvents: eventInfo[] = [
-  {
-    title: 'COMP1521 Revision Session',
-    startTime: 'Wednesday, 31 July 2024 16:00:00',
-    endTime: 'Wednesday, 31 July 2024 18:00:00',
-    location: 'UNSW Colombo Theatre B',
-    description: 'PSST 🤫 Think a pipe is what Mario goes down? ⬇️ Still think threads are for clothes? 🪡 Whether you’re seven weeks behind (😣) on lectures 👩‍🏫, or super on top of it (🤯), get ready to BYTE 👾 into a world of MIPS and files and numbers 📣 at our COMP1521 Revision Session to learn and/or reinforce your knowledge from the beginning to the end 🏁💪🏻🧠 Make no MIPStake, with bits of free food for you to byte into 🤤 our 1521 Revision Session is just for you ‼️',
-    image: 'https://scontent.fsyd14-1.fna.fbcdn.net/v/t39.30808-6/452409402_989988656244079_1650487011875279290_n.jpg?stp=dst-jpg_s960x960&_nc_cat=111&ccb=1-7&_nc_sid=75d36f&_nc_ohc=ht74Cur7JP4Q7kNvgGspvAQ&_nc_zt=23&_nc_ht=scontent.fsyd14-1.fna&_nc_gid=APUh-KsjJ_dRpSnbr0TYkXd&oh=00_AYAu-LeWj1k53uhaQe6BMnCdQiDRUmguc0R4gt93VnxsRA&oe=6713A488',
-    link: 'https://www.facebook.com/events/1911189126010096',
-  },
-  {
-    title: 'IMC Coding Competition',
-    startTime: 'Wednesday, 13 March 2024 15:00:00',
-    endTime: 'Wednesday, 13 March 2024 18:00:00',
-    location: 'Mathews Theatre B, UNSW',
-    description: 'Get those fingers 👐moving, as you’ll need to team up in groups of 3️⃣to be able to face 🗣️some of the problems thrown your way.To reward your diligence, you’ll be able to grab a free BYTE as finger food is provided 😈 Gaining coding experience and free food, what else could someone even ask for??? 😣',
-    image: 'https://scontent.fsyd14-1.fna.fbcdn.net/v/t39.30808-6/429779953_899425045300441_8341318489109234227_n.jpg?stp=dst-jpg_s960x960&_nc_cat=108&ccb=1-7&_nc_sid=75d36f&_nc_ohc=GY9LwEPT93gQ7kNvgHltEQe&_nc_zt=23&_nc_ht=scontent.fsyd14-1.fna&_nc_gid=APnYFltr29MYoFJQyVlY7HF&oh=00_AYBAaye3BXFt34mnbEi4ERpy1XmUYCTEbpzSqL1xa_xLsA&oe=6713AF65',
-    link: 'https://www.facebook.com/events/1106870833796065',
-  },
-  {
-    title: 'Cultural BBQ',
-    startTime: 'Wednesday, 17 July 2024 12:00:00',
-    endTime: 'Wednesday, 17 July 2024 14:00:00',
-    location: 'Globe Lawn',
-    description: 'Tired of eating the same food every week? 😔 Looking to expand your horizons and try some cultural food? 🥘 BROKE AND NEED SOMETHING TO EAT ⁉️⁉️ Well CSESoc has you covered with an upgrade to our weekly bbq🍖🌟',
-    image: 'https://scontent.fsyd14-1.fna.fbcdn.net/v/t39.30808-6/450318124_983296013580010_564345365632281594_n.jpg?stp=dst-jpg_s960x960&_nc_cat=109&ccb=1-7&_nc_sid=75d36f&_nc_ohc=bpVcbawdlHUQ7kNvgFOoHVZ&_nc_zt=23&_nc_ht=scontent.fsyd14-1.fna&_nc_gid=AHXSpjSIF8pprA1p1Ogqi34&oh=00_AYD1_PrwM7LTFVCvhXIQ3kubwhhYkBOmIO49Gpy4bvTdEg&oe=67139777',
-    link: 'https://www.facebook.com/events/871196261705246',
-  },
-  {
-    title: 'CSESOC Boardgames Night',
-    startTime: 'Thursday, 7 March 2024 17:00:00',
-    endTime: 'Thursday, 7 March 2024 19:00:00',
-    location: 'Design Next Studio, Level 5, J17, UNSW',
-    description: 'The whirlwind of uni got u overwhelmed 😣? Come down to the Design Studio, and chill out with us 🧘‍♀️ as we play board games and indulge in free pizza 🍕!',
-    image: 'https://scontent.fsyd14-1.fna.fbcdn.net/v/t39.30808-6/429667295_896623802247232_669736057716718914_n.jpg?stp=dst-jpg_s960x960&_nc_cat=102&ccb=1-7&_nc_sid=75d36f&_nc_ohc=Ayn7Skl-pFAQ7kNvgES7wuB&_nc_zt=23&_nc_ht=scontent.fsyd14-1.fna&_nc_gid=AsnAjGmOe-G8q1L6qZb9G3U&oh=00_AYDpfvDY6DpKeydN99VCHujemmm0gZwL7_O1HjXHvwiPsw&oe=671383B1',
-    link: 'https://www.facebook.com/events/322704110303236',
   },
 ];

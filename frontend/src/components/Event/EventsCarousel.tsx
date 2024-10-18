@@ -62,11 +62,17 @@ const formatEventDate = (startTime: string, endTime: string): string => {
   const startDate = new Date(startTime);
   const endDate = new Date(endTime);
 
-  const sameDay = startDate.toDateString() === endDate.toDateString();
+  const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: '2-digit', year: 'numeric' };
 
+  const formatDate = (date: Date): string => {
+    return new Intl.DateTimeFormat('en-AU', options).format(date).replace(/\//g, '/');
+  };
+
+  const sameDay = startDate.toDateString() === endDate.toDateString();
+  
   if (sameDay) {
-    return startDate.toLocaleDateString();
+    return formatDate(startDate); // Return single date in dd/mm/yyyy
   } else {
-    return `${startDate.toLocaleDateString()} - ${endDate.toLocaleDateString()}`;
+    return `${formatDate(startDate)} - ${formatDate(endDate)}`; // Return date range
   }
 };
