@@ -35,7 +35,7 @@ export default function EventsCarousel() {
       containerClass="carousel-container my-8"
     >
       {events.map((event, index) => (
-        <div key={index} className="w-full text-center">
+        <div key={index} className="w-full text-center px-5">
           <a href={event.link} target="_blank" rel="noopener noreferrer" className="relative block w-full h-64 group transition-opacity duration-3000">
             <img
               src={event.image}

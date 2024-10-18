@@ -11,15 +11,22 @@ const Event = () => {
       </div>
       <div className="flex items-center">
         <div className="flex flex-col text-center">
-        <p className="text-center text-3xl">
-          We run a wide-variety of events for fun, learning new skills and careers. For full
-          listings, check out the CSESoc Discord or our Facebook page!
-        </p>
-        <a href="events">
-          <button className="mt-10 bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[60%] xl:h-12 h-10 hover-animate">
-            See all events
-          </button>
-        </a>
+          <p className="text-center text-3xl">
+            We run a wide-variety of events for fun, learning new skills and careers. For full
+            listings, check out the CSESoc Discord or our Facebook page!
+          </p>
+          <div>
+            <a href="https://bit.ly/CSESocDiscord">
+              <button className="mt-5 mx-5 bg-white border font-bold text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-24 xl:h-12 h-10 hover-animate">
+                Discord
+              </button>
+            </a>
+            <a href="https://www.facebook.com/csesoc">
+              <button className="mt-5 mx-5 bg-white border font-bold text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-24 xl:h-12 h-10 hover-animate">
+                FB
+              </button>
+            </a>
+          </div>
         </div>
       </div>
       <div className="flex items-center justify-start mt-10">
