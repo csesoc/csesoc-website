@@ -5,7 +5,7 @@ import { socialLinks } from '@/../public/data/socialInfos';
 const Footer = () => {
   return (
     <section>
-      <div className="sm:flex justify-between pb-10">
+      <div className="sm:flex justify-between py-10">
         <div className="flex flex-col gap-10">
           <div className="flex items-center">
             <Link href="/" className="flex">
