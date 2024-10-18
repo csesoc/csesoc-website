@@ -1,21 +1,20 @@
 import React from 'react';
-import { previousEvents } from '../../../public/data/events';
+import { previousEvents } from '@/../public/data/events';
 
 const EventGallery = () => {
-
   return (
-    <div className="flex flex-wrap px-14 py-10 mb-14 gap-16 justify-center my-10">
+    <div className="flex flex-wrap mb-14 gap-8 justify-center my-10">
       {previousEvents.map((event, index) => {
         return (
           <div key={index}>
-            <div className="w-full h-40 text-center">
-              <a href={event.link} target="_blank" rel="noopener noreferrer" className="relative block w-full h-64 group transition-opacity duration-3000">
+            <div className="w-full h-48 text-center">
+              <a href={event.link} target="_blank" rel="noopener noreferrer" className="relative block w-full h-48 group transition-opacity duration-3000">
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-40 object-contain"
+                  className="w-full h-48 object-contain"
                 />
-                <div className="w-full h-40 absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                <div className="w-full h-48 absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="text-white text-center p-4">
                     <h2 className="font-extrabold text-xl mb-2">{event.title}</h2>
                     <h3 className="font-bold text-lg">{event.location}</h3>

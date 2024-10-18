@@ -11,7 +11,7 @@ const Event = () => {
       </div>
       <div className="flex items-center">
         <div className="flex flex-col text-center">
-          <p className="text-center text-3xl">
+          <p className="text-center text-2xl">
             We run a wide-variety of events for fun, learning new skills and careers. For full
             listings, check out our {' '}
             <a
