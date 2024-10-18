@@ -12,7 +12,7 @@ const Carousel: React.FC<CarouselProps> = ({ events }) => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       fadeToNextSlide();
-    }, 3000);
+    }, 6000);
 
     return () => clearInterval(intervalId);
   }, [events.length]);

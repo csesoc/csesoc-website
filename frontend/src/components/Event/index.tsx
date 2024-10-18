@@ -15,7 +15,12 @@ const Event = () => {
         </p>
         {/* <div className="bg-blue-500 w-4/5 h-96 ml-80">Placeholder</div> */}
       </div>
-      <Carousel events={events}/>
+      {events.length !== 0 ?
+        <Carousel events={events}/> :
+        <div className="flex items-center justify-center h-96">
+          <p className="text-2xl">No upcoming events... check back here later!</p>
+        </div>
+      }
       <div className="flex items-center justify-start mt-10">
         <p className="text-2xl font-bold pl-20 pb-10">
           Previous events
