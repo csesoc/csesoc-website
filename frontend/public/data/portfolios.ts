@@ -80,6 +80,22 @@ export const PORTFOLIOS: PortfolioData[] = [
         ],
     },
     {
+        name: "Digital",
+        description: "Expands CSESoc's vibrant community into the virtual world, running online events and managing our online spaces to make sure everyone feels welcomed in our community.",
+        members: [
+            {
+                name: "Amy Tian",
+                role: PortfolioRole.DIRECTOR,
+                imageUrl: "/images/members/blank-pfp.png",
+            },
+            {
+                name: "Brandon Tan",
+                role: PortfolioRole.DIRECTOR,
+                imageUrl: "/images/members/blank-pfp.png",
+            },
+        ],
+    },
+    {
         name: "Education",
         description: "Teaches interesting technical skills to the community, whether that's through workshops, articles, or programs.",
         members: [
@@ -195,22 +211,6 @@ export const PORTFOLIOS: PortfolioData[] = [
             },
             {
                 name: "Leo Ng Maisnam",
-                role: PortfolioRole.DIRECTOR,
-                imageUrl: "/images/members/blank-pfp.png",
-            },
-        ],
-    },
-    {
-        name: "Online",
-        description: "Expands CSESoc's vibrant community into the virtual world, running online events and managing our online spaces to make sure everyone feels welcomed in our community.",
-        members: [
-            {
-                name: "Amy Tian",
-                role: PortfolioRole.DIRECTOR,
-                imageUrl: "/images/members/blank-pfp.png",
-            },
-            {
-                name: "Brandon Tan",
                 role: PortfolioRole.DIRECTOR,
                 imageUrl: "/images/members/blank-pfp.png",
             },

@@ -11,9 +11,9 @@ const Sponsors = () => {
       <div className="text-center">
         <h2 className="font-bold text-6xl">OUR SPONSORS</h2>
       </div>
-      <div className="flex-1 flex justify-center items-center my-15">
+      <div className="flex-1 flex justify-center items-center">
         <div
-          className="rounded border border-[#595F6D] h-auto overflow-hidden w-[90rem] flex flex-col gap-8 py-8"
+          className="rounded h-auto overflow-hidden w-[90rem] flex flex-col gap-8"
         >
           <SponsorCarousel />
           <div className="flex justify-center items-center">

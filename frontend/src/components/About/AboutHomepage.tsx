@@ -4,7 +4,7 @@ export default function AboutHomePage() {
     return (
         <section className="py-8 xl:px-24 sm:px-10 px-5" id="about">
           <div className="text-center my-10">
-            <h2 className="font-bold text-6xl">ABOUT</h2>
+            <h2 className="font-bold text-6xl mb-16">ABOUT</h2>
           </div>
           <div className="flex justify-center items-center">
             <div className="lg:grid grid-cols-6 flex-1 max-w-[90rem]">

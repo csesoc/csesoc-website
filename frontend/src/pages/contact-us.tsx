@@ -42,7 +42,7 @@ export default function ContactUsPage() {
               <span>.</span>
             </p>
           </li>
-          <li>
+          {/* <li>
             <h3 className="text-2xl font-semibold pt-5">For sharing opportunities with our members</h3>
             <p className="text-xl my-2">
               <span>Please fill out </span>
@@ -51,7 +51,7 @@ export default function ContactUsPage() {
               </a>
               <span>.</span>
             </p>
-          </li>
+          </li> */}
         </ul>
 
         <div className="my-10">
