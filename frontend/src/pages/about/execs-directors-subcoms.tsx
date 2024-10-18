@@ -2,6 +2,7 @@ import PortfolioDisplay from "@/components/About/PortfolioDisplay";
 import Layout from "@/components/Layout";
 import PageBody from "@/components/PageBody";
 import PageTitle from "@/components/PageTitle";
+import { EXECS } from "@/../public/data/execs";
 
 const ExecsDirectorsSubcommitteesPage = () => {
   return (
@@ -22,29 +23,27 @@ const ExecsDirectorsSubcommitteesPage = () => {
           </div>
         </div>
 
-        <div className="my-5 text-center">
-            <h2 className="text-xl font-bold mb-2">Execs</h2>
-            <div className="flex justify-center">
-                <ul className="mx-4">
-                    <li>Elizabeth Zhu Chan - Co-President</li>
-                    <li>Lesley Lu - Co-President</li>
-                    <li>Ivan Chan - Secretary</li>
-                    <li>Justin Son - Treasurer</li>
-                    <li>Sophie Khov - Arc Delegate</li>
-                    <li>Catherine Kim - Grievance, Equity, Diversity and Inclusion Officer</li>
-                    <li>Amy Liu - Vice President (Internals)</li>
-                    <li>Nicole Jiang - Vice President (Externals)</li>
-                    <li>Matthew Lim - Vice President (Technicals)</li>
-                </ul>
-            </div>
+        {/* EXECS */}
+        <div className="my-5">
+          <h2 className="text-xl font-bold mb-2">Execs</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {EXECS.map(exec => (
+              <div>
+                <div>
+                  <p>{exec.name}</p>
+                  <p className="text-gray-500">{exec.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="border-t border-gray-300 my-5"></div>
+        <div className="border-t border-gray-300 my-10"></div>
 
         {/* PORTFOLIOS */}
         <div className="space-y-6">
           <div>
-            <h2 className="text-xl font-semibold mb-2">Subcommitees</h2>
+            <h2 className="text-xl font-semibold mb-2">Directors & Subcommitees</h2>
             <p className="text-lg">
               Subcommittees are the teams led by Directors that run CSESoc and its events to the benefit of all UNSW Computing students. Click to see the members of each!
             </p>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import PortfolioCard from "./PortfolioCard";
-import { PORTFOLIOS } from "../../../public/data/portfolios";
+import { PORTFOLIOS } from "@/../public/data/portfolios";
 
 const PortfolioDisplay = () => {
   const [selectedPortfolio, setSelectedPortfolio] = useState("Careers");
@@ -9,7 +9,7 @@ const PortfolioDisplay = () => {
 
   return (
     <div>
-      <div className="flex justify-between max-w-full h-10 my-6 snap-x snap-mandatory overflow-scroll hide-scrollbar">
+      <div className="flex justify-between max-w-full h-10 my-6 snap-x snap-mandatory overflow-auto hide-scrollbar">
         {names.map((name) => (
           <button 
             className={`grow text-center border border-white ${name === selectedPortfolio ? "bg-blue-400" : "bg-blue-700"} p-2`} 

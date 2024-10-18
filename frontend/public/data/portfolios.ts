@@ -156,46 +156,6 @@ export const PORTFOLIOS: PortfolioData[] = [
                 role: PortfolioRole.DIRECTOR,
                 imageUrl: "/images/members/blank-pfp.png",
             },
-            {
-                name: "Chris Yoo",
-                role: PortfolioRole.SUBCOM,
-                imageUrl: "/images/members/2024/chris-yoo.png",
-            },
-            {
-                name: "John Doe",
-                role: PortfolioRole.SUBCOM,
-                imageUrl: "/images/members/blank-pfp.png",
-            },
-            {
-                name: "John Doe",
-                role: PortfolioRole.SUBCOM,
-                imageUrl: "/images/members/blank-pfp.png",
-            },
-            {
-                name: "John Doe",
-                role: PortfolioRole.SUBCOM,
-                imageUrl: "/images/members/blank-pfp.png",
-            },
-            {
-                name: "John Doe",
-                role: PortfolioRole.SUBCOM,
-                imageUrl: "/images/members/blank-pfp.png",
-            },
-            {
-                name: "John Doe",
-                role: PortfolioRole.SUBCOM,
-                imageUrl: "/images/members/blank-pfp.png",
-            },
-            {
-                name: "John Doe",
-                role: PortfolioRole.SUBCOM,
-                imageUrl: "/images/members/blank-pfp.png",
-            },
-            {
-                name: "John Doe",
-                role: PortfolioRole.SUBCOM,
-                imageUrl: "/images/members/blank-pfp.png",
-            },
         ],
     },
     {

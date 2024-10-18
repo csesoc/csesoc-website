@@ -1,10 +1,11 @@
-import Image from 'next/image';
-import { PortfolioData } from "../../../public/data/portfolios";
+// import Image from 'next/image';
+import { PortfolioData } from "@/../public/data/portfolios";
 
 interface PortfolioCardProps {
   portfolio: PortfolioData,
 }
 
+// NOTE: Profile pictures can be added in the future
 const PortfolioCard = ({ portfolio }: PortfolioCardProps) => {
   return (
     <div>
@@ -15,12 +16,12 @@ const PortfolioCard = ({ portfolio }: PortfolioCardProps) => {
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {portfolio.members.map(member => (
           <div>
-            <Image
+            {/* <Image
               src={member.imageUrl}
               alt={`${member.name} portrait`}
               width={150}
               height={150}
-            />
+            /> */}
             
             <div>
               <p>{member.name}</p>
