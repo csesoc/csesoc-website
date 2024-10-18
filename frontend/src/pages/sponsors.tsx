@@ -35,6 +35,9 @@ export default function SponsorsPage() {
       <div id="goldRain" className="opacity-0">
         <EmojiRain emoji="🪙" />
       </div>
+      <div id="silverRain" className="opacity-0">
+        <EmojiRain emoji="🪩" />
+      </div>
       <section className="py-8">
         <h2 className="text-4xl font-black text-center font-bold" onClick={() => handleRainClick('diamond')}>DIAMOND SPONSORS</h2>
         <div>
@@ -68,7 +71,7 @@ export default function SponsorsPage() {
             })}
           </div>
         </div>
-        <h2 className="text-4xl font-black text-center font-bold">SILVER SPONSORS</h2>
+        <h2 className="text-4xl font-black text-center font-bold" onClick={() => handleRainClick('silver')}>SILVER SPONSORS</h2>
         <div>
           <div className="flex flex-wrap rounded-[1rem] px-14 py-10 mb-14 gap-16 justify-evenly rounded border-2 border-[#595F6D] mt-10">
             {silverLinks.map((item, index) => {
