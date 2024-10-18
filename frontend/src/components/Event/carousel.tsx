@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { eventInfo } from '../../../public/data/data';
+import { eventInfo } from '../../../public/data/events';
 
 interface CarouselProps {
   events: eventInfo[];

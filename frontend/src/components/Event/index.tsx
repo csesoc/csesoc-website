@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from './carousel';
-import { events, previousEvents } from '../../../public/data/data';
+import { events, previousEvents } from '../../../public/data/events';
 
 const Event = () => {
   return (
