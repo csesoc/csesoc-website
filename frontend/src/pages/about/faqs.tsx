@@ -1,15 +1,12 @@
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+import Layout from "@/components/Layout";
+import PageBody from "@/components/PageBody";
+import PageTitle from "@/components/PageTitle";
 
-const Faqs = () => {
+const FaqsPage = () => {
   return (
-    <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
-      <Navbar />
-      <section className="py-8 xl:px-24 sm:px-10 px-5" id="faqs">
-        <div className="text-center my-10">
-          <h1 className="font-bold text-6xl">FREQUENTLY ASKED QUESTIONS</h1>
-        </div>
-
+    <Layout>
+      <PageTitle title="FREQUENTLY ASKED QUESTIONS" />
+      <PageBody>
         <div>
           <p className="text-2xl my-5 font-semibold">
             What is CSESoc?
@@ -52,10 +49,9 @@ const Faqs = () => {
             subcommittee. Subcommittee recruitment opens during T1 of each year.
           </p>
         </div>
-      </section>
-      <Footer />
-    </section>
+      </PageBody>
+    </Layout>
   );
 };
 
-export default Faqs;
+export default FaqsPage;

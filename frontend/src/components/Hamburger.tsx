@@ -36,19 +36,22 @@ export default function Hamburger() {
           >
             <ul>
               <li className="py-2 text-lg">
-                <Link href={'./about'}>About Us</Link>
+                <Link href={'/about'}>About Us</Link>
               </li>
               <li className="py-2 text-lg">
-                <Link href={'./events'}>Events</Link>
+                <Link href={'/events'}>Events</Link>
               </li>
               <li className="py-2 text-lg">
-                <Link href={'./resources'}>Resources</Link>
+                <Link href={'/resources'}>Resources</Link>
               </li>
               <li className="py-2 text-lg">
-                <Link href={'./sponsors'}>Sponsors</Link>
+                <Link href={'/sponsors'}>Sponsors</Link>
               </li>
               <li className="py-2 text-lg">
-                <Link href={'./contact-us'}>Contact Us</Link>
+                <Link href={'/contact-us'}>Contact Us</Link>
+              </li>
+              <li className="py-2 text-lg">
+                <a target="_blank" href="https://csesoc-merch.square.site/">Merch Store</a>
               </li>
             </ul>
           </motion.div>

@@ -1,15 +1,12 @@
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Layout from "@/components/Layout";
+import PageBody from "@/components/PageBody";
+import PageTitle from "@/components/PageTitle";
 
-const ElectionGuide = () => {
+const ElectionGuidePage = () => {
   return (
-    <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
-      <Navbar />
-      <section className="py-8 xl:px-24 sm:px-10 px-5" id="election-guide">
-        <div className="text-center my-10">
-          <h1 className="font-bold text-6xl">ELECTION NOMINATION GUIDE</h1>
-        </div>
-
+    <Layout>
+      <PageTitle title="ELECTION GUIDE" />
+      <PageBody>
         <div>
           <p className="text-lg my-5">
             Before considering any executive position for CSESoc, it 
@@ -29,9 +26,11 @@ const ElectionGuide = () => {
             to either nominate yourself for a position or be nominated by someone else.
           </p>
 
-          <p className="text-lg my-5">
-            Once nominations are open, you will be able to submit your nomination by 
-            emailing <a href="mailto:copresidents@csesoc.org.au" className="text-blue-500 hover:underline">copresidents@csesoc.org.au</a> with:
+          <div className="text-lg my-5">
+            <p>
+              Once nominations are open, you will be able to submit your nomination by 
+              emailing <a href="mailto:copresidents@csesoc.org.au" className="text-blue-500 hover:underline">copresidents@csesoc.org.au</a> with:
+            </p>
             <ul className="list-disc ml-6">
               <li>Your full name and zID, or the full name and zID of the person you are nominating</li>
               <li>The position you or the person you are nominating is going for</li>
@@ -43,7 +42,7 @@ const ElectionGuide = () => {
                 their nomination). Be sure to use a zID email!
               </li>
             </ul>
-          </p>
+          </div>
 
           <p className="text-lg my-5">
             If you're planning on running for multiple positions, then make sure you include your preference 
@@ -110,10 +109,9 @@ const ElectionGuide = () => {
             </ul>
           </div>
         </div>
-      </section>
-      <Footer />
-    </section>
+      </PageBody>
+    </Layout>
   );
 };
 
-export default ElectionGuide;
+export default ElectionGuidePage;

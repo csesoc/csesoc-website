@@ -20,25 +20,15 @@ const Landing = () => {
             <p>{'<h2>'}</p>
             <h2 className="font-bold 2xl:text-3xl text-xl">
               We are the principal representative body for{' '}
-              <span className="text-[#3977F9]">UNSW computing</span> students.
+              <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering"
+                 target = "_blank"
+                 className="text-[#3977F9] relative after:bg-current after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:duration-200"
+              >
+                UNSW computing
+              </a>
+              {' '}students.
             </h2>
             <p>{'</h2>'}</p>
-          </div>
-        </div>
-        <div className="w-72 font-semibold text-xl lg:block hidden">
-          <p className="font-bold bg-[#3977F8] inline px-3 py-1">STATS</p>
-          <hr className="mb-3 mt-5" />
-          <div className="flex justify-between">
-            <p>323,000</p>
-            <p>Members</p>
-          </div>
-          <div className="flex justify-between">
-            <p>300</p>
-            <p>Team Members</p>
-          </div>
-          <div className="flex justify-between">
-            <p>52</p>
-            <p>Events held</p>
           </div>
         </div>
       </div>

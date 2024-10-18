@@ -13,7 +13,6 @@ const Sponsors = () => {
       id="sponsors"
     >
       <div className="text-center">
-        <p className="text-[#3977F8] font-game text-xl">04</p>
         <h2 className="font-bold text-6xl">SUPPORT CSESOC</h2>
       </div>
       <div className="flex-1 flex justify-center items-center my-20">
@@ -29,7 +28,7 @@ const Sponsors = () => {
               <h2 className="text-4xl font-black">Our sponsors</h2>
               <p className="xl:my-10 my-3 text-lg">Check out our very cool sponsors.</p>
               <a href="sponsors">
-                <button className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[100%] xl:h-12 h-10">
+                <button className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[100%] xl:h-12 h-10 hover-animate">
                   View our sponsors
                 </button>
               </a>
