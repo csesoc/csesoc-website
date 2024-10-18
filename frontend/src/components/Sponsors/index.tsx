@@ -19,7 +19,7 @@ const Sponsors = () => {
           <div className="flex justify-center items-center">
             <a href="sponsors">
               <button className="bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[20rem] xl:h-12 h-10 hover-animate">
-                Learn More
+                See all sponsors
               </button>
             </a>
           </div>
