@@ -7,7 +7,7 @@ const EventGallery = () => {
     return {
       src: event.image,
       height: 256,
-      width: 500,
+      width: 400,
       customOverlay: (
         <div className="absolute inset-0 bg-black bg-opacity-60 opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <div className="text-white text-center p-4">
