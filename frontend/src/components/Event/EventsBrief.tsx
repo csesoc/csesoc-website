@@ -6,7 +6,7 @@ const EventBrief = () => {
   return (
     <section className="py-8 xl:px-24 sm:px-10 px-5" id="events">
       <div className="text-center my-10">
-        <h1 className="font-bold text-6xl">UPCOMING EVENTS</h1>
+        <h1 className="font-bold text-6xl mb-16">UPCOMING EVENTS</h1>
       </div>
       {events.length !== 0 ?
         <EventsCarousel/> :
