@@ -11,7 +11,7 @@ const EventBrief = () => {
       {events.length !== 0 ?
         <EventsCarousel/> :
         <div className="flex items-center justify-center h-96">
-          <p className="text-2xl">No upcoming events... check back here later!</p>
+          <p className="text-4xl">No upcoming events... check back here later!</p>
         </div>
       }
       <div className="flex justify-center items-center">

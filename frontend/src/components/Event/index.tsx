@@ -21,21 +21,20 @@ const Event = () => {
           </button>
         </a>
         </div>
-        <div className="bg-blue-500 w-4/5 h-96 ml-80">Placeholder</div>
       </div>
       <div className="flex items-center justify-start mt-10">
-        <p className="text-2xl font-bold pl-20">
+        <p className="text-4xl font-bold">
           Explore upcoming events
         </p>
       </div>
       {events.length !== 0 ?
         <EventsCarousel/> :
         <div className="flex items-center justify-center h-96">
-          <p className="text-2xl">No upcoming events... check back here later!</p>
+          <p className="text-4xl">No upcoming events... check back here later!</p>
         </div>
       }
       <div className="flex items-center justify-start mt-10">
-        <p className="text-2xl font-bold pl-20 pb-10">
+        <p className="text-4xl font-bold pb-10">
           Previous events
         </p>
       </div>
