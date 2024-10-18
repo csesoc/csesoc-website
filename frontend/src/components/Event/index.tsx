@@ -13,23 +13,15 @@ const Event = () => {
         <div className="flex flex-col text-center">
           <p className="text-center text-3xl">
             We run a wide-variety of events for fun, learning new skills and careers. For full
-            listings, check out the CSESoc Discord or our Facebook page!
+            listings, check out our {' '}
+            <a
+              href="https://www.facebook.com/csesoc"
+              className="text-[#3977F9] relative after:bg-current after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:duration-200"
+            >Facebook page</a>!
           </p>
-          <div>
-            <a href="https://bit.ly/CSESocDiscord">
-              <button className="mt-5 mx-5 bg-white border font-bold text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-24 xl:h-12 h-10 hover-animate">
-                Discord
-              </button>
-            </a>
-            <a href="https://www.facebook.com/csesoc">
-              <button className="mt-5 mx-5 bg-white border font-bold text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-24 xl:h-12 h-10 hover-animate">
-                FB
-              </button>
-            </a>
-          </div>
         </div>
       </div>
-      <div className="flex items-center justify-start mt-10">
+      <div className="flex items-center justify-start mt-20">
         <p className="text-4xl font-bold">
           Explore upcoming events
         </p>
@@ -40,7 +32,7 @@ const Event = () => {
           <p className="text-4xl">No upcoming events... check back here later!</p>
         </div>
       }
-      <div className="flex items-center justify-start mt-10">
+      <div className="flex items-center justify-start mt-20">
         <p className="text-4xl font-bold">
           Previous events
         </p>
