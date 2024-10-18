@@ -9,31 +9,48 @@ export default function AboutHomePage() {
           <div className="flex justify-center items-center">
             <div className="lg:grid grid-cols-6 flex-1 max-w-[90rem]">
               {/* LEFT SIDE */}
+              {/* NOTE: there is slightly altered from about/index.tsx */}
               <div className="col-span-2 md:mx-5">
                 <div className="flex items-center justify-center">
                   <Image src="/assets/csesoc_icon.svg" alt="CSESoc Icon" width={150} height={150} />
                 </div>
-                <h2 className="text-3xl font-extrabold">CSESoc</h2>
-                <button className="bg-[#444F6F] w-full my-5 py-2 rounded hover-animate">Follow</button>
+                <h2 className="mt-4 text-3xl font-extrabold">CSESoc</h2>
+                <p className="text-[#727B8C] font-medium">unsw-computer-science-engineering-society</p>
+                <div className="my-4 flex gap-5">
+                  <Image src="/assets/people_icon.svg" alt="People" width={20} height={20} />
+                  <div>
+                    16k <span className="text-[#727B8C]">members</span> · 146{' '}
+                    <span className="text-[#727B8C]">internal members</span>
+                  </div>
+                </div>
+                <div className="my-4 flex gap-5">
+                  <Image src="/assets/location_icon.svg" alt="Location" width={20} height={20} />
+                  Sydney, Australia
+                </div>
+                <div className="flex gap-5">
+                  <Image src="/assets/mail_icon.svg" alt="Mail" width={20} height={20} />
+                  <a href="mailto:info@csesoc.org.au" className="hover:underline">info@csesoc.org.au</a>
+                </div>
               </div>
               {/* RIGHT SIDE */}
               <div className="col-span-4 lg:mt-0 mt-10">
-                <div className="rounded border border-[#595F6D] p-5 h-auto">
-                  <p className="text-xs">
-                    csesoc/README<span className="text-[#7A8192]">.md</span>
-                  </p>
-                  <p className="mt-5">
-                    CSESoc is one of the biggest and most active societies at UNSW, catering to over 3500 CSE
-                    students spanning across degrees in Computer Science, Software Engineering,
-                    Bioinformatics and Computer Engineering. 
-                    <br/><br/>
-                    We are here to fulfil the social, personal and 
-                    professional needs of CSE students, and promote computing through a variety of forms.
-                    <br/><br/>
-                    Learn more <a href="/about" className="text-[#3977F9]">about us!</a>
-                  </p>
-
-                </div>
+                <p className="text-2xl">
+                  We are one of the largest and most active societies at UNSW, and {" "}
+                  <span className="font-bold text-[#3977F8]">the largest computing society in the southern hemisphere</span>.
+                  <br/><br/>
+                  CSESoc comprises {" "}
+                  <span className="font-bold text-[#3977F8]">over 16k members</span> 
+                  {" "}spanning across various degrees including Computer Science, 
+                  Software Engineering, Bioinformatics and Computer Engineering.
+                  <br/><br/>
+                  We are here to fulfil the social, personal and professional needs of CSE students, 
+                  and promote computing through a variety of forms.
+                </p>
+                <a href="about">
+                  <button className="mt-16 bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[60%] xl:h-12 h-10 hover-animate mx-auto block">
+                    Find out more
+                  </button>
+                </a>
               </div>
             </div>
           </div>
