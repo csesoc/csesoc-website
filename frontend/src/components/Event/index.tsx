@@ -1,12 +1,13 @@
 import React from 'react';
-import Carousel from './carousel';
-import { events, previousEvents } from '../../../public/data/events';
+import { events } from '../../../public/data/events';
+import EventsCarousel from './EventsCarousel';
+import EventGallery from './EventsGallery';
 
 const Event = () => {
   return (
     <section className="py-8 xl:px-24 sm:px-10 px-5" id="events">
       <div className="text-center my-10">
-        <h1 className="font-bold text-6xl">UPCOMING EVENTS</h1>
+        <h1 className="font-bold text-6xl">EVENTS</h1>
       </div>
       <div className="flex items-center">
         <div className="flex flex-col text-center">
@@ -22,8 +23,13 @@ const Event = () => {
         </div>
         <div className="bg-blue-500 w-4/5 h-96 ml-80">Placeholder</div>
       </div>
+      <div className="flex items-center justify-start mt-10">
+        <p className="text-2xl font-bold pl-20">
+          Explore upcoming events
+        </p>
+      </div>
       {events.length !== 0 ?
-        <Carousel events={events}/> :
+        <EventsCarousel/> :
         <div className="flex items-center justify-center h-96">
           <p className="text-2xl">No upcoming events... check back here later!</p>
         </div>
@@ -33,7 +39,7 @@ const Event = () => {
           Previous events
         </p>
       </div>
-      <Carousel events={previousEvents} />
+      <EventGallery />
     </section>
   );
 };
