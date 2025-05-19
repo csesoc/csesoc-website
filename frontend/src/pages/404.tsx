@@ -3,7 +3,7 @@ import Navbar from '@/components/Navbar';
 
 export default function Custom404() {
   return (
-    <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden">
+    <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative">
       <div className="items-center text-center">
         <Navbar />
         <h1 className="text-5xl font-bold pt-24">404 - Page Not Found</h1>
