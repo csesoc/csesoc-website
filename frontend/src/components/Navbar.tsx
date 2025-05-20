@@ -12,7 +12,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="sticky top-10 flex justify-between items-center relative z-10 shadow-lg rounded-md bg-white/15 backdrop-blur-md px-6 py-6">
+    <nav className="sticky top-0 flex justify-between items-center relative z-10 shadow-lg rounded-md bg-white/15 backdrop-blur-md xl:px-24 md:px-10 px-5 py-6">
       <Link href="/">
         <Image
           src="/assets/csesoc_logo.svg"

@@ -6,9 +6,15 @@ import EventsBrief from '@/components/Event/EventsBrief';
 
 export default function HomePage() {
   return (
-    <section className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative">
+    <section>
+        <div className="h-8"></div>
+        
         <Navbar />
-        <Landing />
+
+        <div className="-mt-36">
+            <Landing />
+        </div>
+
         <AboutHomePage />
         <EventsBrief />
         <Sponsors />
