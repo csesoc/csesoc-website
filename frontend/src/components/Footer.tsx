@@ -41,7 +41,7 @@ const Footer = () => {
             <div>B03 CSE Building K17, UNSW</div>
             <a href="mailto:csesoc@csesoc.org.au" className="hover:underline">csesoc@csesoc.org.au</a>
           </div>
-          <p>© 2024 — CSESoc UNSW</p>
+          <p>© 2025 — CSESoc UNSW</p>
         </div>
       </div>
       <Image
