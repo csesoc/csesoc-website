@@ -52,7 +52,7 @@ export default function SponsorsPage() {
               {diamondLinks.map((item, index) => {
                 return (
                   <div key={index} onClick={() => handleSponsorClick(item)}>
-                    <img className={`h-14 ${logostyle}`} src={item.svg} alt={item.alt} />
+                    <img className={`h-16 max-w-xs ${logostyle}`} src={item.svg} alt={item.alt} />
                   </div>
                 );
               })}
@@ -65,7 +65,7 @@ export default function SponsorsPage() {
             {goldLinks.map((item, index) => {
               return (
                 <div key={index} onClick={() => handleSponsorClick(item)}>
-                  <img className={`h-14 ${logostyle}`} src={item.svg} alt={item.alt} />
+                  <img className={`h-14 max-w-xs ${logostyle}`} src={item.svg} alt={item.alt} />
                 </div>
               );
             })}
@@ -77,7 +77,7 @@ export default function SponsorsPage() {
             {silverLinks.map((item, index) => {
               return (
                 <div key={index} onClick={() => handleSponsorClick(item)}>
-                  <img className={`h-14 ${logostyle}`} src={item.svg} alt={item.alt} />
+                  <img className={`h-14 max-w-xs ${logostyle}`} src={item.svg} alt={item.alt} />
                 </div>
               );
             })}
