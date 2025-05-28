@@ -140,14 +140,14 @@ export const silverLinks: sponsorInfo[] = [
   //   description:
   //     'Bringing 30+ lender calcs into one, easy-to-use interface delivering accurate results and relevant policy insights for even the most complex scenarios.'
   // },
-  // {
-  //   name: 'Finma',
-  //   href: 'https://www.finma.au/',
-  //   svg: '/assets/finma_logo.svg',
-  //   alt: 'Finma logo',
-  //   description:
-  //     'Finma is an Australian fintech company that provides digital solutions for financial planning, helping users better manage their money and achieve long-term financial goals.'
-  // },
+  {
+    name: 'Finma',
+    href: 'https://www.finma.au/',
+    svg: '/assets/finma_logo.png',
+    alt: 'Finma logo',
+    description:
+      'Finma is an Australian fintech company that provides digital solutions for financial planning, helping users better manage their money and achieve long-term financial goals.'
+  },
   {
     name: 'Zip',
     href: 'https://zip.co/au',
