@@ -48,7 +48,7 @@ jobs:
     concurrency: prod
     environment:
       name: prod
-    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/master' }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
