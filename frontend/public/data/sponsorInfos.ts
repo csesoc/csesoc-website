@@ -1,4 +1,5 @@
 export type sponsorInfo = {
+  name: string;
   href: string;
   svg: string;
   alt: string;
@@ -7,6 +8,15 @@ export type sponsorInfo = {
 
 export const diamondLinks: sponsorInfo[] = [
   {
+    name: 'Atlassian',
+    href: 'https://www.atlassian.com/',
+    svg: '/assets/atlassian_logo.svg',
+    alt: 'Atlassian logo',
+    description:
+      'Atlassian Corporation is an Australian-American software company that develops products for software developers, and project managers among other groups.'
+  },
+  {
+    name: 'Jane Street',
     href: 'https://www.janestreet.com/',
     svg: '/assets/janestreet_logo.svg',
     alt: 'Jane Street logo',
@@ -14,6 +24,7 @@ export const diamondLinks: sponsorInfo[] = [
       'Jane Street is a research-driven trading firm where curious people work together on deep problems.'
   },
   {
+    name: 'Tiktok',
     href: 'https://careers.tiktok.com/',
     svg: '/assets/tiktok_logo.svg',
     alt: 'Tiktok logo',
@@ -23,21 +34,16 @@ export const diamondLinks: sponsorInfo[] = [
 ];
 
 export const goldLinks: sponsorInfo[] = [
+  // {
+  //   name: 'Citadel',
+  //   href: 'https://www.citadel.com/',
+  //   svg: '/assets/citadel_logo.svg',
+  //   alt: 'Citadel logo',
+  //   description:
+  //     "We are an alternative investment manager working on behalf of the world's preeminent institutions. Discover our work, teams, careers and more."
+  // },
   {
-    href: 'https://www.atlassian.com/',
-    svg: '/assets/atlassian_logo.svg',
-    alt: 'Atlassian logo',
-    description:
-      'Atlassian Corporation is an Australian-American software company that develops products for software developers, and project managers among other groups.'
-  },
-  {
-    href: 'https://www.citadel.com/',
-    svg: '/assets/citadel_logo.svg',
-    alt: 'Citadel logo',
-    description:
-      "We are an alternative investment manager working on behalf of the world's preeminent institutions. Discover our work, teams, careers and more."
-  },
-  {
+    name: 'IMC',
     href: 'https://www.imc.com/ap/',
     svg: '/assets/imc_logo.svg',
     alt: 'IMC logo',
@@ -45,6 +51,15 @@ export const goldLinks: sponsorInfo[] = [
       'For three decades IMC has provided liquidity to the financial markets globally. Specialised in algorithmic trading and advanced technology, we set the pace for the evolution of market making.'
   },
   {
+    name: 'Zurich',
+    href: 'https://www.zurich.com.au/',
+    svg: '/assets/zurich_logo.svg',
+    alt: 'Zurich logo',
+    description:
+      "Zurich is one of the world's most experienced insurers whose strategy focuses on providing the right general insurance and life insurance solutions for its clients."
+  },
+  {
+    name: 'Neara',
     href: 'https://neara.com/',
     svg: '/assets/neara_logo.svg',
     alt: 'Neara logo',
@@ -52,57 +67,26 @@ export const goldLinks: sponsorInfo[] = [
       'Neara electric utility software is a physics-enabled platform that builds 3D interactive models of critical infrastructure networks and assets.'
   },
   {
+    name: 'TheTradeDesk',
+    href: 'https://www.thetradedesk.com/',
+    svg: '/assets/the_trade_desk_logo.svg',
+    alt: 'TheTradeDesk logo',
+    description:
+      'The Trade Desk is a global advertising technology company that empowers buyers with a platform to purchase digital advertising across various channels.'
+  },
+  {
+    name: 'SafetyCulture',
     href: 'https://safetyculture.com/',
     svg: '/assets/safetyculture_logo.svg',
     alt: 'SafetyCulture logo',
     description:
       'Get to the root cause of workplace trends with total visibility across your organization. Use data from completed inspections, reported incidents, sensors, and asset history to keep workers safe, and prevent things from happening in the first place.'
   },
-  {
-    href: 'https://www.zurich.com.au/',
-    svg: '/assets/zurich_logo.svg',
-    alt: 'Zurich logo',
-    description:
-      "Zurich is one of the world's most experienced insurers whose strategy focuses on providing the right general insurance and life insurance solutions for its clients."
-  }
 ];
 
 export const silverLinks: sponsorInfo[] = [
   {
-    href: 'https://appian.com/',
-    svg: '/assets/appian_logo.svg',
-    alt: 'Appian logo',
-    description:
-      'Appian Corporation is an American cloud computing and enterprise software company headquartered in McLean, Virginia, part of the Dulles Technology Corridor. The company sells a platform as a service for building enterprise software applications.'
-  },
-  {
-    href: 'https://www.flowtraders.com/',
-    svg: '/assets/flowtraders_logo.svg',
-    alt: 'FlowTraders logo',
-    description:
-      'Flow Traders is a proprietary trading firm. A market maker, it provides liquidity in the securities market by using high frequency and quantitative trading strategies.'
-  },
-  {
-    href: 'https://www.jds.net.au/',
-    svg: '/assets/jds_logo.svg',
-    alt: 'jds logo',
-    description: "JDS Australia delivers specialist services in a set of technologies and capabilities that ensure critical IT systems work.",
-  },
-  {
-    href: 'https://www.macquarie.com.au/',
-    svg: '/assets/macquarie_logo.svg',
-    alt: 'Macquarie logo',
-    description:
-      'Macquarie Bank offers transaction accounts, home loans, credit cards, online banking, business banking and more.'
-  },
-  {
-    href: 'https://optiver.com/',
-    svg: '/assets/optiver_logo.svg',
-    alt: 'Optiver logo',
-    description:
-      'Optiver is a global market maker. As one of the oldest market making firms in the world, Optiver has been improving financial markets since 1986.'
-  },
-  {
+    name: 'Quantium',
     href: 'https://quantium.com/',
     svg: '/assets/quantium_logo.svg',
     alt: 'Quantium logo',
@@ -110,26 +94,23 @@ export const silverLinks: sponsorInfo[] = [
       "We combine the best of human and artificial intelligence to power possibilities for individuals, organisations and society. Through the application of world leading, advanced analytics solutions, we help our clients solve their most complex problems."
   },
   {
-    href: 'https://quickli.com.au/',
-    svg: '/assets/quickli_logo.svg',
-    alt: 'Quickli logo',
+    name: 'Optiver',
+    href: 'https://optiver.com/',
+    svg: '/assets/optiver_logo.svg',
+    alt: 'Optiver logo',
     description:
-      'Bringing 30+ lender calcs into one, easy-to-use interface delivering accurate results and relevant policy insights for even the most complex scenarios.'
+      'Optiver is a global market maker. As one of the oldest market making firms in the world, Optiver has been improving financial markets since 1986.'
   },
   {
-    href: 'https://www.revolutionise.com.au/',
-    svg: '/assets/revsport_logo.svg',
-    alt: 'revolutioniseSport logo',
+    name: 'Macquarie',
+    href: 'https://www.macquarie.com.au/',
+    svg: '/assets/macquarie_logo.svg',
+    alt: 'Macquarie logo',
     description:
-      'revolutioniseSPORT is an online management platform for sports of all shapes and sizes.'
+      'Macquarie Bank offers transaction accounts, home loans, credit cards, online banking, business banking and more.'
   },
   {
-    href: 'https://www.recordpoint.com/',
-    svg: '/assets/recordpoint_logo.svg',
-    alt: 'RecordPoint logo',
-    description: 'Manage all your data and records in one central place – without moving them.'
-  },
-  {
+    name: 'Sig Susquehanna',
     href: 'https://sig.com/',
     svg: '/assets/susquehanna_logo.svg',
     alt: 'Susquehanna logo',
@@ -137,6 +118,38 @@ export const silverLinks: sponsorInfo[] = [
       'Discover Susquehanna, a global quantitative trading firm built on a rigorous, analytical foundation in financial markets.'
   },
   {
+    name: 'Freelancer',
+    href: 'https://www.freelancer.com/',
+    svg: '/assets/freelancer_logo.svg',
+    alt: 'Freelancer logo',
+    description:
+      'Freelancer is a global crowdsourcing marketplace connecting employers and freelancers to collaborate on a wide range of projects.'
+  },
+  {
+    name: 'FlowTraders',
+    href: 'https://www.flowtraders.com/',
+    svg: '/assets/flowtraders_logo.svg',
+    alt: 'FlowTraders logo',
+    description:
+      'Flow Traders is a proprietary trading firm. A market maker, it provides liquidity in the securities market by using high frequency and quantitative trading strategies.'
+  },
+  // {
+  //   href: 'https://quickli.com.au/',
+  //   svg: '/assets/quickli_logo.svg',
+  //   alt: 'Quickli logo',
+  //   description:
+  //     'Bringing 30+ lender calcs into one, easy-to-use interface delivering accurate results and relevant policy insights for even the most complex scenarios.'
+  // },
+  {
+    name: 'Finma',
+    href: 'https://www.finma.au/',
+    svg: '/assets/finma_logo.png',
+    alt: 'Finma logo',
+    description:
+      'Finma is an Australian fintech company that provides digital solutions for financial planning, helping users better manage their money and achieve long-term financial goals.'
+  },
+  {
+    name: 'Zip',
     href: 'https://zip.co/au',
     svg: '/assets/zip_logo.svg',
     alt: 'Zip logo',
@@ -144,10 +157,11 @@ export const silverLinks: sponsorInfo[] = [
       "Zip Co Limited is a global 'buy now pay later' financial technology company with operations in Australia, New Zealand and the USA."
   },
   {
-    href: 'https://www.canva.com/en_au/',
-    svg: '/assets/canva_logo.svg',
-    alt: 'Canva logo',
+    name: 'revolutioniseSport',
+    href: 'https://www.revolutionise.com.au/',
+    svg: '/assets/revsport_logo.svg',
+    alt: 'revolutioniseSport logo',
     description:
-      'Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.'
-  }
+      'revolutioniseSPORT is an online management platform for sports of all shapes and sizes.'
+  },
 ];
