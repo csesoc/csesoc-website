@@ -19,7 +19,7 @@ const ExecsDirectorsSubcommitteesPage = () => {
             The CSESoc Executive and Director team for 2025:
           </p>
           <div className="flex justify-center items-center">
-            <img src="https://scontent.fsyd3-2.fna.fbcdn.net/v/t39.30808-6/490746858_1191636532745956_5085482777865160130_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_ohc=Icu4uVEf5csQ7kNvwHQlx94&_nc_oc=Adl9id_hToVec6lOQU7MiV48MEn3IRWN0yZ81zPenDI8ND09eCjhHmgq18hpZybMbRQ&_nc_zt=23&_nc_ht=scontent.fsyd3-2.fna&_nc_gid=wLdWQpSME-IqY5gQfmktbQ&oh=00_AfLFy8b5Sieopu8C3WP4_RsQFVSfXQoYVmVqEGPlrkyOFA&oe=682FAA6E" alt="CSESoc Team 2024" width={700} height={700} />
+            <img src="/images/members/csesoc-2025.jpg" alt="CSESoc Team 2025" width={700} height={700} />
           </div>
         </div>
 
@@ -51,9 +51,9 @@ const ExecsDirectorsSubcommitteesPage = () => {
 
           <PortfolioDisplay />
 
-          <p className="text-xl bold my-5">
+          {/* <p className="text-xl bold my-5">
             Get to know them better <a href="https://media.csesoc.org.au/fyg24-meet-csesoc/" className="text-blue-500 hover:underline">here</a>!
-          </p>
+          </p> */}
         </div>
       </PageBody>
     </Layout>

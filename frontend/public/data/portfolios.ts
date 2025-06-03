@@ -122,4 +122,11 @@ export const PORTFOLIOS: PortfolioData[] = [
       { name: "Aaron Tian", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
     ],
   },
+  {
+    name: "Platforms",
+    description: "Maintains the infrastructure underlying the CSESoc IT Portfolio Projects.",
+    members: [
+      { name: "Dominic Cheung", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
+    ]
+  }
 ];
