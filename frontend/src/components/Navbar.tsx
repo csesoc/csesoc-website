@@ -13,7 +13,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="flex justify-between items-center relative z-10">
+    <nav className="sticky top-0 flex justify-between items-center relative z-10 shadow-lg rounded-md bg-black/15 backdrop-blur-md xl:px-24 md:px-10 px-5 py-6">
       <div>
         <Link href="/">
           <Image
