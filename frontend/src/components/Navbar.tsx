@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import Hamburger from './Hamburger';
+import Terminal from './Terminal';
 
 const Navbar = () => {
   const [path, setPath] = useState<string[]>([]);
@@ -13,22 +14,25 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 flex justify-between items-center relative z-10 shadow-lg rounded-md bg-black/15 backdrop-blur-md xl:px-24 md:px-10 px-5 py-6">
-      <Link href="/">
-        <Image
-          src="/assets/csesoc_logo.svg"
-          alt="CSESoc Logo"
-          width={200}
-          height={200}
-          draggable={false}
-        />
+      <div>
+        <Link href="/">
+          <Image
+            src="/assets/csesoc_logo.svg"
+            alt="CSESoc Logo"
+            width={200}
+            height={200}
+            draggable={false}
+          />
+        </Link>
         <p className="font-mono mt-3 font-bold">
           <span className="text-green-500">csesoc@unsw</span>
           <span>:</span>
           <span className="text-blue-500">~{path.map(segment => '/' + segment.toLowerCase())}</span>
           <span>$ </span>
-          <span id="cursor" className="text-gray-400 inline-block animate-blink">_</span>
+          {/* The interactive terminal that allows changing pages using 'cd' */}
+          <Terminal/>
         </p>
-      </Link>
+      </div>
       <div>
         <div className="md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
           <Link href="/about">
