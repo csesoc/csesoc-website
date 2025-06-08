@@ -7,7 +7,7 @@ const Terminal = () => {
 
   // Automatically select the end of the input as the custom
   // cursor only works at the end of the input.
-  const inputRef: any = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const setInputEnd = () => {
     if (inputRef.current) {
       const len = inputRef.current.value.length;
@@ -32,10 +32,12 @@ const Terminal = () => {
     if (value.toLowerCase() === "~"
       || value.toLowerCase() === "cd"
       || value.toLowerCase() === "cd ~"
+      || value.toLowerCase() === "cd .."
     ) {
       goToPage("/");
     } else if (value.toLowerCase() === "cd about"
       || value.toLowerCase() === "cd about us"
+      || value.toLowerCase() === "cd about_us"
     ) {
       goToPage("/about");
     } else if (value.toLowerCase() === "cd events"
@@ -53,6 +55,7 @@ const Terminal = () => {
     } else if (value.toLowerCase() === "cd contact"
       || value.toLowerCase() === "cd contacts"
       || value.toLowerCase() === "cd contact us"
+      || value.toLowerCase() === "cd contact_us"
     ) {
       goToPage("/contact-us");
     }
