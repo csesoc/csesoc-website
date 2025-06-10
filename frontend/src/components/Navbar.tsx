@@ -34,6 +34,9 @@ const Navbar = () => {
           <Link href="/about">
             <div className="text-xl">{'//'} about us</div>
           </Link>
+          <Link href="/media">
+            <div className="text-xl">{'//'} media</div>
+          </Link>
           <Link href="/events">
             <div className="text-xl">{'//'} events</div>
           </Link>
