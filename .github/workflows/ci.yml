@@ -1,0 +1,39 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - master
+      - renovate/*
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  api-ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run type-check
+      - run: npm run build
+  ui-ci:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm run lint
+      - run: npm run type-check
+      - run: npm run build

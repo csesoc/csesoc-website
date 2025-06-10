@@ -16,10 +16,10 @@ const ExecsDirectorsSubcommitteesPage = () => {
             Execs are elected annually by CSE students at the end of the preceding year and Directors are selected by Execs.
           </p>
           <p className="text-xl my-5">
-            The CSESoc Executive and Director team for 2024:
+            The CSESoc Executive and Director team for 2025:
           </p>
           <div className="flex justify-center items-center">
-            <img src="/images/csesoc-team-2024.jpeg" alt="CSESoc Team 2024" width={700} height={700} />
+            <img src="/images/members/csesoc-2025.jpg" alt="CSESoc Team 2025" width={700} height={700} />
           </div>
         </div>
 
@@ -51,9 +51,9 @@ const ExecsDirectorsSubcommitteesPage = () => {
 
           <PortfolioDisplay />
 
-          <p className="text-xl bold my-5">
+          {/* <p className="text-xl bold my-5">
             Get to know them better <a href="https://media.csesoc.org.au/fyg24-meet-csesoc/" className="text-blue-500 hover:underline">here</a>!
-          </p>
+          </p> */}
         </div>
       </PageBody>
     </Layout>
