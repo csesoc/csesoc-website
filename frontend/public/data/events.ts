@@ -10,12 +10,28 @@ export type eventInfo = {
 
 export const events: eventInfo[] = [
   {
-    title: "Brawl Stars Tournament",
-    startTime: "Thursday, 29 May 2025 20:00:00",
-    endTime: "Thursday, 29 May 2025 22:30:00",
-    location: "Online via Discord",
-    image: "/images/events/brawl_stars.jpg",
-    link: "https://www.facebook.com/events/1251081513377441"
+    title: "Startup Spotlight Barbeque",
+    startTime: "Wednesday, 11 June 2025 12:00:00",
+    endTime: "Wednesday, 11 June 2025 14:00:00",
+    location: "John Lions Garden",
+    image: "/images/events/startup_spotlight_bbq.jpg",
+    link: "https://www.facebook.com/events/1018289650496840"
+  },
+  {
+    title: "Mister Maker's Magic Table",
+    startTime: "Wednesday, 18 June 2025 13:00:00",
+    endTime: "Wednesday, 18 June 2025 15:00:00",
+    location: "UNSW Quad",
+    image: "/images/events/mister_makers_magic_table.jpg",
+    link: "https://www.facebook.com/events/1224929275882537"
+  },
+  {
+    title: "Industry Mentoring Program Launch",
+    startTime: "Wednesday, 18 June 2025 18:00:00",
+    endTime: "Wednesday, 18 June 2025 20:00:00",
+    location: "Rex Vowels Theatre",
+    image: "/images/events/industry_mentoring_program.jpg",
+    link: "https://www.facebook.com/events/1776932683235783"
   },
   {
     title: "Rookie Code Rumble",
@@ -28,6 +44,14 @@ export const events: eventInfo[] = [
 ];
 
 export const previousEvents: eventInfo[] = [
+  {
+    title: "Brawl Stars Tournament",
+    startTime: "Thursday, 29 May 2025 20:00:00",
+    endTime: "Thursday, 29 May 2025 22:30:00",
+    location: "Online via Discord",
+    image: "/images/events/brawl_stars.jpg",
+    link: "https://www.facebook.com/events/1251081513377441"
+  },
   {
     title: "Flower Exchange",
     startTime: "Wednesday, 23 Apr 2025 13:00:00",
