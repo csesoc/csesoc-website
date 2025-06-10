@@ -10,12 +10,9 @@ const Article = () => {
       <div className="flex justify-between items-end">
         <div>
           <div className="font-semibold">
-            <p>{'<h1>'}</p>
             <h2 className="font-black 2xl:text-8xl lg:text-6xl text-4xl">Hello World!</h2>
-            <p>{'</h1>'}</p>
           </div>
           <div className="font-semibold mt-10">
-            <p>{'<h2>'}</p>
             <h2 className="font-bold 2xl:text-3xl text-xl">
               We are the principal representative body for{' '}
               <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering"
@@ -26,7 +23,6 @@ const Article = () => {
               </a>
               {' '}students.
             </h2>
-            <p>{'</h2>'}</p>
           </div>
         </div>
       </div>
