@@ -3,7 +3,7 @@ import PortfolioCard from "./PortfolioCard";
 import { PortfolioData } from "@/../public/data/members";
 
 type PortfolioDisplayProps = {
-  execs: PortfolioData[];
+  portfolios: PortfolioData[];
 };
 
 const PortfolioDisplay = ({ portfolios }: PortfolioDisplayProps) => {
