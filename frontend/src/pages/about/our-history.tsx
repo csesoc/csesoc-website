@@ -5,13 +5,21 @@ import { useState } from "react";
 import PortfolioDisplay from "@/components/About/PortfolioDisplay";
 import ExecDisplay from "@/components/About/ExecDisplay";
 
+// Need to import more data
+import { teamData as data2020 } from "@/../public/data/years/2020";
+
 const MIN_YEAR = 2007;
 const MAX_YEAR = 2020;
 const DEFAULT_YEAR = 2020;
 
+const TEAM_DATA_BY_YEAR: Record<number, { execs: Exec[], portfolios: PortfolioData[] }> = {
+  2020: data2020,
+};
+
 const OurHistoryPage = () => {
   const [year, setYear] = useState(DEFAULT_YEAR);
   const [shouldDisplayTip, setShouldDisplayTip] = useState(true);
+  const currentTeam = TEAM_DATA_BY_YEAR[year];
 
   return (
     <Layout>
@@ -71,14 +79,18 @@ const OurHistoryPage = () => {
             <p className="mt-5">Use the slider to see the teams from past years!</p>
           )}
 
-          <div className="pt-6">
-            <ExecDisplay />
-          </div>
-          <div className="space-y-6 w-full">
-            <div className="border-t border-gray-300 my-10"></div>
-            <h2 className="text-xl font-semibold mb-2">Directors</h2>
-            <PortfolioDisplay />
-          </div>
+          {currentTeam && (
+            <>
+              <div className="pt-6 w-full">
+                <ExecDisplay execs={currentTeam.execs}/>
+              </div>
+              <div className="space-y-6 w-full">
+                <div className="border-t border-gray-300 my-10"></div>
+                <h2 className="text-xl font-semibold mb-2">Directors</h2>
+                <PortfolioDisplay portfolios={currentTeam.portfolios}/>
+              </div>
+            </>
+          )}
 
         </div>
       </PageBody>
