@@ -1,4 +1,5 @@
 import PortfolioDisplay from "@/components/About/PortfolioDisplay";
+import ExecDisplay from "@/components/About/ExecDisplay";
 import Layout from "@/components/Layout";
 import PageBody from "@/components/PageBody";
 import PageTitle from "@/components/PageTitle";
@@ -24,19 +25,7 @@ const ExecsDirectorsSubcommitteesPage = () => {
         </div>
 
         {/* EXECS */}
-        <div className="my-5">
-          <h2 className="text-xl font-bold mb-2">Execs</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {EXECS.map(exec => (
-              <div>
-                <div>
-                  <p>{exec.name}</p>
-                  <p className="text-gray-500">{exec.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        <ExecDisplay />
 
         <div className="border-t border-gray-300 my-10"></div>
 
@@ -50,10 +39,7 @@ const ExecsDirectorsSubcommitteesPage = () => {
           </div>
 
           <PortfolioDisplay />
-
-          {/* <p className="text-xl bold my-5">
-            Get to know them better <a href="https://media.csesoc.org.au/fyg24-meet-csesoc/" className="text-blue-500 hover:underline">here</a>!
-          </p> */}
+          
         </div>
       </PageBody>
     </Layout>
