@@ -4,22 +4,24 @@ import dotenv from "dotenv";
 import pingRoute from "./routes/ping";
 import eventsRoute from "./routes/events";
 import eventsWebhookRoute from "./routes/eventsWebhook";
-import { fetchEvents } from "./data/eventData";
+import { eventInfo, eventInfoMutex, fetchEvents } from "./data/eventData";
 
 dotenv.config();
 
 (async () => {
   try {
-    await fetchEvents();
+    const events = await fetchEvents();
+    eventInfoMutex.runExclusive(() => eventInfo.concat(events));
     console.log("Events fetched successfully");
   } catch (error) {
     // do we ungracefully bail out here???
-    console.error("Error fetching events:", error);
+    // could just load from a backup file instead
+    console.error("Error fetching events on startup:", error);
   }
 
   const app: Express = express();
   const port = process.env.PORT || 9000;
-  
+
   // Middleware
   app.use(
     express.json({
@@ -29,11 +31,11 @@ dotenv.config();
     })
   );
   app.use(cors());
-  
+
   app.use(pingRoute);
   app.use(eventsWebhookRoute);
   app.use(eventsRoute);
-  
+
   app.listen(port, () => {
     console.log(`Server successfully started on port ${port}`);
   });

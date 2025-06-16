@@ -1,38 +1,38 @@
-import crypto from 'crypto';
+import crypto from "crypto";
 import { RequestHandler } from "express";
-import { eventInfo, fetchEvent, filterInPlace, replaceInPlace } from '../data/eventData';
+import { eventInfo, eventInfoMutex, fetchEvent } from "../data/eventData";
+import { filterInPlace, replaceInPlace } from "../util";
 
-interface ChangesEntry {
-  field: string;
-  value: {
-    event_id: string;
-    item: string;
-    verb: string;
-  }
-}
-
-interface FacebookWebhookNotificationEntry {
-  id: string;
-  changes: ChangesEntry[];
-}
-
-interface FacebookWebhookNotification {
-  entry: FacebookWebhookNotificationEntry[];
+interface FacebookWebhookPayload {
   object: string;
+  entry: Array<{
+    id: string;
+    changes: Array<{
+      field: string;
+      value: {
+        event_id: string;
+        item: string;
+        verb: string;
+      };
+    }>;
+  }>;
 }
 
-const verifySignature = (rawBody: Buffer, signatureHeader?: string): boolean => {
+const verifySignature = (
+  rawBody: Buffer,
+  signatureHeader?: string
+): boolean => {
   if (!signatureHeader) return false;
-  const [algo, signature] = signatureHeader.split('=');
-  if (algo !== 'sha256') return false;
+  const [algo, signature] = signatureHeader.split("=");
+  if (algo !== "sha256") return false;
 
   const expected = crypto
-    .createHmac('sha256', process.env.FB_APP_SECRET as string)
+    .createHmac("sha256", process.env.FB_APP_SECRET as string)
     .update(rawBody)
-    .digest('hex');
+    .digest("hex");
 
   return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected));
-}
+};
 
 export const EventsWebhookVerifier: RequestHandler = (req, res) => {
   const mode = req.query["hub.mode"];
@@ -73,13 +73,22 @@ https://developers.facebook.com/docs/graph-api/webhooks/reference/page/#feed -- 
 */
 
 export const EventsWebhookUpdate: RequestHandler = async (req, res) => {
-  const signature = req.headers['x-hub-signature-256'];
-  if (!req.rawBody || typeof signature !== "string" || !verifySignature(req.rawBody, signature)) {
+  const signature = req.headers["x-hub-signature-256"];
+  if (
+    !req.rawBody ||
+    typeof signature !== "string" ||
+    !verifySignature(req.rawBody, signature)
+  ) {
     return res.sendStatus(401);
   }
 
-  const notif: FacebookWebhookNotification = req.body;
-  if (!notif || !notif.entry || notif.object !== "page" || notif.entry.length === 0) {
+  const notif: FacebookWebhookPayload = req.body;
+  if (
+    !notif ||
+    !notif.entry ||
+    notif.object !== "page" ||
+    notif.entry.length === 0
+  ) {
     return res.sendStatus(400);
   }
 
@@ -89,19 +98,40 @@ export const EventsWebhookUpdate: RequestHandler = async (req, res) => {
     for (const change of entry.changes) {
       if (change.field !== "feed" || change.value.item !== "event") continue;
 
-      if (change.value.verb === "delete") {
-        // we need filter *in place* because all imports are immutable (the REAL const)
-        filterInPlace(eventInfo, (val, index, arr) => val.id !== change.value.event_id);
-      } else {
-        try {
+      try {
+        if (change.value.verb === "delete") {
+          await eventInfoMutex.runExclusive(() =>
+            filterInPlace(eventInfo, (val) => val.id !== change.value.event_id)
+          );
+          console.log(`Deleted event: ${change.value.event_id}`);
+        } else if (change.value.verb === "edit") {
           const newEvent = await fetchEvent(change.value.event_id);
-          replaceInPlace(eventInfo, (val, index, arr) => val.id === change.value.event_id, newEvent);
-        } catch(err) {
-          console.log(`Wasn't able to update event for some reason: ${err}`);
+
+          eventInfoMutex.runExclusive(() =>
+            replaceInPlace(
+              eventInfo,
+              (val) => val.id === change.value.event_id,
+              newEvent
+            )
+          );
+          console.log(`Edited event: ${change.value.event_id}`);
+        } else if (change.value.verb === "add") {
+          const newEvent = await fetchEvent(change.value.event_id);
+          await eventInfoMutex.runExclusive(() => eventInfo.push(newEvent));
+          console.log(`Added event: ${change.value.event_id}`);
+        } else {
+          console.warn(
+            `Unknown verb "${change.value.verb}" for event ${change.value.event_id}`
+          );
         }
+      } catch (err) {
+        console.error(
+          `Error processing event: ${change.value.event_id}:\n${err}`
+        );
+        return res.sendStatus(500);
       }
     }
   }
 
   res.sendStatus(200);
-}
+};

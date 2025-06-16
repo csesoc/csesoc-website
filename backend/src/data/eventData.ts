@@ -1,3 +1,7 @@
+import { Mutex } from "async-mutex";
+import { inspect } from "util";
+import { FacebookError, Result, ResultType } from "../util";
+
 class EventInfo {
   // god forbid a class have public members
   public id: string;
@@ -28,39 +32,6 @@ class EventInfo {
   }
 }
 
-// We are altering the array in place, pray we do not alter it from another thread
-// I don't even know if concurrent modification exception is a thing in JS
-// Maybe this is a single threaded moment :icant:
-export function filterInPlace<T>(
-  arr: T[],
-  predicate: (value: T, index: number, array: T[]) => boolean
-): T[] {
-  let write = 0;
-  for (let read = 0; read < arr.length; read++) {
-    const val = arr[read];
-    if (predicate(val, read, arr)) {
-      arr[write++] = val;
-    }
-  }
-  arr.length = write;
-  return arr;
-}
-
-// This one is definitely not thread safe lmao
-// TODO fix with a mutex probably
-export function replaceInPlace<T>(
-  arr: T[],
-  predicate: (value: T, index: number, array: T[]) => boolean,
-  replacement: T
-): number {
-  const idx = arr.findIndex(predicate);
-  if (idx !== -1) arr[idx] = replacement;
-  return idx;
-}
-
-// we LOVE global variables
-export let eventInfo: EventInfo[] = [];
-
 interface FacebookEvent {
   id: string;
   name: string;
@@ -76,32 +47,37 @@ interface FacebookEventsResponse {
 
 // this isn't in .env for different module compatiblity
 const FB_API_VERSION = "v23.0";
+const DEFAULT_EVENT_LOCATION = "Everything everywhere all at once!!!";
+const DEFAULT_EVENT_IMAGE = "/images/events/default_event.jpg";
+
+// we LOVE global variables
+export const eventInfoMutex = new Mutex();
+export const eventInfo: EventInfo[] = [];
 
 export async function fetchEvents() {
   const response = await fetch(
     `https://graph.facebook.com/${FB_API_VERSION}/${process.env.FB_EVENT_PAGE_ID}/events?access_token=${process.env.FB_ACCESS_TOKEN}&fields=id,name,cover,place,start_time,end_time`
   );
 
-  const res: FacebookEventsResponse = await response.json();
-
-  if (!res || !res.data) {
-    console.log("No events found...");
-    return;
+  const res: Result<FacebookEventsResponse, FacebookError> = await response.json();
+  if (!res || res.type === ResultType.Err) {
+    console.log(`No events found...\n${res}`);
+    return [];
   }
 
-  const processed = res.data.map(
+  const processed = res.value.data.map(
     (e) =>
       new EventInfo(
         e.id,
         e.name,
         e.start_time,
         e.end_time,
-        e.place?.name ?? "Everything everywhere all at once!!!",
-        e.cover?.source || "/images/events/default_event.jpg"
+        e.place?.name ?? DEFAULT_EVENT_LOCATION,
+        e.cover?.source ?? DEFAULT_EVENT_IMAGE
       )
   );
 
-  eventInfo = processed;
+  return processed;
 }
 
 export async function fetchEvent(id: string) {
@@ -109,18 +85,22 @@ export async function fetchEvent(id: string) {
     `https://graph.facebook.com/${FB_API_VERSION}/${id}?access_token=${process.env.FB_ACCESS_TOKEN}&fields=id,name,cover,place,start_time,end_time`
   );
 
-  const res: FacebookEvent = await response.json();
+  const res: Result<FacebookEvent, FacebookError> = await response.json();
 
-  if (!res) {
-    throw new Error(`Couldn't get details for event ${id}`);
+  if (!res || res.type === ResultType.Err) {
+    throw new Error(
+      `Couldn't fetch details for event ${id}\n${inspect(
+        Object.getOwnPropertyDescriptor(res, "error")?.value
+      )}`
+    );
   }
 
   return new EventInfo(
-    res.id,
-    res.name,
-    res.start_time,
-    res.end_time,
-    res.place?.name ?? "Everything everywhere all at once!!!",
-    res.cover?.source || "/images/events/default_event.jpg"
+    res.value.id,
+    res.value.name,
+    res.value.start_time,
+    res.value.end_time,
+    res.value.place?.name ?? DEFAULT_EVENT_LOCATION,
+    res.value.cover?.source ?? DEFAULT_EVENT_IMAGE
   );
 }
