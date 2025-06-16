@@ -4,6 +4,7 @@ import PageTitle from "@/components/PageTitle";
 import { useState } from "react";
 import PortfolioDisplay from "@/components/About/PortfolioDisplay";
 import ExecDisplay from "@/components/About/ExecDisplay";
+import { Exec, PortfolioData } from "@/../public/data/members";
 
 // Need to import more data
 import { teamData as data2020 } from "@/../public/data/years/2020";
