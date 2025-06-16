@@ -1,11 +1,15 @@
 import { useState } from "react";
 import PortfolioCard from "./PortfolioCard";
-import { PORTFOLIOS } from "@/../public/data/portfolios";
+import { PortfolioData } from "@/../public/data/members";
 
-const PortfolioDisplay = () => {
+type PortfolioDisplayProps = {
+  execs: PortfolioData[];
+};
+
+const PortfolioDisplay = ({ portfolios }: PortfolioDisplayProps) => {
   const [selectedPortfolio, setSelectedPortfolio] = useState("Careers");
   
-  const names = PORTFOLIOS.map(port => port.name);
+  const names = portfolios.map(port => port.name);
 
   return (
     <div>
@@ -25,7 +29,7 @@ const PortfolioDisplay = () => {
         ))}
       </div>
       
-      <PortfolioCard portfolio={PORTFOLIOS.find(port => port.name === selectedPortfolio) ?? PORTFOLIOS[0]} />
+      <PortfolioCard portfolio={portfolios.find(port => port.name === selectedPortfolio) ?? portfolios[0]} />
     </div>
   )
 }

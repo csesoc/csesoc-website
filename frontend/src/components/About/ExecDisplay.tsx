@@ -1,12 +1,16 @@
 import { useState } from "react";
-import { EXECS } from "@/../public/data/execs";
+import { Exec } from "@/../public/data/members";
 
-const ExecDisplay = () => {
+type ExecDisplayProps = {
+  execs: Exec[];
+};
+
+const ExecDisplay = ({ execs }: ExecDisplayProps) => {
 	return (
 		<div className="my-5">
 			<h2 className="text-xl font-bold mb-2">Execs</h2>
 			<div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-				{EXECS.map(exec => (
+				{execs.map(exec => (
 					<div>
 						<div>
 							<p>{exec.name}</p>

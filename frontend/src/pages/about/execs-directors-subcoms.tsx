@@ -3,7 +3,7 @@ import ExecDisplay from "@/components/About/ExecDisplay";
 import Layout from "@/components/Layout";
 import PageBody from "@/components/PageBody";
 import PageTitle from "@/components/PageTitle";
-import { EXECS } from "@/../public/data/execs";
+import { teamData } from "@/../public/data/years/2025";
 
 const ExecsDirectorsSubcommitteesPage = () => {
   return (
@@ -25,7 +25,7 @@ const ExecsDirectorsSubcommitteesPage = () => {
         </div>
 
         {/* EXECS */}
-        <ExecDisplay />
+        <ExecDisplay execs={teamData.execs} />
 
         <div className="border-t border-gray-300 my-10"></div>
 
@@ -38,7 +38,7 @@ const ExecsDirectorsSubcommitteesPage = () => {
             </p>
           </div>
 
-          <PortfolioDisplay />
+          <PortfolioDisplay portfolios={teamData.portfolios} />
           
         </div>
       </PageBody>
