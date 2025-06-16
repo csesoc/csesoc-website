@@ -1,62 +1,80 @@
 import React from 'react';
-import { AnimatePresence, motion, useCycle } from 'framer-motion';
 import Link from 'next/link';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function Hamburger() {
-  const [isOpen, toggleOpen] = useCycle(false, true);
 
   return (
-    <button
-      onClick={() => {
-        toggleOpen();
-      }}
-    >
-      <svg
-        className="w-10 h-10"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M4 6h16M4 12h16m-7 6h7"
-        />
-      </svg>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-16 right-0 bg-[#3977F9] p-4 shadow-lg w-40 rounded-2xl"
+    <DropdownMenu modal={false}>
+      <DropdownMenuTrigger>
+        <button className="p-2 rounded-lg transition-all">
+          <svg
+            className="w-10 h-10 hover:scale-110 hover:rotate-2 transition-all"
+            fill="none"
+            stroke="white"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <ul>
-              <li className="py-2 text-lg">
-                <Link href={'/about'}>About Us</Link>
-              </li>
-              <li className="py-2 text-lg">
-                <Link href={'/events'}>Events</Link>
-              </li>
-              <li className="py-2 text-lg">
-                <Link href={'/resources'}>Resources</Link>
-              </li>
-              <li className="py-2 text-lg">
-                <Link href={'/sponsors'}>Sponsors</Link>
-              </li>
-              <li className="py-2 text-lg">
-                <Link href={'/contact-us'}>Contact Us</Link>
-              </li>
-              <li className="py-2 text-lg">
-                <a target="_blank" href="https://csesoc-merch.square.site/">Merch Store</a>
-              </li>
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </button>
+            <path strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16m-7 6h7"
+            />
+          </svg>
+        </button>
+      </DropdownMenuTrigger>
+      
+      <DropdownMenuContent 
+        align="end" 
+        className="w-44 bg-[#3977F9] border-none shadow-lg rounded-2xl text-white"
+      >
+     
+        <DropdownMenuItem className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer">
+          <Link href="/about" className="w-full block">
+            About Us
+          </Link>
+        </DropdownMenuItem>
+        
+        <DropdownMenuItem className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer">
+          <Link href="/events" className="w-full block">
+            Events
+          </Link>
+        </DropdownMenuItem>
+        
+        <DropdownMenuItem className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer">
+          <Link href="/resources" className="w-full block">
+            Resources
+          </Link>
+        </DropdownMenuItem>
+        
+        <DropdownMenuItem className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer">
+          <Link href="/sponsors" className="w-full block">
+            Sponsors
+          </Link>
+        </DropdownMenuItem>
+        
+        <DropdownMenuItem className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer">
+          <Link href="/contact-us" className="w-full block">
+            Contact Us
+          </Link>
+        </DropdownMenuItem>
+        
+        <DropdownMenuItem className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer">
+          <a 
+            target="_blank" 
+            href="https://csesoc-merch.square.site/"
+            className="w-full block"
+          >
+            Merch
+          </a>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }
