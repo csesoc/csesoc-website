@@ -8,7 +8,8 @@ const Terminal = () => {
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
 
-  // Automatically focus and move cursor to the end
+  // Automatically select the end of the input as the custom
+  // cursor only works at the end of the input.
   const setInputEnd = () => {
     if (inputRef.current) {
       const len = inputRef.current.value.length;
