@@ -33,6 +33,8 @@ const Terminal = () => {
     router.push(target);
   };
 
+  // Checking for "Enter" and if so, changing to
+  // the inputted page
   const handleKey = (key: string) => {
     if (key !== "Enter") return;
 
