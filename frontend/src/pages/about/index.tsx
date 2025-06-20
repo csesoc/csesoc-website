@@ -7,7 +7,6 @@ import TabTitle from 'next/head';
 export default function AboutPage() {
   return (
     <Layout>
-
       <TabTitle>
         <title>About Us | CseSoc UNSW</title>
       </TabTitle>

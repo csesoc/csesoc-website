@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import PageBody from "@/components/PageBody";
 import PageTitle from "@/components/PageTitle";
+import TabTitle from 'next/head'
 import { useState } from "react";
 
 const MIN_YEAR = 2007;
@@ -13,6 +14,10 @@ const OurHistoryPage = () => {
 
   return (
     <Layout>
+      <TabTitle>
+        <title>Our History | CseSoc UNSW</title>
+      </TabTitle>
+
       <PageTitle title="OUR HISTORY" />
       <PageBody>
         <div>
