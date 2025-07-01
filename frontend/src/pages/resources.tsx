@@ -2,6 +2,7 @@ import Layout from '@/components/Layout';
 import Image from 'next/image';
 import { resourceCards, stage1, stage2, stage3 } from '@/../public/data/resourceCards';
 import PageTitle from '@/components/PageTitle';
+import TabTitle from 'next/head';
 
 export default function ResourcesPage() {
   const boxStyling =
@@ -9,6 +10,10 @@ export default function ResourcesPage() {
 
   return (
     <Layout>
+      <TabTitle>
+        <title>Resources | CseSoc UNSW</title>
+      </TabTitle>
+
       <PageTitle title="RESOURCES" />
       
       <section className="bg-no-repeat bg-center py-8 px-15 min-h-screen flex justify-center items-center">

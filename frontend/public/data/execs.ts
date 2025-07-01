@@ -7,39 +7,39 @@ export type Exec = {
 
 export const EXECS: Exec[] = [
   {
-    name: "Elizabeth Zhu Chan",
+    name: "Joyce He",
     role: "Co-President",
   },
   {
-    name: "Lesley Lu",
+    name: "Susie Xia",
     role: "Co-President",
   },
   {
-    name: "Ivan Chan",
+    name: "Zitian Qin",
     role: "Secretary",
   },
   {
-    name: "Justin Son",
+    name: "Lisa Lin",
     role: "Treasurer",
   },
   {
-    name: "Sophie Khov",
+    name: "Leo Maisnam",
     role: "Arc Delegate",
   },
   {
-    name: "Catherine Kim",
+    name: "Aryan Chauhan",
     role: "Grievance, Equity, Diversity and Inclusion Officer",
   },
   {
-    name: "Amy Liu",
-    role: "Vice President (Internals)",
+    name: "Emma Nguyen",
+    role: "Vice President (External)",
   },
   {
-    name: "Nicole Jiang",
-    role: "Vice President (Externals)",
+    name: "Jordan Djamaan",
+    role: "Vice President (Internal)",
   },
   {
-    name: "Matthew Lim",
-    role: "Vice President (Technicals)",
+    name: "JJ Roberts-White",
+    role: "Vice President (Technical)",
   },
 ];

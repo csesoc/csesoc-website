@@ -1,6 +1,7 @@
 import React from 'react';
 import { events } from '../../../public/data/events';
 import EventsCarousel from './EventsCarousel';
+import { ChevronRight } from 'lucide-react';
 
 const EventBrief = () => {
   return (
@@ -16,9 +17,10 @@ const EventBrief = () => {
       }
       <div className="flex justify-center items-center">
         <a href="events">
-          <button className="mt-10 bg-white border text-[#3977F8] border-[#A7A6E5] text-lg rounded-xl w-[20rem] xl:h-12 h-10 hover-animate">
-            See all events
-          </button>
+            <button className="group flex justify-center items-center gap-2 pl-2 bg-white border text-blue-900 font-semibold border-[#A7A6E5] text-lg rounded-3xl w-[14rem] hover:opacity-60 xl:h-12 h-10 duration-300">
+              See all events
+              <ChevronRight className="group-hover:animate-bounce-right" />
+            </button>
         </a>
       </div>
     </section>

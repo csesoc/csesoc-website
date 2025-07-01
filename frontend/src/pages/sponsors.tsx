@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { diamondLinks, goldLinks, silverLinks, sponsorInfo } from '@/../public/data/sponsorInfos';
 import SponsorModal from '@/components/Sponsors/SponsorModal';
 import { EmojiRain } from 'next-emoji-rain';
+import TabTitle from 'next/head';
 
 export default function SponsorsPage() {
   const logostyle =
@@ -29,6 +30,10 @@ export default function SponsorsPage() {
 
   return (
     <Layout>
+      <TabTitle>
+        <title>Sponsers | CseSoc UNSW</title>
+      </TabTitle>
+
       <div id="diamondRain" className="opacity-0">
         <EmojiRain emoji="💎" />
       </div>
@@ -52,7 +57,7 @@ export default function SponsorsPage() {
               {diamondLinks.map((item, index) => {
                 return (
                   <div key={index} onClick={() => handleSponsorClick(item)}>
-                    <img className={`h-14 ${logostyle}`} src={item.svg} alt={item.alt} />
+                    <img className={`h-16 max-w-xs ${logostyle}`} src={item.svg} alt={item.alt} />
                   </div>
                 );
               })}
@@ -65,7 +70,7 @@ export default function SponsorsPage() {
             {goldLinks.map((item, index) => {
               return (
                 <div key={index} onClick={() => handleSponsorClick(item)}>
-                  <img className={`h-14 ${logostyle}`} src={item.svg} alt={item.alt} />
+                  <img className={`h-14 max-w-xs ${logostyle}`} src={item.svg} alt={item.alt} />
                 </div>
               );
             })}
@@ -77,7 +82,7 @@ export default function SponsorsPage() {
             {silverLinks.map((item, index) => {
               return (
                 <div key={index} onClick={() => handleSponsorClick(item)}>
-                  <img className={`h-14 ${logostyle}`} src={item.svg} alt={item.alt} />
+                  <img className={`h-14 max-w-xs ${logostyle}`} src={item.svg} alt={item.alt} />
                 </div>
               );
             })}

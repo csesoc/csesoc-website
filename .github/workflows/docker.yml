@@ -35,7 +35,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ${{ matrix.component }}
-          push: ${{ github.event_name != 'pull_request' && ( github.ref == 'refs/heads/main' || github.ref == 'refs/heads/qa' ) }}
+          push: ${{ github.event_name != 'pull_request' && ( github.ref == 'refs/heads/master' || github.ref == 'refs/heads/qa' ) }}
           platforms: linux/amd64
           file: ${{ matrix.component }}/Dockerfile
           tags: |
@@ -49,7 +49,7 @@ jobs:
     concurrency: prod
     environment:
       name: prod
-    if: ${{ github.event_name != 'pull_request' && ( github.ref == 'refs/heads/main' || github.ref == 'refs/heads/qa' ) }}
+    if: ${{ github.event_name != 'pull_request' && ( github.ref == 'refs/heads/master' || github.ref == 'refs/heads/qa' ) }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -64,7 +64,7 @@ jobs:
         env:
           BRANCH: ${{ github.ref }}
         run: |
-          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+          if [[ "${{ github.ref }}" == "refs/heads/master" ]]; then
             echo "TYPE=prod" >> $GITHUB_OUTPUT
           elif [[ "${{ github.ref }}" == "refs/heads/qa" ]]; then
             echo "TYPE=qa" >> $GITHUB_OUTPUT
