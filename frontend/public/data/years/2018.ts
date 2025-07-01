@@ -35,7 +35,7 @@ export const teamData = {
     },
     {
       name: "Marketing",
-      description: "Promotes CSESoc on our social media as well as creating supplementary marketing material to engage our audience.",
+      description: "",
       members: [
         { name: "Celine Tye", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Sheng An Zhang", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -65,7 +65,7 @@ export const teamData = {
     },
     {
       name: "Social Events",
-      description: "Organises approachable events targeted towards building an inclusive and welcoming community, to help build long-lasting friendships!",
+      description: "",
       members: [
         { name: "Mark Sonnenschein", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Sampath Somanchi", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },

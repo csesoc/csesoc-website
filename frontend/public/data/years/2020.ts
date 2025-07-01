@@ -31,7 +31,7 @@ export const teamData = {
   portfolios: [
     {
       name: "Careers",
-      description: "Facilitates industry sponsor relations, as well as creating events focused on interpersonal development and networking.",
+      description: "",
       members: [
         { name: "Evangeline Endacott", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Low Khye Ean", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -49,7 +49,7 @@ export const teamData = {
     },
     {
       name: "Creative",
-      description: "Lays the groundwork for CSESoc's aesthetic branding, providing an outlet for creative expression.",
+      description: "",
       members: [
         { name: "Elizabeth Zhong", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Jia Min Guo", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -57,7 +57,7 @@ export const teamData = {
     },
     {
       name: "Marketing",
-      description: "Promotes CSESoc on our social media as well as creating supplementary marketing material to engage our audience.",
+      description: "",
       members: [
         { name: "Isaac Pamu Joshi", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Jessica Feng", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -65,7 +65,7 @@ export const teamData = {
     },
     {
       name: "Media",
-      description: "Focuses on creating content for our CSESoc community and beyond to capture our diverse student voice.",
+      description: "",
       members: [
         { name: "Aditi Chandra", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Clarence Shijun Feng", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -73,7 +73,7 @@ export const teamData = {
     },
     {
       name: "Socials",
-      description: "Organises approachable events targeted towards building an inclusive and welcoming community, to help build long-lasting friendships!",
+      description: "",
       members: [
         { name: "Frances Lee", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Van-Roy Trinh", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },

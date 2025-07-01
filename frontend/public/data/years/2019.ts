@@ -27,7 +27,7 @@ export const teamData = {
   portfolios: [
     {
       name: "Careers",
-      description: "Facilitates industry sponsor relations, as well as creating events focused on interpersonal development and networking.",
+      description: "",
       members: [
         { name: "Sam Push", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Sophia Lin", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -43,7 +43,7 @@ export const teamData = {
     },
     {
       name: "Marketing",
-      description: "Promotes CSESoc on our social media as well as creating supplementary marketing material to engage our audience.",
+      description: "",
       members: [
         { name: "Amy Luo", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Taiyue Tan", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -51,7 +51,7 @@ export const teamData = {
     },
     {
       name: "Media",
-      description: "Focuses on creating content for our CSESoc community and beyond to capture our diverse student voice.",
+      description: "",
       members: [
         { name: "Adrian Martinez", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Mehri Amin", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -66,7 +66,7 @@ export const teamData = {
     },
     {
       name: "Social Events",
-      description: "Organises approachable events targeted towards building an inclusive and welcoming community, to help build long-lasting friendships!",
+      description: "",
       members: [
         { name: "Selina Chua", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Nathan Ellis", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
