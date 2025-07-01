@@ -13,7 +13,7 @@ const PortfolioDisplay = ({ portfolios }: PortfolioDisplayProps) => {
 
   return (
     <div>
-      <div className="flex justify-between max-w-full h-12 my-6 snap-x snap-mandatory overflow-y-hidden pb-1 
+      <div className="flex justify-between max-w-full my-6 snap-x snap-mandatory overflow-y-hidden pb-1 
           [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:h-2
           [&::-webkit-scrollbar-track]:bg-transparent
           [&::-webkit-scrollbar-thumb]:rounded-full
