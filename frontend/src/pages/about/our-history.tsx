@@ -4,18 +4,11 @@ import PageTitle from "@/components/PageTitle";
 import { useState } from "react";
 import PortfolioDisplay from "@/components/About/PortfolioDisplay";
 import ExecDisplay from "@/components/About/ExecDisplay";
-import { Exec, PortfolioData } from "@/../public/data/members";
-
-// Need to import more data
-import { teamData as data2020 } from "@/../public/data/years/2020";
+import { TEAM_DATA_BY_YEAR } from "@/../public/data/years/index";
 
 const MIN_YEAR = 2007;
 const MAX_YEAR = 2020;
 const DEFAULT_YEAR = 2020;
-
-const TEAM_DATA_BY_YEAR: Record<number, { execs: Exec[], portfolios: PortfolioData[] }> = {
-  2020: data2020,
-};
 
 const OurHistoryPage = () => {
   const [year, setYear] = useState(DEFAULT_YEAR);

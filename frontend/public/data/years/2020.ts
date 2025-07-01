@@ -36,12 +36,12 @@ export const teamData = {
         { name: "Evangeline Endacott", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Low Khye Ean", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Nicholas Duller", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
-                { name: "Yan Zhai", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
+        { name: "Yan Zhai", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
       ],
     },
     {
       name: "CompClub",
-      description: "need to add a description",
+      description: "",
       members: [
         { name: "Livia Wijayanti", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Timothy Ryan", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -81,7 +81,7 @@ export const teamData = {
     },
     {
       name: "Software Projects",
-      description: "add a description",
+      description: "",
       members: [
         { name: "Gordon Zhong", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Leesa Kristina Dang", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -89,7 +89,7 @@ export const teamData = {
     },
     {
       name: "Student Network",
-      description: "hello",
+      description: "",
       members: [
         { name: "Sachin Krishnamoorthy", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Shrey Somaiya", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
@@ -97,7 +97,7 @@ export const teamData = {
     },
     {
       name: "Workshops",
-      description: "hello",
+      description: "",
       members: [
         { name: "Michael Gribben", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
       ],
