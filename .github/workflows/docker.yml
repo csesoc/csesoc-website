@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - "master"
+      - "qa"
 
 jobs:
   build:
@@ -34,21 +35,21 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           context: ${{ matrix.component }}
-          push: ${{ github.event_name != 'pull_request' }}
+          push: ${{ github.event_name != 'pull_request' && ( github.ref == 'refs/heads/main' || github.ref == 'refs/heads/qa' ) }}
           platforms: linux/amd64
           file: ${{ matrix.component }}/Dockerfile
           tags: |
             ghcr.io/csesoc/website-${{ matrix.component }}:${{ github.sha }}
             ghcr.io/csesoc/website-${{ matrix.component }}:latest
           labels: ${{ steps.meta.outputs.labels }}
-  deploy-prod:
-    name: Deploy Production (CD)
+  deploy:
+    name: Deploy (CD)
     runs-on: ubuntu-latest
     needs: [build]
     concurrency: prod
     environment:
       name: prod
-    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+    if: ${{ github.event_name != 'pull_request' && ( github.ref == 'refs/heads/main' || github.ref == 'refs/heads/qa' ) }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -58,48 +59,29 @@ jobs:
           ref: develop
       - name: Install yq - portable yaml processor
         uses: mikefarah/yq@v4.27.2
+      - name: "Determine deployment type"
+        id: get_manifest
+        env:
+          BRANCH: ${{ github.ref }}
+        run: |
+          if [[ "${{ github.ref }}" == "refs/heads/main" ]]; then
+            echo "TYPE=prod" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.ref }}" == "refs/heads/qa" ]]; then
+            echo "TYPE=qa" >> $GITHUB_OUTPUT
+          else
+            exit 1
+          fi
       - name: Update deployment
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           git config user.name "CSESoc CD"
           git config user.email "technical@csesoc.org.au"
-          git checkout -b update/website-prod/${{ github.sha }}
-          yq -i '.items[0].spec.template.spec.containers[0].image = "ghcr.io/csesoc/website-backend:${{ github.sha }}"' apps/projects/website/prod/deploy-backend.yml
-          yq -i '.items[0].spec.template.spec.containers[0].image = "ghcr.io/csesoc/website-frontend:${{ github.sha }}"' apps/projects/website/prod/deploy-frontend.yml
+          git checkout -b update/website-${{ steps.get_manifest.outputs.TYPE }}/${{ github.sha }}
+          yq -i '.items[0].spec.template.spec.containers[0].image = "ghcr.io/csesoc/website-backend:${{ github.sha }}"' apps/projects/website/${{ steps.get_manifest.outputs.TYPE }}/deploy-backend.yml
+          yq -i '.items[0].spec.template.spec.containers[0].image = "ghcr.io/csesoc/website-frontend:${{ github.sha }}"' apps/projects/website/${{ steps.get_manifest.outputs.TYPE }}/deploy-frontend.yml
           git add .
-          git commit -m "feat(website/prod): update image"
-          git push -u origin update/website-prod/${{ github.sha }}
-          gh pr create -B develop --title "feat(website/prod): update image" --body "Updates the image for the website-prod deployment to commit csesoc/csesoc-website@${{ github.sha }}." > URL
-          gh pr merge $(cat URL) --squash -d
-  deploy-qa:
-    name: Deploy QA (CD)
-    runs-on: ubuntu-latest
-    needs: [build]
-    concurrency: qa
-    environment:
-      name: qa
-    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/qa' }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          repository: csesoc/deployment
-          token: ${{ secrets.GH_TOKEN }}
-          ref: develop
-      - name: Install yq - portable yaml processor
-        uses: mikefarah/yq@v4.27.2
-      - name: Update deployment
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          git config user.name "CSESoc CD"
-          git config user.email "technical@csesoc.org.au"
-          git checkout -b update/website-qa/${{ github.sha }}
-          yq -i '.items[0].spec.template.spec.containers[0].image = "ghcr.io/csesoc/website-qa-backend:${{ github.sha }}"' apps/projects/website/qa/deploy-backend.yml
-          yq -i '.items[0].spec.template.spec.containers[0].image = "ghcr.io/csesoc/website-qa-frontend:${{ github.sha }}"' apps/projects/website/qa/deploy-frontend.yml
-          git add .
-          git commit -m "feat(website/qa): update image"
-          git push -u origin update/website-qa/${{ github.sha }}
-          gh pr create -B develop --title "feat(website/qa): update image" --body "Updates the image for the website-qa deployment to commit csesoc/csesoc-website@${{ github.sha }}." > URL
+          git commit -m "feat(website/${{ steps.get_manifest.outputs.TYPE }}): update image"
+          git push -u origin update/website-${{ steps.get_manifest.outputs.TYPE }}/${{ github.sha }}
+          gh pr create -B develop --title "feat(website/${{ steps.get_manifest.outputs.TYPE }}): update image" --body "Updates the image for the website-prod deployment to commit csesoc/csesoc-website@${{ github.sha }}." > URL
           gh pr merge $(cat URL) --squash -d
