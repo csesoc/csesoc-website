@@ -1,62 +1,103 @@
-import React from 'react';
-import { AnimatePresence, motion, useCycle } from 'framer-motion';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export default function Hamburger() {
-  const [isOpen, toggleOpen] = useCycle(false, true);
+  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsOpenDropdown(false);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <button
-      onClick={() => {
-        toggleOpen();
-      }}
-    >
-      <svg
-        className="w-10 h-10"
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
+    <DropdownMenu modal={false} open={isOpenDropdown} onOpenChange={setIsOpenDropdown}>
+      <DropdownMenuTrigger asChild>
+        <button className="p-2 rounded-lg">
+          <div className="w-10 h-10 flex flex-col justify-center items-center">
+            <motion.div
+              className="h-0.5 w-6 bg-white"
+              animate={{
+                rotate: isOpenDropdown ? 45 : 0,
+                y: isOpenDropdown ? 2 : -4,
+              }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="h-0.5 w-6 bg-white"
+              animate={{
+                opacity: isOpenDropdown ? 0 : 1,
+                x: isOpenDropdown ? -10 : 0,
+              }}
+              transition={{ duration: 0.2, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="h-0.5 w-6 bg-white"
+              animate={{
+                rotate: isOpenDropdown ? -45 : 0,
+                y: isOpenDropdown ? -2 : 4,
+              }}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+            />
+          </div>
+        </button>
+      </DropdownMenuTrigger>
+      
+      <DropdownMenuContent 
+        align="end" 
+        className="w-44 bg-[#3977F9] border-none shadow-lg rounded-2xl text-white dropdown-content overflow-hidden"
       >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth={2}
-          d="M4 6h16M4 12h16m-7 6h7"
-        />
-      </svg>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2 }}
-            className="absolute top-16 right-0 bg-[#3977F9] p-4 shadow-lg w-40 rounded-2xl"
+     
+        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
+          <Link href="/about" className="w-full block">
+            About Us
+          </Link>
+        </DropdownMenuItem>
+        
+        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
+          <Link href="/events" className="w-full block">
+            Events
+          </Link>
+        </DropdownMenuItem>
+        
+        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
+          <Link href="/resources" className="w-full block">
+            Resources
+          </Link>
+        </DropdownMenuItem>
+        
+        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
+          <Link href="/sponsors" className="w-full block">
+            Sponsors
+          </Link>
+        </DropdownMenuItem>
+        
+        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
+          <Link href="/contact-us" className="w-full block">
+            Contact Us
+          </Link>
+        </DropdownMenuItem>
+        
+        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
+          <a 
+            target="_blank" 
+            href="https://csesoc-merch.square.site/"
+            className="w-full block"
           >
-            <ul>
-              <li className="py-2 text-lg">
-                <Link href={'/about'}>About Us</Link>
-              </li>
-              <li className="py-2 text-lg">
-                <Link href={'/events'}>Events</Link>
-              </li>
-              <li className="py-2 text-lg">
-                <Link href={'/resources'}>Resources</Link>
-              </li>
-              <li className="py-2 text-lg">
-                <Link href={'/sponsors'}>Sponsors</Link>
-              </li>
-              <li className="py-2 text-lg">
-                <Link href={'/contact-us'}>Contact Us</Link>
-              </li>
-              <li className="py-2 text-lg">
-                <a target="_blank" href="https://csesoc-merch.square.site/">Merch Store</a>
-              </li>
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </button>
+            Merch
+          </a>
+        </DropdownMenuItem>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

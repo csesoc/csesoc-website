@@ -3,10 +3,16 @@ import Landing from '@/components/Landing';
 import Sponsors from '@/components/Sponsors/index';
 import AboutHomePage from '@/components/About/AboutHomepage';
 import EventsBrief from '@/components/Event/EventsBrief';
+import TabTitle from 'next/head';
 
 export default function HomePage() {
   return (
-    <section>
+    <>
+      <TabTitle>
+        <title>CseSoc UNSW</title>
+      </TabTitle>
+
+      <section>
         <div className="h-8"></div>
         
         <Navbar />
@@ -18,6 +24,8 @@ export default function HomePage() {
         <AboutHomePage />
         <EventsBrief />
         <Sponsors />
-    </section>
+      </section>
+    </>
+    
   );
 }

@@ -4,10 +4,14 @@ import Layout from "@/components/Layout";
 import PageBody from "@/components/PageBody";
 import PageTitle from "@/components/PageTitle";
 import { teamData } from "@/../public/data/years/2025";
+import TabTitle from 'next/head'
 
 const ExecsDirectorsSubcommitteesPage = () => {
   return (
     <Layout>
+      <TabTitle>
+        <title>Execs, Directors, Subcom | CseSoc UNSW</title>
+      </TabTitle>
       <PageTitle title="EXECS, DIRECTORS & SUBCOMMITTEES" />
       <PageBody>
         {/* CSESOC TEAM */}

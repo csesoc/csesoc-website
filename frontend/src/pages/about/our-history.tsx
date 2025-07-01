@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import PageBody from "@/components/PageBody";
 import PageTitle from "@/components/PageTitle";
+import TabTitle from 'next/head'
 import { useState } from "react";
 import PortfolioDisplay from "@/components/About/PortfolioDisplay";
 import ExecDisplay from "@/components/About/ExecDisplay";
@@ -17,6 +18,10 @@ const OurHistoryPage = () => {
 
   return (
     <Layout>
+      <TabTitle>
+        <title>Our History | CseSoc UNSW</title>
+      </TabTitle>
+
       <PageTitle title="OUR HISTORY" />
       <PageBody>
         <div>
