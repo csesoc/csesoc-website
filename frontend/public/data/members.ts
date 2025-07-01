@@ -18,4 +18,5 @@ export type PortfolioMember = {
 export enum PortfolioRole {
   DIRECTOR = "Director",
   SUBCOM = "Subcommittee",
+  HEAD = "Head Director"
 }

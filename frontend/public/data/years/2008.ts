@@ -81,7 +81,7 @@ export const teamData = {
       name: "Technical",
       description: "",
       members: [
-        { name: "V. Ramana Kirubagaran (Head)", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
+        { name: "V. Ramana Kirubagaran", role: PortfolioRole.HEAD, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Dean Berwick", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
         { name: "Prashant Varanasi", role: PortfolioRole.DIRECTOR, imageUrl: "/images/members/blank-pfp.png" },
       ],
