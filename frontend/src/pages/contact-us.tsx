@@ -8,7 +8,7 @@ export default function ContactUsPage() {
   return (
     <Layout>
       <TabTitle>
-        <title>Contact Us | CseSoc UNSW</title>
+        <title>Contact Us | CSESoc UNSW</title>
       </TabTitle>
       
       <PageTitle title="CONTACT US" />

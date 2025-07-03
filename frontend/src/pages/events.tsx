@@ -8,7 +8,7 @@ export default function EventsPage() {
   return (
     <>
       <TabTitle>
-        <title>Events | CseSoc UNSW</title>
+        <title>Events | CSESoc UNSW</title>
       </TabTitle>
 
       <section className="flex flex-col min-h-screen justify-between py-8 relative">

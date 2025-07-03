@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <>
       <TabTitle>
-        <title>CseSoc UNSW</title>
+        <title>CSESoc UNSW</title>
       </TabTitle>
 
       <section>
