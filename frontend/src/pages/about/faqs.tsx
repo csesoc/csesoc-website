@@ -7,7 +7,7 @@ const FaqsPage = () => {
   return (
     <Layout>
       <TabTitle>
-        <title>FAQs | CseSoc UNSW</title>
+        <title>FAQs | CSESoc UNSW</title>
       </TabTitle>
       <PageTitle title="FREQUENTLY ASKED QUESTIONS" />
       <PageBody>
