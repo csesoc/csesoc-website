@@ -11,7 +11,7 @@ export default function ResourcesPage() {
   return (
     <Layout>
       <TabTitle>
-        <title>Resources | CseSoc UNSW</title>
+        <title>Resources | CSESoc UNSW</title>
       </TabTitle>
 
       <PageTitle title="RESOURCES" />

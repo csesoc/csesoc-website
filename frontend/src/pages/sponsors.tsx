@@ -31,7 +31,7 @@ export default function SponsorsPage() {
   return (
     <Layout>
       <TabTitle>
-        <title>Sponsers | CseSoc UNSW</title>
+        <title>Sponsers | CSESoc UNSW</title>
       </TabTitle>
 
       <div id="diamondRain" className="opacity-0">

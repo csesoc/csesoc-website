@@ -7,7 +7,7 @@ const ElectionGuidePage = () => {
   return (
     <Layout>
       <TabTitle>
-        <title>Constitution | CseSoc UNSW</title>
+        <title>Constitution | CSESoc UNSW</title>
       </TabTitle>
       <PageTitle title="ELECTION GUIDE" />
       <PageBody>
