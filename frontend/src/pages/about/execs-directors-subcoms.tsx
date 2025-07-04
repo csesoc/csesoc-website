@@ -9,7 +9,7 @@ const ExecsDirectorsSubcommitteesPage = () => {
   return (
     <Layout>
       <TabTitle>
-        <title>Execs, Directors, Subcom | CseSoc UNSW</title>
+        <title>Execs, Directors, Subcom | CSESoc UNSW</title>
       </TabTitle>
       <PageTitle title="EXECS, DIRECTORS & SUBCOMMITTEES" />
       <PageBody>

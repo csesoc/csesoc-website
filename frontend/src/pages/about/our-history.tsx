@@ -15,7 +15,7 @@ const OurHistoryPage = () => {
   return (
     <Layout>
       <TabTitle>
-        <title>Our History | CseSoc UNSW</title>
+        <title>Our History | CSESoc UNSW</title>
       </TabTitle>
 
       <PageTitle title="OUR HISTORY" />

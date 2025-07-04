@@ -8,7 +8,7 @@ export default function AboutPage() {
   return (
     <Layout>
       <TabTitle>
-        <title>About Us | CseSoc UNSW</title>
+        <title>About Us | CSESoc UNSW</title>
       </TabTitle>
 
       <PageTitle title="ABOUT US" />
