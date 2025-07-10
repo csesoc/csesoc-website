@@ -61,6 +61,7 @@ export async function fetchEvents() {
 
   if (!response.ok) {
     throw new Error(JSON.stringify(response.json()));
+
   }
   const res: FacebookEventsResponse = await response.json();
 
