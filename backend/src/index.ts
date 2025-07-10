@@ -11,7 +11,7 @@ dotenv.config();
 (async () => {
   try {
     const events = await fetchEvents();
-    eventInfoMutex.runExclusive(() => eventInfo = eventInfo.concat(events));
+    eventInfoMutex.runExclusive(() => eventInfo.push(...events));
     console.log("Events fetched successfully");
   } catch (error) {
     // do we ungracefully bail out here???
