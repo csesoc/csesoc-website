@@ -59,9 +59,8 @@ export async function fetchEvents() {
     `https://graph.facebook.com/${FB_API_VERSION}/${process.env.FB_EVENT_PAGE_ID}/events?access_token=${process.env.FB_ACCESS_TOKEN}&fields=id,name,cover,place,start_time,end_time`
   );
 
-  if (!response || response.type === ResultType.Err) {
-    console.log(`No events found...\n${response}`);
-    return [];
+  if (!response.ok) {
+    throw new Error(JSON.stringify(response.json()));
   }
   const res: FacebookEventsResponse = await response.json();
 
@@ -85,15 +84,10 @@ export async function fetchEvent(id: string) {
     `https://graph.facebook.com/${FB_API_VERSION}/${id}?access_token=${process.env.FB_ACCESS_TOKEN}&fields=id,name,cover,place,start_time,end_time`
   );
 
-  const res: Result<FacebookEvent, FacebookError> = await response.json();
-
-  if (!res || res.type === ResultType.Err) {
-    throw new Error(
-      `Couldn't fetch details for event ${id}\n${inspect(
-        Object.getOwnPropertyDescriptor(res, "error")?.value
-      )}`
-    );
+  if (!response.ok) {
+    throw new Error(`Couldn't fetch details for event ${id}\n${JSON.stringify(response.json())}`);
   }
+  const res: Result<FacebookEvent, FacebookError> = await response.json();
 
   return new EventInfo(
     res.value.id,
