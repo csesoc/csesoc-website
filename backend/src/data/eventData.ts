@@ -87,14 +87,14 @@ export async function fetchEvent(id: string) {
   if (!response.ok) {
     throw new Error(`Couldn't fetch details for event ${id}\n${JSON.stringify(response.json())}`);
   }
-  const res: Result<FacebookEvent, FacebookError> = await response.json();
+  const res: FacebookEvent = await response.json();
 
   return new EventInfo(
-    res.value.id,
-    res.value.name,
-    res.value.start_time,
-    res.value.end_time,
-    res.value.place?.name ?? DEFAULT_EVENT_LOCATION,
-    res.value.cover?.source ?? DEFAULT_EVENT_IMAGE
+    res.id,
+    res.name,
+    res.start_time,
+    res.end_time,
+    res.place?.name ?? DEFAULT_EVENT_LOCATION,
+    res.cover?.source ?? DEFAULT_EVENT_IMAGE
   );
 }
