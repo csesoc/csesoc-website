@@ -59,13 +59,13 @@ export async function fetchEvents() {
     `https://graph.facebook.com/${FB_API_VERSION}/${process.env.FB_EVENT_PAGE_ID}/events?access_token=${process.env.FB_ACCESS_TOKEN}&fields=id,name,cover,place,start_time,end_time`
   );
 
-  const res: Result<FacebookEventsResponse, FacebookError> = await response.json();
-  if (!res || res.type === ResultType.Err) {
-    console.log(`No events found...\n${res}`);
+  if (!response || response.type === ResultType.Err) {
+    console.log(`No events found...\n${response}`);
     return [];
   }
+  const res: FacebookEventsResponse = await response.json();
 
-  const processed = res.value.data.map(
+  const processed = res.data.map(
     (e) =>
       new EventInfo(
         e.id,
