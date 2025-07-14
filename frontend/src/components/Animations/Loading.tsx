@@ -7,7 +7,7 @@ const Loading = () => {
   // Toggling the animation durations
   const loadDuration = 3;
   const loadStart = 1;
-  const loadEnd = 2.5;
+  const loadEnd = 0.5;
 
   // Loading dots animation
   const [dots, setDots] = React.useState('');
@@ -67,8 +67,8 @@ const Loading = () => {
       initial={{ opacity: 1}} 
       animate={{ opacity: 0 }}
       transition={{
-        duration: loadDuration - loadEnd,
-        delay: loadEnd, 
+        duration: loadEnd,
+        delay: loadDuration - loadEnd, 
       }}
       className="fixed inset-0 bg-[#000021] z-[999] flex flex-col items-center justify-center"
       style={{
@@ -80,11 +80,11 @@ const Loading = () => {
       </div>
       <div className="w-80 h-3 bg-gray-700 rounded-full overflow-hidden">
         <motion.div
-          className="h-full bg-blue-400 rounded-full"
+          className="h-full bg-gradient-to-r from-blue-400 to-blue-500 rounded-full"
           initial={{ width: "0%" }}
           animate={{ width: "100%" }}
           transition={{
-            duration: loadEnd - loadStart,
+            duration: loadDuration - loadEnd - loadStart,
             ease: "easeInOut",
             delay: loadStart, 
           }}

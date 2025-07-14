@@ -5,10 +5,10 @@ import FadeInAnimation from '../Animations/FadeInAnimation';
 
 const Landing = () => {
   const animationSequence = {
-    navbar: 1,
-    h1: 1.2,
-    h2: 1.3, 
-    background: 2.0,
+    navbar: 0.1,
+    h1: 0.3,
+    h2: 0.4, 
+    background: 2.2,  
   };
 
   return (

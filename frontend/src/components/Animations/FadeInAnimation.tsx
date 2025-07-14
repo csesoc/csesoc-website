@@ -16,7 +16,7 @@ const FadeInAnimation = ({ children, delay = 0, yInitial = 30, className }: Fade
       initial={{ opacity: 0, y: yInitial }} 
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        duration: 0.6,
+        duration: 0.5,
         delay,
       }}
       className={className}
