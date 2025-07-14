@@ -1,10 +1,14 @@
 import Layout from "@/components/Layout";
 import PageBody from "@/components/PageBody";
 import PageTitle from "@/components/PageTitle";
+import TabTitle from 'next/head'
 
 const ElectionGuidePage = () => {
   return (
     <Layout>
+      <TabTitle>
+        <title>Constitution | CSESoc UNSW</title>
+      </TabTitle>
       <PageTitle title="ELECTION GUIDE" />
       <PageBody>
         <div>

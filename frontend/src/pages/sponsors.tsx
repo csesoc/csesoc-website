@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { diamondLinks, goldLinks, silverLinks, sponsorInfo } from '@/../public/data/sponsorInfos';
 import SponsorModal from '@/components/Sponsors/SponsorModal';
 import { EmojiRain } from 'next-emoji-rain';
+import TabTitle from 'next/head';
 
 export default function SponsorsPage() {
   const logostyle =
@@ -29,6 +30,10 @@ export default function SponsorsPage() {
 
   return (
     <Layout>
+      <TabTitle>
+        <title>Sponsers | CSESoc UNSW</title>
+      </TabTitle>
+
       <div id="diamondRain" className="opacity-0">
         <EmojiRain emoji="💎" />
       </div>

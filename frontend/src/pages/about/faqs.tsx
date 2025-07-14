@@ -1,10 +1,14 @@
 import Layout from "@/components/Layout";
 import PageBody from "@/components/PageBody";
 import PageTitle from "@/components/PageTitle";
+import TabTitle from 'next/head'
 
 const FaqsPage = () => {
   return (
     <Layout>
+      <TabTitle>
+        <title>FAQs | CSESoc UNSW</title>
+      </TabTitle>
       <PageTitle title="FREQUENTLY ASKED QUESTIONS" />
       <PageBody>
         <div>
