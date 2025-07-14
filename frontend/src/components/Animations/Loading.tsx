@@ -2,31 +2,16 @@ import React from 'react'
 import { motion } from 'framer-motion';
 
 const Loading = () => {
-  const [isLoading, setIsLoading] = React.useState(false);
+  const [isLoading, setIsLoading] = React.useState(true);
 
   // Toggling the animation durations
   const loadDuration = 3;
-  const loadStart = 1;
+  const loadStart = 0.1;
   const loadEnd = 0.5;
-
-  // Loading dots animation
-  const [dots, setDots] = React.useState('');
-  React.useEffect(() => {
-    if (!isLoading) return;
-    
-    const interval = setInterval(() => {
-      setDots(prev => {
-        if (prev === '...') return '';
-        return prev + '.';
-      });
-    }, 800); 
-
-    return () => clearInterval(interval);
-  }, [isLoading]);
 
   React.useLayoutEffect(() => {
 
-    // Only show loading on hard refresh
+    // Only show loading on initial load
     if (!window || !window.sessionStorage) {
       setIsLoading(true);
     } else {
@@ -64,7 +49,7 @@ const Loading = () => {
 
   return (
     <motion.div
-      initial={{ opacity: 1}} 
+      initial={{ opacity: 1 }} 
       animate={{ opacity: 0 }}
       transition={{
         duration: loadEnd,
@@ -75,9 +60,6 @@ const Loading = () => {
         willChange: 'opacity',
       }}
     >
-      <div className="text-white text-xl mb-4 font-mono pb-5">
-        Loading{dots}
-      </div>
       <div className="w-80 h-3 bg-gray-700 rounded-full overflow-hidden">
         <motion.div
           className="h-full bg-gradient-to-r from-blue-400 to-blue-500 rounded-full"

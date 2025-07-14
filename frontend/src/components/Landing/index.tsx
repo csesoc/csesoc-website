@@ -1,14 +1,13 @@
 import Background from '@/components/Background';
-import Navbar from '@/components/Navbar';
 import Loading from '../Animations/Loading';
 import FadeInAnimation from '../Animations/FadeInAnimation';
+import React from 'react';
 
 const Landing = () => {
   const animationSequence = {
-    navbar: 0.1,
-    h1: 0.3,
-    h2: 0.4, 
-    background: 2.2,  
+    h1: 0.1,
+    h2: 0.2, 
+    background: 2.5,  
   };
 
   return (
@@ -17,9 +16,6 @@ const Landing = () => {
       id="landing"
     >
       <Loading />
-      <FadeInAnimation delay={animationSequence.navbar} yInitial={-30}>
-        <Navbar />
-      </FadeInAnimation>
       <FadeInAnimation
         delay={animationSequence.background}
         yInitial={0}
