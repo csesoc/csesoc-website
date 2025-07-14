@@ -1,5 +1,6 @@
 import Background from '@/components/Background';
 import Navbar from '@/components/Navbar';
+import Loading from '../Animations/Loading';
 
 const Landing = () => {
   return (
@@ -9,6 +10,7 @@ const Landing = () => {
     >
       <Navbar />
       <Background />
+      <Loading />
       <div className="flex justify-between items-end">
         <div>
           <div className="font-semibold">
@@ -21,8 +23,8 @@ const Landing = () => {
             <h2 className="font-bold 2xl:text-3xl text-xl">
               We are the principal representative body for{' '}
               <a href="https://www.unsw.edu.au/engineering/our-schools/computer-science-and-engineering"
-                 target = "_blank"
-                 className="text-[#3977F9] relative after:bg-current after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:duration-200"
+                target = "_blank"
+                className="text-[#3977F9] relative after:bg-current after:absolute after:h-1 after:w-0 after:bottom-0 after:left-0 hover:after:w-full after:duration-200"
               >
                 UNSW computing
               </a>
