@@ -1,13 +1,13 @@
 import { ReactNode } from 'react'
 import { motion } from 'framer-motion';
 
-interface FadeEnterProps {
+interface ScrollEnterProps {
   children: ReactNode;
   delay?: number;
   viewport?: number;
 }
 
-const FadeEnterAnimation = ({ children, delay = 0, viewport = 0.3 }: FadeEnterProps) => {
+const ScrollEnterAnimation = ({ children, delay = 0 }: ScrollEnterProps) => {
   
   return (
     <motion.div
@@ -17,11 +17,11 @@ const FadeEnterAnimation = ({ children, delay = 0, viewport = 0.3 }: FadeEnterPr
         duration: 0.6,
         delay,
       }}
-      viewport={{ amount: viewport, once: true }}
+      viewport={{ amount: 0.3, once: true }}
     >
       {children}
     </motion.div>
   )
 }
 
-export default FadeEnterAnimation
+export default ScrollEnterAnimation

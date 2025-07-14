@@ -75,7 +75,7 @@ const Loading = () => {
         willChange: 'opacity',
       }}
     >
-      <div className="text-white text-xl mb-4 font-mono">
+      <div className="text-white text-xl mb-4 font-mono pb-5">
         Loading{dots}
       </div>
       <div className="w-80 h-3 bg-gray-700 rounded-full overflow-hidden">

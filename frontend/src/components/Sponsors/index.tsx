@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '@/components/Footer';
 import SponsorCarousel from './SponsorCarousel';
 import { ChevronRight } from 'lucide-react';
-import FadeEnterAnimation from '../Animations/FadeEnterAnimation';
+import ScrollEnterAnimation from '../Animations/ScrollEnterAnimation';
 
 const Sponsors = () => {
   return (
@@ -10,12 +10,12 @@ const Sponsors = () => {
       className="flex flex-col min-h-screen py-8 xl:px-24 sm:px-10 px-8 relative mt-20"
       id="sponsors"
     >
-      <FadeEnterAnimation>
+      <ScrollEnterAnimation>
         <div className="text-center">
           <h2 className="font-bold text-6xl">OUR SPONSORS</h2>
         </div>
-      </FadeEnterAnimation>
-      <FadeEnterAnimation>
+      </ScrollEnterAnimation>
+      <ScrollEnterAnimation>
         <div className="flex-1 flex justify-center items-center">
           <div
             className="rounded h-auto overflow-hidden w-[90rem] flex flex-col gap-8"
@@ -31,7 +31,7 @@ const Sponsors = () => {
             </div>
           </div>
         </div>
-      </FadeEnterAnimation>
+      </ScrollEnterAnimation>
       <Footer />
       <img
         src="assets/sponsors_backdrop.svg"

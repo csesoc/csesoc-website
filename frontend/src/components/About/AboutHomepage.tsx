@@ -1,15 +1,15 @@
 import Image from "next/image";
-import FadeEnterAnimation from '@/components/Animations/FadeEnterAnimation';
+import ScrollEnterAnimation from '@/components/Animations/ScrollEnterAnimation';
 
 export default function AboutHomePage() {
   return (
     <section className="py-8 pb-16 xl:px-24 sm:px-10 px-5" id="about">
-      <FadeEnterAnimation>
+      <ScrollEnterAnimation>
         <div className="text-center my-10">
           <h2 className="font-bold text-6xl mb-16">ABOUT</h2>
         </div>
-      </FadeEnterAnimation>
-      <FadeEnterAnimation>
+      </ScrollEnterAnimation>
+      <ScrollEnterAnimation>
         <div className="flex justify-center items-center">
           <div className="lg:grid grid-cols-6 flex-1 max-w-[90rem]">
             {/* LEFT SIDE */}
@@ -60,7 +60,7 @@ export default function AboutHomePage() {
             </div>
           </div>
         </div>
-      </FadeEnterAnimation>
+      </ScrollEnterAnimation>
     </section>
   );
 }

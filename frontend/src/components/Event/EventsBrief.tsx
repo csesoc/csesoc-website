@@ -2,17 +2,17 @@ import React from 'react';
 import { events } from '../../../public/data/events';
 import EventsCarousel from './EventsCarousel';
 import { ChevronRight, Facebook } from 'lucide-react';
-import FadeEnterAnimation from '../Animations/FadeEnterAnimation';
+import ScrollEnterAnimation from '../Animations/ScrollEnterAnimation';
 
 const EventBrief = () => {
   return (
     <section className="py-8 xl:px-24 sm:px-10 px-5" id="events">
-      <FadeEnterAnimation>
+      <ScrollEnterAnimation>
         <div className="text-center my-10">
           <h1 className="font-bold text-6xl mb-16">UPCOMING EVENTS</h1>
         </div>
-      </FadeEnterAnimation>
-      <FadeEnterAnimation>
+      </ScrollEnterAnimation>
+      <ScrollEnterAnimation>
         {events.length !== 0 ?
           <EventsCarousel/> :
           <div className="flex items-center justify-center h-96">
@@ -27,7 +27,7 @@ const EventBrief = () => {
               </button>
           </a>
         </div>
-      </FadeEnterAnimation>
+      </ScrollEnterAnimation>
     </section>
   );
 };

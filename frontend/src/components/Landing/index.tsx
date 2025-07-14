@@ -1,37 +1,42 @@
 import Background from '@/components/Background';
 import Navbar from '@/components/Navbar';
 import Loading from '../Animations/Loading';
-import FadeEnterAnimation from '../Animations/FadeEnterAnimation';
-import { motion } from 'framer-motion';
+import FadeInAnimation from '../Animations/FadeInAnimation';
 
 const Landing = () => {
+  const animationSequence = {
+    navbar: 1,
+    h1: 1.2,
+    h2: 1.3, 
+    background: 2.0,
+  };
+
   return (
     <section
       className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden"
       id="landing"
     >
       <Loading />
-      <motion.div
-        initial={{ opacity: 0, y: -30}}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 0.5,
-          delay: 1,
-        }}
-      >
+      <FadeInAnimation delay={animationSequence.navbar} yInitial={-30}>
         <Navbar />
-      </motion.div>
-      <Background />
+      </FadeInAnimation>
+      <FadeInAnimation
+        delay={animationSequence.background}
+        yInitial={0}
+        className='absolute'
+      >
+          <Background />
+      </FadeInAnimation>
       <div className="flex justify-between items-end">
         <div>
-          <FadeEnterAnimation delay={1.2} viewport={0}>
+          <FadeInAnimation delay={animationSequence.h1}>
             <div className="font-semibold">
               <p>{'<h1>'}</p>
               <h2 className="font-black 2xl:text-8xl lg:text-6xl text-4xl">Hello World!</h2>
               <p>{'</h1>'}</p>
             </div>
-          </FadeEnterAnimation>
-          <FadeEnterAnimation delay={1.3} viewport={0}>
+          </FadeInAnimation>
+          <FadeInAnimation delay={animationSequence.h2}>
             <div className="font-semibold mt-10">
               <p>{'<h2>'}</p>
               <h2 className="font-bold 2xl:text-3xl text-xl">
@@ -46,7 +51,7 @@ const Landing = () => {
               </h2>
               <p>{'</h2>'}</p>
             </div>
-          </FadeEnterAnimation>
+          </FadeInAnimation>
         </div>
       </div>
     </section>
