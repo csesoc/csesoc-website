@@ -1,30 +1,35 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import mdcontent from '../../../public/articles/test-article/content.md'
 import React, { useState, useEffect } from "react";
 
-// const markdown = 
-// `HELLO THIS IS *MARKDOWN*
-
-// **BOLD TEXT**
-
-// ***bold Italics***
-// # heAdINg TeSt`
 
 export default function Article( {articleName} : {articleName : string} ) {
+
     const [markdown, setMarkdown] = useState("");
 
     useEffect(() => {
-    fetch('../../../public/articles/test-article/content.md')
+    fetch('/articles/test-article/content.md')
         .then((res) => res.text())
         .then((text) => setMarkdown(text));
     }, []);
+
+    const articleUrl = "/articles/" + articleName
+
+    const [infoObj, setInfo] = useState("");
+
+    useEffect(() => {
+    fetch('/articles/test-article/info.json')
+        .then((res) => res.text())
+        .then((text) => setInfo(text));
+    }, []);
+
+    // const obj = JSON.parse(infoObj)
 
     return (
         <article className="mt-[6px]">
             <header className="mb-[6vmin] w-[100vmin] justify-self-center">
                 <div className="mb-[6vmin] w-[120vmin] justify-self-center">
-                    <img src="/articles/test-article/cover.png"/>
+                    <img src={articleUrl + "/cover.png"}/>
                 </div>
                 {/* title, author, date */}
                 <div className=""> 
@@ -32,15 +37,16 @@ export default function Article( {articleName} : {articleName : string} ) {
                         Articles
                     </div>
                     <h1 className="font-black xl:text-6xl text-xl">
-                        Title of Article
+                        {infoObj}
+                        TITLE
                     </h1>
                     <div className="mt-[24px] flex">
                         <div className="inline-flex">
-                            <img src="/articles/test-article/author.jpg" className="inline ml-[4px] mr-[14px] w-[56px] h-[56px] rounded-full"/>
+                            <img src={articleUrl + "/author.jpg"} className="inline ml-[4px] mr-[14px] w-[56px] h-[56px] rounded-full"/>
                         </div>
                         <div className="inline-flex flex-col self-center">
                             <p className="font-bold self-start">
-                                Author Name
+                                {articleUrl + "/info.json"}
                             </p>
                             <p className="self-end">
                                 the date is blah blah blah
@@ -51,7 +57,9 @@ export default function Article( {articleName} : {articleName : string} ) {
             </header>
             <section className="w-[100vmin] justify-self-center pb-[75px]">
                 <a className="font l:text-3xl text-xl">
-                    <ReactMarkdown remarkPlugins={[remarkGfm]} children={markdown}/>
+                    <ReactMarkdown>
+                        {markdown}
+                    </ReactMarkdown>
                 </a>
             </section>
         </article>
