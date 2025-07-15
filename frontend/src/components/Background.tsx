@@ -8,7 +8,7 @@ const Background = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShouldLoad(true);
-    }, 900); 
+    }, 700); 
 
     return () => clearTimeout(timer);
   }, []);

@@ -1,5 +1,4 @@
 import Background from '@/components/Background';
-import Loading from '../Animations/Loading';
 import FadeInAnimation from '../Animations/FadeInAnimation';
 import React from 'react';
 
@@ -7,7 +6,7 @@ const Landing = () => {
   const animationSequence = {
     h1: 0.1,
     h2: 0.2, 
-    background: 2.5,  
+    background: 2,  
   };
 
   return (
@@ -15,11 +14,10 @@ const Landing = () => {
       className="flex flex-col min-h-screen justify-end py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden"
       id="landing"
     >
-      <Loading />
       <FadeInAnimation
         delay={animationSequence.background}
         yInitial={0}
-        className='absolute'
+        className='absolute w-full h-full'
       >
           <Background />
       </FadeInAnimation>
