@@ -11,6 +11,7 @@ export default function AboutPage() {
     title: 0,
     mainContent: 0.2,
     sidebar: 0.2,
+    pinned: 0.4,
   }
 
   return (
@@ -83,7 +84,7 @@ export default function AboutPage() {
                     </ul>
                   </div>
                 </FadeInAnimation>
-                <div className="mt-10">
+                <FadeInAnimation delay={animationSequence.pinned} className="mt-10">
                   Pinned
                   {/* TODO: refactor all of this */}
                   <div className="sm:flex my-5">
@@ -145,7 +146,7 @@ export default function AboutPage() {
                       <div className="rounded-full bg-[#E7E923] w-3 h-3" />
                     </div>
                   </div>
-                </div>
+                </FadeInAnimation>
               </div>
             </div>
           </div>
