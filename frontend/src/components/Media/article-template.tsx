@@ -1,31 +1,42 @@
+// "use server"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"
+// import fs from "fs"
+
+export default function Article( {articleName} : {articleName : string | string[] | undefined} ) {
 
 
-export default function Article( {articleName} : {articleName : string} ) {
+    let articleUrl = "/articles/" + articleName
+
+    // let infoFile = fs.readFileSync(articleUrl)
+    // console.log(infoFile)
+
+
+    // import markdown from `@/../public/articles/${articleName}/content.md`
 
     const [markdown, setMarkdown] = useState("");
-
     useEffect(() => {
-    fetch('/articles/test-article/content.md')
+        fetch(`${articleUrl}/content.md`)//, { cache: 'no-store' })
         .then((res) => res.text())
         .then((text) => setMarkdown(text));
     }, []);
 
-    const articleUrl = "/articles/" + articleName
-
     const [infoObj, setInfo] = useState("");
-
     useEffect(() => {
-    fetch('/articles/test-article/info.json')
+        fetch(`${articleUrl}/info.json`)//, { cache: 'no-store' })
         .then((res) => res.text())
-        .then((text) => setInfo(text));
+        .then((text) => JSON.parse(`${text}`))
+        .then((object) => setInfo(object));
     }, []);
 
-    // const obj = JSON.parse(infoObj)
+    console.log(infoObj)
+
+    // const obj = JSON.parse(`${infoObj}`)
+    // const obj = JSON.parse(`{"title" : "TEST TITLE", "author": "test auth", "date" : "test date"}`)
 
     return (
+
         <article className="mt-[6px]">
             <header className="mb-[6vmin] w-[100vmin] justify-self-center">
                 <div className="mb-[6vmin] w-[120vmin] justify-self-center">
@@ -34,11 +45,10 @@ export default function Article( {articleName} : {articleName : string} ) {
                 {/* title, author, date */}
                 <div className=""> 
                     <div className="mb-[16px]">
-                        Articles
+                        Article
                     </div>
                     <h1 className="font-black xl:text-6xl text-xl">
-                        {infoObj}
-                        TITLE
+                        {infoObj.title}
                     </h1>
                     <div className="mt-[24px] flex">
                         <div className="inline-flex">
@@ -46,10 +56,10 @@ export default function Article( {articleName} : {articleName : string} ) {
                         </div>
                         <div className="inline-flex flex-col self-center">
                             <p className="font-bold self-start">
-                                {articleUrl + "/info.json"}
+                                {infoObj.author}
                             </p>
                             <p className="self-end">
-                                the date is blah blah blah
+                                {infoObj.date}
                             </p>
                         </div>
                     </div>
