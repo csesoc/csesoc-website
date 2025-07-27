@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, X, ChevronDown, ChevronUp, CircleQuestionMark } from 'lucide-react';
+import { MessageCircle, X, ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const Olliebot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -126,7 +126,7 @@ const Olliebot = () => {
                 onClick={toggleFaqs}
               >
                 <div className="flex items-center gap-2">
-                  <CircleQuestionMark size={16} className="text-[#3977F8]" />
+                  <HelpCircle size={16} className="text-[#3977F8]" />
                   <span className="font-medium text-gray-700 text-sm">FAQs</span>
                 </div>
                 {showFaqs ? <ChevronUp size={16} className='text-gray-700'/> : <ChevronDown size={16} className='text-gray-700'/>}
