@@ -1,42 +1,48 @@
-// "use server"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import React, { useState, useEffect } from "react"
-// import fs from "fs"
+
+type Info = {
+    title : string
+    author : string
+    data : string
+}
 
 export default function Article( {articleName} : {articleName : string | string[] | undefined} ) {
 
-
+    // const fs = require("fs");
     let articleUrl = "/articles/" + articleName
+    console.log("URL: " + articleUrl)
 
-    // let infoFile = fs.readFileSync(articleUrl)
-    // console.log(infoFile)
+    if (articleName == undefined) {
+        return (
+            <div> fetching article... </div>
+        )
+    }
 
-
-    // import markdown from `@/../public/articles/${articleName}/content.md`
+    // if (fs.existsSync(articleUrl)) {
+    //     // Do something
+    // }
 
     const [markdown, setMarkdown] = useState("");
     useEffect(() => {
-        fetch(`${articleUrl}/content.md`)//, { cache: 'no-store' })
+        fetch(`${articleUrl}/content.md`)
         .then((res) => res.text())
         .then((text) => setMarkdown(text));
     }, []);
 
+    console.log("MARKDOWN: " + markdown)
+
+    // infoObj here is not a string, but of type Info. 
     const [infoObj, setInfo] = useState("");
     useEffect(() => {
-        fetch(`${articleUrl}/info.json`)//, { cache: 'no-store' })
+        fetch(`${articleUrl}/info.json`)
         .then((res) => res.text())
         .then((text) => JSON.parse(`${text}`))
         .then((object) => setInfo(object));
     }, []);
-
-    console.log(infoObj)
-
-    // const obj = JSON.parse(`${infoObj}`)
-    // const obj = JSON.parse(`{"title" : "TEST TITLE", "author": "test auth", "date" : "test date"}`)
-
+    
     return (
-
         <article className="mt-[6px]">
             <header className="mb-[6vmin] w-[100vmin] justify-self-center">
                 <div className="mb-[6vmin] w-[120vmin] justify-self-center">
@@ -74,7 +80,10 @@ export default function Article( {articleName} : {articleName : string | string[
             </section>
         </article>
     );
-};
+}
+
+// ============================================================================
+
 
     // <section
     //   className="flex flex-col min-h-screen justify-between py-8 xl:px-24 md:px-10 px-5 relative overflow-hidden"
