@@ -9,7 +9,7 @@ import { eventInfo, eventInfoMutex, fetchEvents } from "./data/eventData";
 dotenv.config();
 
 (async () => {
-  setInterval(() => {
+  setInterval(async () => {
     try {
       const events = await fetchEvents();
       eventInfoMutex.runExclusive(() => {
