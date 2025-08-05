@@ -9,15 +9,20 @@ import { eventInfo, eventInfoMutex, fetchEvents } from "./data/eventData";
 dotenv.config();
 
 (async () => {
-  try {
-    const events = await fetchEvents();
-    eventInfoMutex.runExclusive(() => eventInfo.push(...events));
-    console.log("Events fetched successfully");
-  } catch (error) {
-    // do we ungracefully bail out here???
-    // could just load from a backup file instead
-    console.error("Error fetching events on startup:", error);
-  }
+  setInterval(() => {
+    try {
+      const events = await fetchEvents();
+      eventInfoMutex.runExclusive(() => {
+        eventInfo.length = 0;
+        eventInfo.push(...events);
+      });
+      console.log("Events fetched successfully");
+    } catch (error) {
+      // do we ungracefully bail out here???
+      // could just load from a backup file instead
+      console.error("Error fetching events:", error);
+    }
+  }, 30 * 60 * 1000);
 
   const app: Express = express();
   const port = process.env.PORT || 9000;
