@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { socialLinks } from '@/../public/data/socialInfos';
 
 const Hamburger = () => {
   // Needs dom element to be same bfore and after
@@ -33,8 +35,8 @@ const Hamburger = () => {
     }
 
     return () => {
-      document.body.style.overflow = 'scroll';
-      document.body.style.paddingRight = '0px';
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
     };
   }, [showMenu]);
 
@@ -78,55 +80,75 @@ const Hamburger = () => {
                 <X className="h-6 w-6" />
               </button>
 
-              <div className="p-6 pt-20 items-start flex flex-col gap-4">
-                <Link
-                  href="/about"
-                  className="text-white text-lg p-3 hover:underline"
-                  onClick={closeMenu}
-                >
-                  About Us
-                </Link>
+              <div className="p-6 pt-20 flex flex-col h-full">
+                <div className="flex flex-col gap-4 items-start">
+                  <Link
+                    href="/about"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    About Us
+                  </Link>
 
-                <Link
-                  href="/events"
-                  className="text-white text-lg p-3 hover:underline"
-                  onClick={closeMenu}
-                >
-                  Events
-                </Link>
+                  <Link
+                    href="/events"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    Events
+                  </Link>
 
-                <Link
-                  href="/resources"
-                  className="text-white text-lg p-3 hover:underline"
-                  onClick={closeMenu}
-                >
-                  Resources
-                </Link>
+                  <Link
+                    href="/resources"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    Resources
+                  </Link>
 
-                <Link
-                  href="/sponsors"
-                  className="text-white text-lg p-3 hover:underline"
-                  onClick={closeMenu}
-                >
-                  Sponsors
-                </Link>
+                  <Link
+                    href="/sponsors"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    Sponsors
+                  </Link>
 
-                <Link
-                  href="/contact-us"
-                  className="text-white text-lg p-3 hover:underline"
-                  onClick={closeMenu}
-                >
-                  Contact Us
-                </Link>
+                  <Link
+                    href="/contact-us"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    Contact Us
+                  </Link>
 
-                <a
-                  href="https://csesoc-merch.square.site/"
-                  target="_blank"
-                  className="text-white text-lg p-3 hover:underline"
-                  onClick={closeMenu}
-                >
-                  Merch
-                </a>
+                  <a
+                    href="https://csesoc-merch.square.site/"
+                    target="_blank"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    Merch
+                  </a>
+                </div>
+
+                <div className="flex-1"></div>
+
+                <div className="flex gap-4 justify-center pb-6">
+                  {socialLinks.map((item, index) => {
+                    return (
+                      <a key={index} href={item.href}>
+                        <Image
+                          className="h-4 fill-white min-w-full hover:scale-125 transition-all"
+                          src={item.src}
+                          alt={item.alt}
+                          height={15}
+                          width={15}
+                        />
+                      </a>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>,
