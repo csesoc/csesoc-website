@@ -4,10 +4,28 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 
 const Hamburger = () => {
+  // Needs dom element to be same bfore and after
+  // setIsOpen(true) occurs first while dom portal doesnt exist
+  // Then creates dom portal
+  // So it tries to go from isOpen=true to isOpen=true
+  // So no animation occurs as it starts from its finishing val
+  // So we need to create dom portal first, then menu
+  // animation should only start after dom portal is created
   const [isOpen, setIsOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const openMenu = () => {
+    setShowMenu(true);
+    setTimeout(() => setIsOpen(true), 10);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    setTimeout(() => setShowMenu(false), 300);
+  };
 
   useEffect(() => {
-    if (isOpen) {
+    if (showMenu) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = 'scroll';
@@ -16,55 +34,53 @@ const Hamburger = () => {
     return () => {
       document.body.style.overflow = 'scroll';
     };
-  }, [isOpen]);
+  }, [showMenu]);
 
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') setIsOpen(false);
+      if (e.key === 'Escape') closeMenu();
     };
 
-    if (isOpen) document.addEventListener('keydown', handleEscape);
+    if (showMenu) document.addEventListener('keydown', handleEscape);
 
     return () => {
       document.removeEventListener('keydown', handleEscape);
     };
-  }, [isOpen, setIsOpen]);
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'scroll';
-    }
-
-    return () => {
-      document.body.style.overflow = 'scroll';
-    };
-  }, [isOpen]);
+  }, [showMenu]);
 
   // Portal renders the backdrop at document.body level
-  // Hence, instead of showing just at nav, it shows over all components
+  // Hence, instead of showing just at nav, shows over all components
   const backdrop =
-    isOpen && typeof document !== 'undefined'
+    showMenu && typeof document !== 'undefined'
       ? ReactDOM.createPortal(
-          <div className="inset-0 fixed bg-black/50 z-50 backdrop-blur-sm">
-            {/* Backdrop */}
-            <div className="absolute inset-0" onClick={() => setIsOpen(false)} />
-
+          // Backdrop
+          <div
+            className={`fixed inset-0 z-50 ease-out transition-all duration-300 ${
+              isOpen
+                ? 'bg-black/50 backdrop-blur-sm'
+                : 'bg-black/0 backdrop-blur-none'
+            }`}
+            onClick={closeMenu}
+          >
             {/* Sidebar */}
-            <div className="absolute right-0 top-0 bg-[#3977F9] h-screen w-80 z-50">
+            <div
+              className={`absolute top-0 right-0 bg-[#3977F9] h-screen w-80 z-50 ease-in-out transition-transform duration-300 ${
+                isOpen ? 'translate-x-0' : 'translate-x-full'
+              }`}
+              onClick={(e) => e.stopPropagation()}
+            >
               <button
-                onClick={() => setIsOpen(false)}
-                className="text-white absolute top-[45px] right-[30px] p-2"
+                onClick={closeMenu}
+                className="text-white top-[45px] right-[35px] absolute p-2"
               >
                 <X className="h-6 w-6" />
               </button>
 
-              <div className="p-6 pt-20 flex flex-col gap-4 items-start">
+              <div className="p-6 pt-20 items-start flex flex-col gap-4">
                 <Link
                   href="/about"
                   className="text-white text-lg p-3 hover:underline"
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenu}
                 >
                   About Us
                 </Link>
@@ -72,7 +88,7 @@ const Hamburger = () => {
                 <Link
                   href="/events"
                   className="text-white text-lg p-3 hover:underline"
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenu}
                 >
                   Events
                 </Link>
@@ -80,7 +96,7 @@ const Hamburger = () => {
                 <Link
                   href="/resources"
                   className="text-white text-lg p-3 hover:underline"
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenu}
                 >
                   Resources
                 </Link>
@@ -88,7 +104,7 @@ const Hamburger = () => {
                 <Link
                   href="/sponsors"
                   className="text-white text-lg p-3 hover:underline"
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenu}
                 >
                   Sponsors
                 </Link>
@@ -96,7 +112,7 @@ const Hamburger = () => {
                 <Link
                   href="/contact-us"
                   className="text-white text-lg p-3 hover:underline"
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenu}
                 >
                   Contact Us
                 </Link>
@@ -105,7 +121,7 @@ const Hamburger = () => {
                   href="https://csesoc-merch.square.site/"
                   target="_blank"
                   className="text-white text-lg p-3 hover:underline"
-                  onClick={() => setIsOpen(false)}
+                  onClick={closeMenu}
                 >
                   Merch
                 </a>
@@ -118,7 +134,7 @@ const Hamburger = () => {
 
   return (
     <>
-      <button className="p-2 z-50 relative" onClick={() => setIsOpen(!isOpen)}>
+      <button className="p-2 relative z-50" onClick={openMenu}>
         <Menu className="text-white w-6 h-6" />
       </button>
       {backdrop}
