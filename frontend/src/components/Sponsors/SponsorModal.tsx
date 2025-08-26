@@ -1,33 +1,33 @@
-import { X } from "lucide-react"
-import { useEffect } from "react"
-import type { sponsorInfo } from "@/../public/data/sponsorInfos"
+import { X } from 'lucide-react';
+import { useEffect } from 'react';
+import type { sponsorInfo } from '@/../public/data/sponsorInfos';
 
 export default function SponsorModal({
   sponsorInfo,
-  setFalse,
+  setFalse
 }: {
-  sponsorInfo: sponsorInfo | null
-  setFalse: () => void
+  sponsorInfo: sponsorInfo | null;
+  setFalse: () => void;
 }) {
   // Close modal with Escape key
   useEffect(() => {
     const handleEscKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setFalse()
-    }
+      if (event.key === 'Escape') setFalse();
+    };
 
-    window.addEventListener("keydown", handleEscKey)
-    return () => window.removeEventListener("keydown", handleEscKey)
-  }, [setFalse])
+    window.addEventListener('keydown', handleEscKey);
+    return () => window.removeEventListener('keydown', handleEscKey);
+  }, [setFalse]);
 
   if (sponsorInfo === null) {
-    return null
+    return null;
   }
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm animate-in fade-in duration-200"
       onClick={(e) => {
-        if (e.target === e.currentTarget) setFalse()
+        if (e.target === e.currentTarget) setFalse();
       }}
     >
       <div
@@ -54,7 +54,11 @@ export default function SponsorModal({
               aria-label={`Visit ${sponsorInfo.alt}`}
             >
               <div className="relative w-64 h-32">
-                <img src={`./${sponsorInfo.svg}`} alt={sponsorInfo.alt} className="object-contain w-full h-full" />
+                <img
+                  src={`./${sponsorInfo.svg}`}
+                  alt={sponsorInfo.alt}
+                  className="object-contain w-full h-full"
+                />
               </div>
             </a>
           </div>
@@ -100,7 +104,12 @@ export default function SponsorModal({
                 viewBox="0 0 24 24"
                 stroke="currentColor"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
               </svg>
               Close
             </button>
@@ -108,5 +117,5 @@ export default function SponsorModal({
         </div>
       </div>
     </div>
-  )
+  );
 }

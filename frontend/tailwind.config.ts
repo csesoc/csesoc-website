@@ -11,11 +11,11 @@ const config: Config = {
       keyframes: {
         'bounce-right': {
           '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(6px)' },
-        },
+          '50%': { transform: 'translateX(6px)' }
+        }
       },
       animation: {
-        'bounce-right': 'bounce-right 1.0s ease-in-out infinite',
+        'bounce-right': 'bounce-right 1.0s ease-in-out infinite'
       },
       fontFamily: {
         game: "'Press Start 2P', cursive"

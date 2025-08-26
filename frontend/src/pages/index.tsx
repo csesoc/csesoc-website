@@ -13,11 +13,10 @@ export default function HomePage() {
       </TabTitle>
 
       <section>
-        
         <Navbar />
 
         <div className="-mt-36">
-            <Landing />
+          <Landing />
         </div>
 
         <AboutHomePage />
@@ -25,6 +24,5 @@ export default function HomePage() {
         <Sponsors />
       </section>
     </>
-    
   );
 }

@@ -81,7 +81,7 @@ export const goldLinks: sponsorInfo[] = [
     alt: 'SafetyCulture logo',
     description:
       'Get to the root cause of workplace trends with total visibility across your organization. Use data from completed inspections, reported incidents, sensors, and asset history to keep workers safe, and prevent things from happening in the first place.'
-  },
+  }
 ];
 
 export const silverLinks: sponsorInfo[] = [
@@ -91,7 +91,7 @@ export const silverLinks: sponsorInfo[] = [
     svg: '/assets/quantium_logo.svg',
     alt: 'Quantium logo',
     description:
-      "We combine the best of human and artificial intelligence to power possibilities for individuals, organisations and society. Through the application of world leading, advanced analytics solutions, we help our clients solve their most complex problems."
+      'We combine the best of human and artificial intelligence to power possibilities for individuals, organisations and society. Through the application of world leading, advanced analytics solutions, we help our clients solve their most complex problems.'
   },
   {
     name: 'Optiver',
@@ -163,5 +163,5 @@ export const silverLinks: sponsorInfo[] = [
     alt: 'revolutioniseSport logo',
     description:
       'revolutioniseSPORT is an online management platform for sports of all shapes and sizes.'
-  },
+  }
 ];

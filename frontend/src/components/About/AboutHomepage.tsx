@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function AboutHomePage() {
   return (
@@ -29,22 +29,30 @@ export default function AboutHomePage() {
             </div>
             <div className="flex gap-5">
               <Image src="/assets/mail_icon.svg" alt="Mail" width={20} height={20} />
-              <a href="mailto:info@csesoc.org.au" className="hover:underline">info@csesoc.org.au</a>
+              <a href="mailto:info@csesoc.org.au" className="hover:underline">
+                info@csesoc.org.au
+              </a>
             </div>
           </div>
           {/* RIGHT SIDE */}
           <div className="col-span-4 lg:mt-0 mt-10">
             <p className="text-2xl">
-              We are one of the largest and most active societies at UNSW, and {" "}
-              <span className="font-bold text-[#3977F8]">the largest computing society in the southern hemisphere</span>.
-              <br/><br/>
-              CSESoc comprises {" "}
-              <span className="font-bold text-[#3977F8]">over 16k members</span> 
-              {" "}spanning across various degrees including Computer Science, 
-              Software Engineering, Bioinformatics and Computer Engineering.
-              <br/><br/>
-              We are here to fulfil the social, personal and professional needs of CSE students, 
-              and promote computing through a variety of forms.
+              We are one of the largest and most active societies at UNSW, and{' '}
+              <span className="font-bold text-[#3977F8]">
+                the largest computing society in the southern hemisphere
+              </span>
+              .
+              <br />
+              <br />
+              CSESoc comprises <span className="font-bold text-[#3977F8]">
+                over 16k members
+              </span>{' '}
+              spanning across various degrees including Computer Science, Software Engineering,
+              Bioinformatics and Computer Engineering.
+              <br />
+              <br />
+              We are here to fulfil the social, personal and professional needs of CSE students, and
+              promote computing through a variety of forms.
             </p>
             <div className="flex pt-8 justify-center items-center">
               <a href="about">

@@ -3,7 +3,7 @@ export type socialInfo = {
   src: string;
   alt: string;
 };
-  
+
 export const socialLinks: socialInfo[] = [
   {
     href: 'https://bit.ly/CSESocDiscord',

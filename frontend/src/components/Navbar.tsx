@@ -7,9 +7,11 @@ import Terminal from './Terminal';
 const Navbar = () => {
   const [path, setPath] = useState<string[]>([]);
   useEffect(() => {
-    const pathSegments: string[] | undefined = window.location.pathname.split('/').filter(segment => segment);
+    const pathSegments: string[] | undefined = window.location.pathname
+      .split('/')
+      .filter((segment) => segment);
     if (pathSegments === undefined) setPath([]);
-    else setPath(pathSegments.map(segment => segment.toUpperCase()));
+    else setPath(pathSegments.map((segment) => segment.toUpperCase()));
   }, []);
 
   return (
@@ -27,10 +29,12 @@ const Navbar = () => {
         <p className="font-mono mt-3 font-bold">
           <span className="text-green-500">csesoc@unsw</span>
           <span>:</span>
-          <span className="text-blue-500">~{path.map(segment => '/' + segment.toLowerCase())}</span>
+          <span className="text-blue-500">
+            ~{path.map((segment) => '/' + segment.toLowerCase())}
+          </span>
           <span>$ </span>
           {/* The interactive terminal that allows changing pages using 'cd' */}
-          <Terminal/>
+          <Terminal />
         </p>
       </div>
       <div>
@@ -50,7 +54,7 @@ const Navbar = () => {
           <Link href="/contact-us">
             <div className="text-xl">{'//'} contact us</div>
           </Link>
-          <a target="_blank" href="https://csesoc-merch.square.site/" className='flex'>
+          <a target="_blank" href="https://csesoc-merch.square.site/" className="flex">
             <Image
               src="/assets/merch-store-icon.svg"
               alt="Merchandise Store Icon"
@@ -63,7 +67,7 @@ const Navbar = () => {
         <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
           <Hamburger />
         </div>
-      </div>  
+      </div>
     </nav>
   );
 };

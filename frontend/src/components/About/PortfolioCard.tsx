@@ -1,20 +1,18 @@
 // import Image from 'next/image';
-import { PortfolioData } from "@/../public/data/portfolios";
+import { PortfolioData } from '@/../public/data/portfolios';
 
 interface PortfolioCardProps {
-  portfolio: PortfolioData,
+  portfolio: PortfolioData;
 }
 
 // NOTE: Profile pictures can be added in the future
 const PortfolioCard = ({ portfolio }: PortfolioCardProps) => {
   return (
     <div>
-      <p className="text-lg my-6">
-        {portfolio.description}
-      </p>
+      <p className="text-lg my-6">{portfolio.description}</p>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {portfolio.members.map(member => (
+        {portfolio.members.map((member) => (
           <div>
             {/* <Image
               src={member.imageUrl}
@@ -22,7 +20,7 @@ const PortfolioCard = ({ portfolio }: PortfolioCardProps) => {
               width={150}
               height={150}
             /> */}
-            
+
             <div>
               <p>{member.name}</p>
               <p className="text-gray-500">{member.role}</p>
@@ -32,6 +30,6 @@ const PortfolioCard = ({ portfolio }: PortfolioCardProps) => {
       </div>
     </div>
   );
-}
+};
 
 export default PortfolioCard;

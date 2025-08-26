@@ -10,7 +10,7 @@ export default function ContactUsPage() {
       <TabTitle>
         <title>Contact Us | CSESoc UNSW</title>
       </TabTitle>
-      
+
       <PageTitle title="CONTACT US" />
 
       <PageBody>
