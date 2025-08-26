@@ -13,7 +13,6 @@ export default function HomePage() {
       </TabTitle>
 
       <section>
-        <div className="h-8"></div>
         
         <Navbar />
 

@@ -1,103 +1,78 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 
-export default function Hamburger() {
-  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsOpenDropdown(false);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+export default function SideMenu() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <DropdownMenu modal={false} open={isOpenDropdown} onOpenChange={setIsOpenDropdown}>
-      <DropdownMenuTrigger asChild>
-        <button className="p-2 rounded-lg">
-          <div className="w-10 h-10 flex flex-col justify-center items-center">
-            <motion.div
-              className="h-0.5 w-6 bg-white"
-              animate={{
-                rotate: isOpenDropdown ? 45 : 0,
-                y: isOpenDropdown ? 2 : -4,
-              }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            />
-            <motion.div
-              className="h-0.5 w-6 bg-white"
-              animate={{
-                opacity: isOpenDropdown ? 0 : 1,
-                x: isOpenDropdown ? -10 : 0,
-              }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
-            />
-            <motion.div
-              className="h-0.5 w-6 bg-white"
-              animate={{
-                rotate: isOpenDropdown ? -45 : 0,
-                y: isOpenDropdown ? -2 : 4,
-              }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            />
-          </div>
-        </button>
-      </DropdownMenuTrigger>
-      
-      <DropdownMenuContent 
-        align="end" 
-        className="w-44 bg-[#3977F9] border-none shadow-lg rounded-2xl text-white dropdown-content overflow-hidden"
+    <div className=''>
+      <button 
+        className="p-2 z-50 relative"
+        onClick={() => setIsOpen(!isOpen)}
       >
-     
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <Link href="/about" className="w-full block">
-            About Us
-          </Link>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <Link href="/events" className="w-full block">
-            Events
-          </Link>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <Link href="/resources" className="w-full block">
-            Resources
-          </Link>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <Link href="/sponsors" className="w-full block">
-            Sponsors
-          </Link>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <Link href="/contact-us" className="w-full block">
-            Contact Us
-          </Link>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <a 
-            target="_blank" 
-            href="https://csesoc-merch.square.site/"
-            className="w-full block"
-          >
-            Merch
-          </a>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+        <Menu className="w-6 h-6 text-white" />
+      </button>
+
+      {isOpen && (
+        <>
+          {/* Backdrop overlay */}
+          <div 
+            className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsOpen(false)}
+          />
+          
+          {/* Sidebar */}
+          <div className="fixed right-0 top-0 w-80 h-screen bg-[#3977F9] z-50">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-[45px] right-[20px] text-white p-2"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            
+            <div className="p-6 pt-20">
+              <div className="space-y-4">
+                <Link href="/about" onClick={() => setIsOpen(false)}>
+                  <div className="text-white text-lg p-3">
+                    About Us
+                  </div>
+                </Link>
+                
+                <Link href="/events" onClick={() => setIsOpen(false)}>
+                  <div className="text-white text-lg p-3">
+                    Events
+                  </div>
+                </Link>
+                
+                <Link href="/resources" onClick={() => setIsOpen(false)}>
+                  <div className="text-white text-lg p-3">
+                    Resources
+                  </div>
+                </Link>
+                
+                <Link href="/sponsors" onClick={() => setIsOpen(false)}>
+                  <div className="text-white text-lg p-3">
+                    Sponsors
+                  </div>
+                </Link>
+                
+                <Link href="/contact-us" onClick={() => setIsOpen(false)}>
+                  <div className="text-white text-lg p-3">
+                    Contact Us
+                  </div>
+                </Link>
+                
+                <a href="https://csesoc-merch.square.site/" target="_blank" onClick={() => setIsOpen(false)}>
+                  <div className="text-white text-lg p-3">
+                    Merch
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+    </div>
   );
 }

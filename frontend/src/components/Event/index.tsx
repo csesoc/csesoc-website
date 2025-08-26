@@ -5,7 +5,7 @@ import EventGallery from './EventsGallery';
 
 const Event = () => {
   return (
-    <section className="py-8 xl:px-24 sm:px-10 px-5" id="events">
+    <section className="pb-8 xl:px-24 sm:px-10 px-5" id="events">
       <div className="text-center my-10">
         <h1 className="font-bold text-6xl">EVENTS</h1>
       </div>
