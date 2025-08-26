@@ -15,7 +15,7 @@ export default function ResourcesPage() {
       </TabTitle>
 
       <PageTitle title="RESOURCES" />
-      
+
       <section className="bg-no-repeat bg-center py-8 px-15 min-h-screen flex justify-center items-center">
         <div className="2xl:w-[90rem] xl:w-[75rem] w-[90%]">
           <div className="relative">

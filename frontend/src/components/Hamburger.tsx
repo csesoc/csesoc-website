@@ -1,103 +1,169 @@
 import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
+import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import Image from 'next/image';
+import { socialLinks } from '@/../public/data/socialInfos';
 
-export default function Hamburger() {
-  const [isOpenDropdown, setIsOpenDropdown] = useState(false);
+const Hamburger = () => {
+  // Needs dom element to be same bfore and after
+  // setIsOpen(true) occurs first while dom portal doesnt exist
+  // Then creates dom portal
+  // So it tries to go from isOpen=true to isOpen=true
+  // So no animation occurs as it starts from its finishing val
+  // So we need to create dom portal first, then menu
+  // animation should only start after dom portal is created
+  const [isOpen, setIsOpen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+
+  const openMenu = () => {
+    setShowMenu(true);
+    setTimeout(() => setIsOpen(true), 10);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+    setTimeout(() => setShowMenu(false), 300);
+  };
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsOpenDropdown(false);
+    if (showMenu) {
+      // Add padding when scrollbar vanishes
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    };
+  }, [showMenu]);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeMenu();
     };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    if (showMenu) document.addEventListener('keydown', handleEscape);
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [showMenu]);
+
+  // Portal renders the backdrop at document.body level
+  // Hence, instead of showing just at nav, shows over all components
+  const backdrop =
+    showMenu && typeof document !== 'undefined'
+      ? ReactDOM.createPortal(
+          // Backdrop
+          <div
+            className={`fixed inset-0 z-50 ease-out transition-all duration-300 ${
+              isOpen
+                ? 'bg-black/50 backdrop-blur-sm'
+                : 'bg-black/0 backdrop-blur-none'
+            }`}
+            onClick={closeMenu}
+          >
+            {/* Sidebar */}
+            <div
+              className={`absolute top-0 right-0 bg-[#3977F9] h-screen w-80 z-50 ease-in-out transition-transform duration-300 ${
+                isOpen ? 'translate-x-0' : 'translate-x-full'
+              }`}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={closeMenu}
+                className="text-white top-[45px] right-[35px] absolute p-2"
+              >
+                <X className="h-6 w-6" />
+              </button>
+
+              <div className="p-6 pt-20 flex flex-col h-full">
+                <div className="flex flex-col gap-4 items-start">
+                  <Link
+                    href="/about"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    About Us
+                  </Link>
+
+                  <Link
+                    href="/events"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    Events
+                  </Link>
+
+                  <Link
+                    href="/resources"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    Resources
+                  </Link>
+
+                  <Link
+                    href="/sponsors"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    Sponsors
+                  </Link>
+
+                  <Link
+                    href="/contact-us"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    Contact Us
+                  </Link>
+
+                  <a
+                    href="https://csesoc-merch.square.site/"
+                    target="_blank"
+                    className="text-white text-lg p-3 hover:underline"
+                    onClick={closeMenu}
+                  >
+                    Merch
+                  </a>
+                </div>
+
+                <div className="flex-1"></div>
+
+                <div className="flex gap-4 justify-center pb-6">
+                  {socialLinks.map((item, index) => {
+                    return (
+                      <a key={index} href={item.href}>
+                        <Image
+                          className="h-4 fill-white min-w-full hover:scale-125 transition-all"
+                          src={item.src}
+                          alt={item.alt}
+                          height={15}
+                          width={15}
+                        />
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )
+      : null;
 
   return (
-    <DropdownMenu modal={false} open={isOpenDropdown} onOpenChange={setIsOpenDropdown}>
-      <DropdownMenuTrigger asChild>
-        <button className="p-2 rounded-lg">
-          <div className="w-10 h-10 flex flex-col justify-center items-center">
-            <motion.div
-              className="h-0.5 w-6 bg-white"
-              animate={{
-                rotate: isOpenDropdown ? 45 : 0,
-                y: isOpenDropdown ? 2 : -4,
-              }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            />
-            <motion.div
-              className="h-0.5 w-6 bg-white"
-              animate={{
-                opacity: isOpenDropdown ? 0 : 1,
-                x: isOpenDropdown ? -10 : 0,
-              }}
-              transition={{ duration: 0.2, ease: "easeInOut" }}
-            />
-            <motion.div
-              className="h-0.5 w-6 bg-white"
-              animate={{
-                rotate: isOpenDropdown ? -45 : 0,
-                y: isOpenDropdown ? -2 : 4,
-              }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            />
-          </div>
-        </button>
-      </DropdownMenuTrigger>
-      
-      <DropdownMenuContent 
-        align="end" 
-        className="w-44 bg-[#3977F9] border-none shadow-lg rounded-2xl text-white dropdown-content overflow-hidden"
-      >
-     
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <Link href="/about" className="w-full block">
-            About Us
-          </Link>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <Link href="/events" className="w-full block">
-            Events
-          </Link>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <Link href="/resources" className="w-full block">
-            Resources
-          </Link>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <Link href="/sponsors" className="w-full block">
-            Sponsors
-          </Link>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <Link href="/contact-us" className="w-full block">
-            Contact Us
-          </Link>
-        </DropdownMenuItem>
-        
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <a 
-            target="_blank" 
-            href="https://csesoc-merch.square.site/"
-            className="w-full block"
-          >
-            Merch
-          </a>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <>
+      <button className="p-2 relative z-50" onClick={openMenu}>
+        <Menu className="text-white w-6 h-6" />
+      </button>
+      {backdrop}
+    </>
   );
-}
+};
+
+export default Hamburger;

@@ -1,9 +1,9 @@
-import PortfolioDisplay from "@/components/About/PortfolioDisplay";
-import Layout from "@/components/Layout";
-import PageBody from "@/components/PageBody";
-import PageTitle from "@/components/PageTitle";
-import { EXECS } from "@/../public/data/execs";
-import TabTitle from 'next/head'
+import PortfolioDisplay from '@/components/About/PortfolioDisplay';
+import Layout from '@/components/Layout';
+import PageBody from '@/components/PageBody';
+import PageTitle from '@/components/PageTitle';
+import { EXECS } from '@/../public/data/execs';
+import TabTitle from 'next/head';
 
 const ExecsDirectorsSubcommitteesPage = () => {
   return (
@@ -16,14 +16,18 @@ const ExecsDirectorsSubcommitteesPage = () => {
         {/* CSESOC TEAM */}
         <div>
           <p className="text-xl my-5">
-            The Executives and Directors are responsible for organising the society to make sure that things get done. 
-            Execs are elected annually by CSE students at the end of the preceding year and Directors are selected by Execs.
+            The Executives and Directors are responsible for organising the society to make sure
+            that things get done. Execs are elected annually by CSE students at the end of the
+            preceding year and Directors are selected by Execs.
           </p>
-          <p className="text-xl my-5">
-            The CSESoc Executive and Director team for 2025:
-          </p>
+          <p className="text-xl my-5">The CSESoc Executive and Director team for 2025:</p>
           <div className="flex justify-center items-center">
-            <img src="/images/members/csesoc-2025.jpg" alt="CSESoc Team 2025" width={700} height={700} />
+            <img
+              src="/images/members/csesoc-2025.jpg"
+              alt="CSESoc Team 2025"
+              width={700}
+              height={700}
+            />
           </div>
         </div>
 
@@ -31,7 +35,7 @@ const ExecsDirectorsSubcommitteesPage = () => {
         <div className="my-5">
           <h2 className="text-xl font-bold mb-2">Execs</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {EXECS.map(exec => (
+            {EXECS.map((exec) => (
               <div>
                 <div>
                   <p>{exec.name}</p>
@@ -49,7 +53,8 @@ const ExecsDirectorsSubcommitteesPage = () => {
           <div>
             <h2 className="text-xl font-semibold mb-2">Directors & Subcommitees</h2>
             <p className="text-lg">
-              Subcommittees are the teams led by Directors that run CSESoc and its events to the benefit of all UNSW Computing students. Click to see the directors of each team!
+              Subcommittees are the teams led by Directors that run CSESoc and its events to the
+              benefit of all UNSW Computing students. Click to see the directors of each team!
             </p>
           </div>
 
@@ -62,6 +67,6 @@ const ExecsDirectorsSubcommitteesPage = () => {
       </PageBody>
     </Layout>
   );
-}
+};
 
 export default ExecsDirectorsSubcommitteesPage;

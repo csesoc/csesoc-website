@@ -9,7 +9,12 @@ const Footer = () => {
         <div className="flex flex-col gap-10">
           <div className="flex items-center">
             <Link href="/" className="flex">
-              <Image src="/assets/csesoc_logo_white.svg" width={231} height={53} alt="CSESoc Logo" />
+              <Image
+                src="/assets/csesoc_logo_white.svg"
+                width={231}
+                height={53}
+                alt="CSESoc Logo"
+              />
               <Image
                 src="/flag/ollie_is_hiding.png"
                 alt="Ollie"
@@ -39,7 +44,9 @@ const Footer = () => {
         <div className="flex flex-col max-w-[14rem] sm:mt-0 mt-10 font-light">
           <div className="mb-6">
             <div>B03 CSE Building K17, UNSW</div>
-            <a href="mailto:csesoc@csesoc.org.au" className="hover:underline">csesoc@csesoc.org.au</a>
+            <a href="mailto:csesoc@csesoc.org.au" className="hover:underline">
+              csesoc@csesoc.org.au
+            </a>
           </div>
           <p>© 2025 — CSESoc UNSW</p>
         </div>

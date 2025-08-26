@@ -44,14 +44,16 @@ export default function SponsorsPage() {
         <EmojiRain emoji="🪩" />
       </div>
       <section className="py-8">
-        <h2 className="text-4xl font-black text-center font-bold" onClick={() => handleRainClick('diamond')}>DIAMOND SPONSORS</h2>
+        <h2
+          className="text-4xl font-black text-center font-bold"
+          onClick={() => handleRainClick('diamond')}
+        >
+          DIAMOND SPONSORS
+        </h2>
         <div>
           <div className="w-100 flex flex-col gap-16">
             {showModal && (
-              <SponsorModal
-                sponsorInfo={information}
-                setFalse={() => setShowModal(false)}
-              />
+              <SponsorModal sponsorInfo={information} setFalse={() => setShowModal(false)} />
             )}
             <div className="flex flex-wrap rounded-[1rem] px-14 py-10 mb-14 gap-16 justify-center rounded border-2 border-[#595F6D] my-10">
               {diamondLinks.map((item, index) => {
@@ -64,7 +66,12 @@ export default function SponsorsPage() {
             </div>
           </div>
         </div>
-        <h2 className="text-4xl font-black text-center font-bold" onClick={() => handleRainClick('gold')}>GOLD SPONSORS</h2>
+        <h2
+          className="text-4xl font-black text-center font-bold"
+          onClick={() => handleRainClick('gold')}
+        >
+          GOLD SPONSORS
+        </h2>
         <div>
           <div className="flex flex-wrap rounded-[1rem] px-14 py-10 mb-14 gap-16 justify-evenly rounded border-2 border-[#595F6D] my-10">
             {goldLinks.map((item, index) => {
@@ -76,7 +83,12 @@ export default function SponsorsPage() {
             })}
           </div>
         </div>
-        <h2 className="text-4xl font-black text-center font-bold" onClick={() => handleRainClick('silver')}>SILVER SPONSORS</h2>
+        <h2
+          className="text-4xl font-black text-center font-bold"
+          onClick={() => handleRainClick('silver')}
+        >
+          SILVER SPONSORS
+        </h2>
         <div>
           <div className="flex flex-wrap rounded-[1rem] px-14 py-10 mb-14 gap-16 justify-evenly rounded border-2 border-[#595F6D] mt-10">
             {silverLinks.map((item, index) => {
