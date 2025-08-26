@@ -26,13 +26,15 @@ const Hamburger = () => {
 
   useEffect(() => {
     if (showMenu) {
+      // Add padding when scrollbar vanishes
+      const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'scroll';
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
     }
 
     return () => {
       document.body.style.overflow = 'scroll';
+      document.body.style.paddingRight = '0px';
     };
   }, [showMenu]);
 
