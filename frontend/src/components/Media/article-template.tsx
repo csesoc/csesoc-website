@@ -1,6 +1,7 @@
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import React, { useState, useEffect } from "react"
+import Markdown from 'react-markdown'
 
 type Info = {
     title : string
@@ -10,48 +11,75 @@ type Info = {
 
 export default function Article( {articleName} : {articleName : string | string[] | undefined} ) {
 
-    // const fs = require("fs");
+    // gets article name from URL, show 'fetching article' until URL is fetched
     let articleUrl = "/articles/" + articleName
-    console.log("URL: " + articleUrl)
-
     if (articleName == undefined) {
         return (
             <div> fetching article... </div>
         )
     }
 
-    // if (fs.existsSync(articleUrl)) {
-    //     // Do something
-    // }
-
+    // create variables markdown and infoStr, which hold data fetched from "/articles"
+    // also create functions to update these constants
     const [markdown, setMarkdown] = useState("");
+    const [infoStr, setInfo] = useState("");
     useEffect(() => {
         fetch(`${articleUrl}/content.md`)
         .then((res) => res.text())
         .then((text) => setMarkdown(text));
     }, []);
-
-    console.log("MARKDOWN: " + markdown)
-
-    // infoObj here is not a string, but of type Info. 
-    const [infoObj, setInfo] = useState("");
     useEffect(() => {
         fetch(`${articleUrl}/info.json`)
         .then((res) => res.text())
-        .then((text) => JSON.parse(`${text}`))
         .then((object) => setInfo(object));
     }, []);
+
+    // console logs for debugging
+    // console.log("URL: " + articleUrl)
+    // console.log("MARKDOWN: " + markdown)
+    // console.log("INFO: " + infoStr)
+
+    // return loading until infoStr is fetched
+    if (!infoStr) {
+        return (
+            <div> fetching article info... </div>
+        )
+    }
+
+    // if article doesn't exist, return "article not found"
+    if (infoStr.startsWith("<!DOCTYPE html>")) {
+        return (
+            <div> article not found... </div>
+        )
+    }
+
+    // process infoStr into JSON object
+    const infoObj = JSON.parse(infoStr)
+
+    // react markdown styles
+    const MarkdownLink = ({ children } : {children : string}) => (
+        <a className="underline text-cyan-200">{children}</a>
+    );
+    const MarkdownHeading1 = ({ children } : {children : string}) => (
+        <h1 className="text-5xl font-[1000]">{children}</h1>
+    );
+    const MarkdownHeading2 = ({ children } : {children : string}) => (
+        <h2 className="text-4xl font-black">{children}</h2>
+    );
+    const MarkdownHeading3 = ({ children } : {children : string}) => (
+        <h3 className="text-3xl font-extrabold">{children}</h3>
+    );
     
     return (
         <article className="mt-[6px]">
-            <header className="mb-[6vmin] w-[100vmin] justify-self-center">
-                <div className="mb-[6vmin] w-[120vmin] justify-self-center">
-                    <img src={articleUrl + "/cover.png"}/>
+            <header className="mb-[3vmin] w-[100vmin] justify-self-center">
+                <div className="mb-[6vmin] w-[120vmin] justify-self-center justify-items-center">
+                    <img className="w-[120vmin]" src={articleUrl + "/cover.png"}/>
                 </div>
                 {/* title, author, date */}
                 <div className=""> 
                     <div className="mb-[16px]">
-                        Article
+                        {infoObj.tags}
                     </div>
                     <h1 className="font-black xl:text-6xl text-xl">
                         {infoObj.title}
@@ -72,8 +100,15 @@ export default function Article( {articleName} : {articleName : string | string[
                 </div>
             </header>
             <section className="w-[100vmin] justify-self-center pb-[75px]">
-                <a className="font l:text-3xl text-xl">
-                    <ReactMarkdown>
+                <a className="font l:text-3xl text-xl whitespace-pre-wrap">
+                    <ReactMarkdown
+                        components = {{
+                            a: MarkdownLink,
+                            h1: MarkdownHeading1,
+                            h2: MarkdownHeading2,
+                            h3: MarkdownHeading3,
+                        }}
+                    >
                         {markdown}
                     </ReactMarkdown>
                 </a>
