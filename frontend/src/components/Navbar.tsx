@@ -13,8 +13,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="sticky top-0 flex justify-between items-center relative z-10 shadow-lg rounded-md bg-black/15 backdrop-blur-md xl:px-24 md:px-10 px-5 py-6">
-      <div>
+    <nav className="sticky top-0 flex flex-col relative z-10 shadow-lg rounded-md bg-black/15 backdrop-blur-md xl:px-24 md:px-10 px-5 py-6">
+      <div className="flex justify-between items-center">
         <Link href="/">
           <Image
             src="/assets/csesoc_logo.svg"
@@ -22,33 +22,24 @@ const Navbar = () => {
             width={200}
             height={200}
             draggable={false}
+            className="w-28 h-auto md:w-36 lg:w-48"
           />
         </Link>
-        <p className="font-mono mt-3 font-bold">
-          <span className="text-green-500">csesoc@unsw</span>
-          <span>:</span>
-          <span className="text-blue-500">~{path.map(segment => '/' + segment.toLowerCase())}</span>
-          <span>$ </span>
-          {/* The interactive terminal that allows changing pages using 'cd' */}
-          <Terminal/>
-        </p>
-      </div>
-      <div>
-        <div className="md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
+        <div className="text-[1.7vw] xl:text-xl md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
           <Link href="/about">
-            <div className="text-xl">{'//'} about us</div>
+            <div>{'//'} about us</div>
           </Link>
           <Link href="/events">
-            <div className="text-xl">{'//'} events</div>
+            <div>{'//'} events</div>
           </Link>
           <Link href="/resources">
-            <div className="text-xl">{'//'} resources</div>
+            <div>{'//'} resources</div>
           </Link>
           <Link href="/sponsors">
-            <div className="text-xl">{'//'} sponsors</div>
+            <div>{'//'} sponsors</div>
           </Link>
           <Link href="/contact-us">
-            <div className="text-xl">{'//'} contact us</div>
+            <div>{'//'} contact us</div>
           </Link>
           <a target="_blank" href="https://csesoc-merch.square.site/" className='flex'>
             <Image
@@ -63,6 +54,16 @@ const Navbar = () => {
         <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
           <Hamburger />
         </div>
+      </div>
+      <div>
+        <p className="font-mono mt-3 font-bold">
+          <span className="text-green-500">csesoc@unsw</span>
+          <span>:</span>
+          <span className="text-blue-500">~{path.map(segment => '/' + segment.toLowerCase())}</span>
+          <span>$ </span>
+          {/* The interactive terminal that allows changing pages using 'cd' */}
+          <Terminal/>
+        </p>
       </div>  
     </nav>
   );
