@@ -4,10 +4,12 @@ on:
   push:
     branches:
       - master
+      - qa
       - renovate/*
   pull_request:
     branches:
       - master
+      - qa
 
 jobs:
   api-ci:
