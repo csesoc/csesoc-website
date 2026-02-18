@@ -4,6 +4,7 @@ import Sponsors from '@/components/Sponsors/index';
 import AboutHomePage from '@/components/About/AboutHomepage';
 import EventsBrief from '@/components/Event/EventsBrief';
 import TabTitle from 'next/head';
+import Olliebot from '@/components/Olliebot';
 
 export default function HomePage() {
   return (
@@ -25,6 +26,8 @@ export default function HomePage() {
         <EventsBrief />
         <Sponsors />
       </section>
+
+      <Olliebot/>
     </>
     
   );
