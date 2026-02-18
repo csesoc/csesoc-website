@@ -35,8 +35,8 @@ const Navbar = () => {
       </div>
       <div>
         <div className="md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdFiyC8WshBoRbXFlN086k9vngQzXyeLqvEMiGShziLAgaiCw/viewform?usp=header">
-            <div className="text-xl">{'//'} apply</div>
+          <Link href="https://docs.google.com/forms/d/1EkNgm9HQc1b3C8Pvk7AqHvXF6N65txmOxmKjdMpfwBs">
+            <div className="text-xl">{'//'} subcommittee</div>
           </Link>
           <Link href="/about">
             <div className="text-xl">{'//'} about us</div>
