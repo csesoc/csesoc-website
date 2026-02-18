@@ -1,11 +1,27 @@
 import Spline from '@splinetool/react-spline';
+import { useState, useEffect } from 'react';
 
 const Background = () => {
+
+  // delay background loading
+  const [shouldLoad, setShouldLoad] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShouldLoad(true);
+    }, 700); 
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <Spline
-      className="absolute"
-      scene="https://prod.spline.design/thPGkOvNXu8XjGlk/scene.splinecode"
-    />
+    <>
+      {shouldLoad && (
+        <Spline
+          scene="https://prod.spline.design/thPGkOvNXu8XjGlk/scene.splinecode"
+          renderOnDemand={true}
+        />
+      )}
+    </>
   );
 };
 
