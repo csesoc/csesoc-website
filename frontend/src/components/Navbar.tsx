@@ -6,24 +6,33 @@ import Terminal from './Terminal';
 
 const Navbar = () => {
   const [path, setPath] = useState<string[]>([]);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   useEffect(() => {
     const pathSegments: string[] | undefined = window.location.pathname.split('/').filter(segment => segment);
     if (pathSegments === undefined) setPath([]);
     else setPath(pathSegments.map(segment => segment.toUpperCase()));
   }, []);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () =>window.removeEventListener('scroll', handleScroll);
+  }, []); 
+
   return (
-    <nav className="sticky top-0 flex justify-between items-center relative z-10 shadow-lg rounded-md bg-black/15 backdrop-blur-md xl:px-24 md:px-10 px-5 py-6">
-      <div>
-        <Link href="/">
-          <Image
-            src="/assets/csesoc_logo.svg"
-            alt="CSESoc Logo"
-            width={200}
-            height={200}
-            draggable={false}
-          />
-        </Link>
+    <nav className={`sticky top-0 flex justify-between items-center relative z-10 rounded-md bg-black/15 backdrop-blur-md xl:px-24 md:px-10 px-5 py-6 duration-500 ${isScrolled ? 'shadow-xl' : 'shadow-none'}`}>
+      <Link href="/">
+        <Image
+          src="/assets/csesoc_logo.svg"
+          alt="CSESoc Logo"
+          width={200}
+          height={200}
+          draggable={false}
+        />
         <p className="font-mono mt-3 font-bold">
           <span className="text-green-500">csesoc@unsw</span>
           <span>:</span>
@@ -32,7 +41,7 @@ const Navbar = () => {
           {/* The interactive terminal that allows changing pages using 'cd' */}
           <Terminal/>
         </p>
-      </div>
+      </Link>
       <div>
         <div className="md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
           <Link href="https://docs.google.com/forms/d/1EkNgm9HQc1b3C8Pvk7AqHvXF6N65txmOxmKjdMpfwBs">
@@ -63,7 +72,7 @@ const Navbar = () => {
             />
           </a>
         </div>
-        <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
+        <div className="sm:hidden xl:hidden lg:hidden text-right font-bold block">
           <Hamburger />
         </div>
       </div>  
