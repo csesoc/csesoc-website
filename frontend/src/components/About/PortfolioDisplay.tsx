@@ -1,15 +1,19 @@
 import { useState } from "react";
 import PortfolioCard from "./PortfolioCard";
-import { PORTFOLIOS } from "@/../public/data/portfolios";
+import { PortfolioData } from "@/../public/data/members";
 
-const PortfolioDisplay = () => {
+type PortfolioDisplayProps = {
+  portfolios: PortfolioData[];
+};
+
+const PortfolioDisplay = ({ portfolios }: PortfolioDisplayProps) => {
   const [selectedPortfolio, setSelectedPortfolio] = useState("Careers");
   
-  const names = PORTFOLIOS.map(port => port.name);
+  const names = portfolios.map(port => port.name);
 
   return (
     <div>
-      <div className="flex justify-between max-w-full h-12 my-6 snap-x snap-mandatory overflow-y-hidden pb-1 
+      <div className="flex justify-between max-w-full my-6 snap-x snap-mandatory overflow-y-hidden pb-1 
           [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:h-2
           [&::-webkit-scrollbar-track]:bg-transparent
           [&::-webkit-scrollbar-thumb]:rounded-full
@@ -25,7 +29,7 @@ const PortfolioDisplay = () => {
         ))}
       </div>
       
-      <PortfolioCard portfolio={PORTFOLIOS.find(port => port.name === selectedPortfolio) ?? PORTFOLIOS[0]} />
+      <PortfolioCard portfolio={portfolios.find(port => port.name === selectedPortfolio) ?? portfolios[0]} />
     </div>
   )
 }
