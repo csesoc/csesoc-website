@@ -5,6 +5,9 @@ on:
       - "master"
       - "qa"
 
+env:
+  IMAGE_NAME: ${{ github.ref_name == 'master' && 'website' || 'website-qa' }}
+
 jobs:
   build:
     name: "Build (${{ matrix.component }})"
@@ -39,8 +42,8 @@ jobs:
           platforms: linux/amd64
           file: ${{ matrix.component }}/Dockerfile
           tags: |
-            ghcr.io/csesoc/website-${{ matrix.component }}:${{ github.sha }}
-            ghcr.io/csesoc/website-${{ matrix.component }}:latest
+            ghcr.io/csesoc/${{ env.IMAGE_NAME }}-${{ matrix.component }}:${{ github.sha }}
+            ghcr.io/csesoc/${{ env.IMAGE_NAME }}-${{ matrix.component }}:latest
           labels: ${{ steps.meta.outputs.labels }}
   deploy:
     name: Deploy (CD)
@@ -72,5 +75,5 @@ jobs:
           repository: deployment
           ref: develop
           updates: |
-            ghcr.io/csesoc/website-backend=${{ github.sha }}
-            ghcr.io/csesoc/website-frontend=${{ github.sha }}
+            ghcr.io/csesoc/${{ env.IMAGE_NAME }}-backend=${{ github.sha }}
+            ghcr.io/csesoc/${{ env.IMAGE_NAME }}-frontend=${{ github.sha }}
