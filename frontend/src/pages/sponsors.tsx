@@ -4,6 +4,7 @@ import { diamondLinks, goldLinks, silverLinks, sponsorInfo } from '@/../public/d
 import SponsorModal from '@/components/Sponsors/SponsorModal';
 import { EmojiRain } from 'next-emoji-rain';
 import TabTitle from 'next/head';
+import FadeInAnimation from '@/components/Animations/FadeInAnimation';
 
 export default function SponsorsPage() {
   const logostyle =
@@ -28,6 +29,15 @@ export default function SponsorsPage() {
     }, 4000);
   };
 
+  const animationSequence = {
+    diamondSponsorsTitle: 0,
+    diamondSponsors: 0.1,
+    goldSponsorsTitle: 0.2,
+    goldSponsors: 0.3,
+    silverSponsorsTitle: 0.4,
+    silverSponsors: 0.5,
+  };
+
   return (
     <Layout>
       <TabTitle>
@@ -44,8 +54,12 @@ export default function SponsorsPage() {
         <EmojiRain emoji="🪩" />
       </div>
       <section className="py-8">
-        <h2 className="text-4xl font-black text-center font-bold" onClick={() => handleRainClick('diamond')}>DIAMOND SPONSORS</h2>
-        <div>
+        <FadeInAnimation delay={animationSequence.diamondSponsorsTitle}>
+        <h2 className="text-4xl font-black text-center font-bold"
+          onClick={() => handleRainClick('diamond')}>
+          DIAMOND SPONSORS</h2>
+        </FadeInAnimation>
+        <FadeInAnimation delay={animationSequence.diamondSponsors}>
           <div className="w-100 flex flex-col gap-16">
             {showModal && (
               <SponsorModal
@@ -63,9 +77,14 @@ export default function SponsorsPage() {
               })}
             </div>
           </div>
-        </div>
-        <h2 className="text-4xl font-black text-center font-bold" onClick={() => handleRainClick('gold')}>GOLD SPONSORS</h2>
-        <div>
+        </FadeInAnimation>
+        <FadeInAnimation delay={animationSequence.goldSponsorsTitle}>
+        <h2
+          className="text-4xl font-black text-center font-bold"
+          onClick={() => handleRainClick('gold')}
+          >GOLD SPONSORS</h2>
+        </FadeInAnimation>
+        <FadeInAnimation delay={animationSequence.goldSponsors}>
           <div className="flex flex-wrap rounded-[1rem] px-14 py-10 mb-14 gap-16 justify-evenly rounded border-2 border-[#595F6D] my-10">
             {goldLinks.map((item, index) => {
               return (
@@ -75,9 +94,14 @@ export default function SponsorsPage() {
               );
             })}
           </div>
-        </div>
-        <h2 className="text-4xl font-black text-center font-bold" onClick={() => handleRainClick('silver')}>SILVER SPONSORS</h2>
-        <div>
+        </FadeInAnimation>
+        <FadeInAnimation delay={animationSequence.silverSponsorsTitle}>
+          <h2
+            className="text-4xl font-black text-center font-bold"
+            onClick={() => handleRainClick('silver')}
+            >SILVER SPONSORS</h2>
+        </FadeInAnimation>
+        <FadeInAnimation delay={animationSequence.silverSponsors}>
           <div className="flex flex-wrap rounded-[1rem] px-14 py-10 mb-14 gap-16 justify-evenly rounded border-2 border-[#595F6D] mt-10">
             {silverLinks.map((item, index) => {
               return (
@@ -87,7 +111,7 @@ export default function SponsorsPage() {
               );
             })}
           </div>
-        </div>
+        </FadeInAnimation>
       </section>
     </Layout>
   );
