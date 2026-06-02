@@ -30,14 +30,14 @@ const Navbar = () => {
           <span className="text-blue-500">~{path.map(segment => '/' + segment.toLowerCase())}</span>
           <span>$ </span>
           {/* The interactive terminal that allows changing pages using 'cd' */}
-          <Terminal/>
+          <Terminal />
         </p>
       </div>
       <div>
         <div className="md:flex xl:gap-18 lg:gap-10 md:gap-5 text-right font-bold hidden">
-          <Link href="https://docs.google.com/forms/d/1EkNgm9HQc1b3C8Pvk7AqHvXF6N65txmOxmKjdMpfwBs">
+          {/*<Link href="https://docs.google.com/forms/d/1EkNgm9HQc1b3C8Pvk7AqHvXF6N65txmOxmKjdMpfwBs">
             <div className="text-xl">{'//'} subcommittee</div>
-          </Link>
+          </Link>*/}
           <Link href="/about">
             <div className="text-xl">{'//'} about us</div>
           </Link>
@@ -66,7 +66,7 @@ const Navbar = () => {
         <div className="md:hidden xl:hidden lg:hidden text-right font-bold block">
           <Hamburger />
         </div>
-      </div>  
+      </div>
     </nav>
   );
 };
