@@ -2,10 +2,15 @@ import Layout from "@/components/Layout";
 import PageTitle from "@/components/PageTitle";
 import Image from 'next/image';
 import Link from 'next/link';
+import TabTitle from 'next/head';
 
 export default function AboutPage() {
   return (
     <Layout>
+      <TabTitle>
+        <title>About Us | CSESoc UNSW</title>
+      </TabTitle>
+
       <PageTitle title="ABOUT US" />
       <section className="py-8 xl:px-24 sm:px-10 px-5">
         <div className="flex justify-center items-center">

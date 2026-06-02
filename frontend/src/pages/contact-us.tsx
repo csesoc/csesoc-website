@@ -2,10 +2,15 @@ import Contacts from '@/components/Contacts';
 import Layout from '@/components/Layout';
 import PageBody from '@/components/PageBody';
 import PageTitle from '@/components/PageTitle';
+import TabTitle from 'next/head';
 
 export default function ContactUsPage() {
   return (
     <Layout>
+      <TabTitle>
+        <title>Contact Us | CSESoc UNSW</title>
+      </TabTitle>
+      
       <PageTitle title="CONTACT US" />
 
       <PageBody>
