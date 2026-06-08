@@ -52,51 +52,51 @@ export default function Hamburger() {
           </div>
         </button>
       </DropdownMenuTrigger>
-      
-      <DropdownMenuContent 
-        align="end" 
+
+      <DropdownMenuContent
+        align="end"
         className="w-44 bg-[#3977F9] border-none shadow-lg rounded-2xl text-white dropdown-content overflow-hidden"
       >
-     
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
+
+        {/*<DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
           <Link href="https://docs.google.com/forms/d/1EkNgm9HQc1b3C8Pvk7AqHvXF6N65txmOxmKjdMpfwBs" className="w-full block">
             Apply to Subcommittee
           </Link>
-        </DropdownMenuItem>
+        </DropdownMenuItem>*/}
 
         <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
           <Link href="/about" className="w-full block">
             About Us
           </Link>
         </DropdownMenuItem>
-        
+
         <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
           <Link href="/events" className="w-full block">
             Events
           </Link>
         </DropdownMenuItem>
-        
+
         <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
           <Link href="/resources" className="w-full block">
             Resources
           </Link>
         </DropdownMenuItem>
-        
+
         <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
           <Link href="/sponsors" className="w-full block">
             Sponsors
           </Link>
         </DropdownMenuItem>
-        
+
         <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
           <Link href="/contact-us" className="w-full block">
             Contact Us
           </Link>
         </DropdownMenuItem>
-        
+
         <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
-          <a 
-            target="_blank" 
+          <a
+            target="_blank"
             href="https://csesoc-merch.square.site/"
             className="w-full block"
           >
