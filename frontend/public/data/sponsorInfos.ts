@@ -180,14 +180,14 @@ export const silverLinks: sponsorInfo[] = [
     description:
       'Finma is an Australian fintech company that provides digital solutions for financial planning, helping users better manage their money and achieve long-term financial goals.'
   },
-  // {
-  //   name: 'Zip',
-  //   href: 'https://zip.co/au',
-  //   svg: '/assets/zip_logo.svg',
-  //   alt: 'Zip logo',
-  //   description:
-  //     "Zip Co Limited is a global 'buy now pay later' financial technology company with operations in Australia, New Zealand and the USA."
-  // },
+  {
+    name: 'Zip',
+    href: 'https://zip.co/au',
+    svg: '/assets/zip_logo.svg',
+    alt: 'Zip logo',
+    description:
+      "Zip Co Limited is a global 'buy now pay later' financial technology company with operations in Australia, New Zealand and the USA."
+  },
   // {
   //   name: 'revolutioniseSport',
   //   href: 'https://www.revolutionise.com.au/',
