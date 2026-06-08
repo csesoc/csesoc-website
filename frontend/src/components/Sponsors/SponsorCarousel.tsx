@@ -1,6 +1,6 @@
 import { diamondLinks, goldLinks } from "@/../public/data/sponsorInfos";
 import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css';
+// import 'react-multi-carousel/lib/styles.css';
 
 export default function SponsorCarousel() {
   const responsive = {
