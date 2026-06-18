@@ -1,5 +1,5 @@
 // import Image from 'next/image';
-import { PortfolioData } from "@/../public/data/portfolios";
+import { PortfolioData } from "@/../public/data/members";
 
 interface PortfolioCardProps {
   portfolio: PortfolioData,

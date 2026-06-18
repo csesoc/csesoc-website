@@ -3,6 +3,9 @@ import PageBody from "@/components/PageBody";
 import PageTitle from "@/components/PageTitle";
 import TabTitle from 'next/head'
 import { useState } from "react";
+import PortfolioDisplay from "@/components/About/PortfolioDisplay";
+import ExecDisplay from "@/components/About/ExecDisplay";
+import { TEAM_DATA_BY_YEAR } from "@/../public/data/years/index";
 
 const MIN_YEAR = 2007;
 const MAX_YEAR = 2020;
@@ -11,6 +14,7 @@ const DEFAULT_YEAR = 2020;
 const OurHistoryPage = () => {
   const [year, setYear] = useState(DEFAULT_YEAR);
   const [shouldDisplayTip, setShouldDisplayTip] = useState(true);
+  const currentTeam = TEAM_DATA_BY_YEAR[year];
 
   return (
     <Layout>
@@ -74,9 +78,19 @@ const OurHistoryPage = () => {
             <p className="mt-5">Use the slider to see the teams from past years!</p>
           )}
 
-          <div key={year} className="h-[600px] w-[600px] mt-10">
-            <img src={`/images/csesoc-team-${year}.png`} alt={`CSESoc Team ${year}`}/>
-          </div>
+          {currentTeam && (
+            <>
+              <div className="pt-6 w-full">
+                <ExecDisplay execs={currentTeam.execs}/>
+              </div>
+              <div className="space-y-6 w-full">
+                <div className="border-t border-gray-300 my-10"></div>
+                <h2 className="text-xl font-semibold mb-2">Directors</h2>
+                <PortfolioDisplay portfolios={currentTeam.portfolios}/>
+              </div>
+            </>
+          )}
+
         </div>
       </PageBody>
     </Layout>
