@@ -3,8 +3,15 @@ import Image from 'next/image';
 import { resourceCards, stage1, stage2, stage3 } from '@/../public/data/resourceCards';
 import PageTitle from '@/components/PageTitle';
 import TabTitle from 'next/head';
+import FadeInAnimation from '@/components/Animations/FadeInAnimation';
 
 export default function ResourcesPage() {
+
+  const animationSequence = {
+    title: 0,
+    mainContent: 0.2,
+  };
+
   const boxStyling =
     'border border-[#595F6D] rounded-lg hover:border-[#788093] hover:bg-[#070034] hover:bg-opacity-75 transition-all duration-300';
 
@@ -14,11 +21,13 @@ export default function ResourcesPage() {
         <title>Resources | CSESoc UNSW</title>
       </TabTitle>
 
-      <PageTitle title="RESOURCES" />
+      <FadeInAnimation delay={animationSequence.title}>
+        <PageTitle title="RESOURCES" />
+      </FadeInAnimation>
       
       <section className="bg-no-repeat bg-center py-8 px-15 min-h-screen flex justify-center items-center">
         <div className="2xl:w-[90rem] xl:w-[75rem] w-[90%]">
-          <div className="relative">
+          <FadeInAnimation delay={animationSequence.mainContent} className="relative">
             <Image src="assets/resources_bg.svg" alt="Background" className="-z-50 absolute" fill />
 
             <div className="flex">
@@ -127,7 +136,7 @@ export default function ResourcesPage() {
                 })}
               </div>
             </div>
-          </div>
+          </FadeInAnimation>
         </div>
       </section>
     </Layout>
