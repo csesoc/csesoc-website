@@ -33,7 +33,7 @@ const ElectionGuidePage = () => {
           <div className="text-lg my-5">
             <p>
               Once nominations are open, you will be able to submit your nomination by 
-              emailing <a href="mailto:copresidents@csesoc.org.au" className="text-blue-500 hover:underline">copresidents@csesoc.org.au</a> with:
+              emailing <a href="mailto:returningofficers@csesoc.org.au" className="text-blue-500 hover:underline">copresidents@csesoc.org.au</a> with:
             </p>
             <ul className="list-disc ml-6">
               <li>Your full name and zID, or the full name and zID of the person you are nominating</li>
