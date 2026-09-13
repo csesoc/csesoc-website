@@ -77,7 +77,7 @@ export default function AboutPage() {
                 Pinned
                 {/* TODO: refactor all of this */}
                 <div className="sm:flex my-5">
-                  <div className="p-5 border border-[#595F6D] flex-1 rounded-lg mr-5 w-full sm:mb-0 mb-5">
+                  {/* <div className="p-5 border border-[#595F6D] flex-1 rounded-lg mr-5 w-full sm:mb-0 mb-5">
                     <div className="flex text-[#3A76F8]">
                       <Image src="/assets/book_icon.svg" alt="Book" width={20} height={20} className="mr-2" />
                       <Link href="/about/execs-directors-subcoms">
@@ -86,8 +86,8 @@ export default function AboutPage() {
                     </div>
                     <div className="my-5">CSESoc&apos;s execs, directors, subcommittees</div>
                     <div className="rounded-full bg-[#CC5421] w-3 h-3" />
-                  </div>
-                  <div className="p-5 border border-[#595F6D] flex-1 rounded-lg w-full">
+                  </div> */}
+                  <div className="p-5 border border-[#595F6D] flex-1 rounded-lg mr-5 w-full">
                     <div className="flex text-[#3A76F8]">
                       <Image src="/assets/book_icon.svg" alt="Book" width={20} height={20} className="mr-2" />
                       <Link href="/about/constitution">
@@ -96,6 +96,16 @@ export default function AboutPage() {
                     </div>
                     <div className="my-5">Current and past constitutions</div>
                     <div className="rounded-full bg-[#566ACE] w-3 h-3" />
+                  </div>
+                  <div className="p-5 border border-[#595F6D] flex-1 rounded-lg w-full">
+                    <div className="flex text-[#3A76F8]">
+                      <Image src="/assets/book_icon.svg" alt="Book" width={20} height={20} className="mr-2" />
+                      <Link href="/about/faqs">
+                        <span className="font-semibold hover:underline">faqs</span>
+                      </Link>
+                    </div>
+                    <div className="my-5">Frequently asked questions</div>
+                    <div className="rounded-full bg-[#CC5421] w-3 h-3" />
                   </div>
                 </div>
                 <div className="sm:flex my-5">
@@ -109,22 +119,7 @@ export default function AboutPage() {
                     <div className="my-5">Dive into CSESoc&apos;s history</div>
                     <div className="rounded-full bg-[#E7E923] w-3 h-3" />
                   </div>
-                  <div className="p-5 border border-[#595F6D] flex-1 rounded-lg w-full">
-                    <div className="flex text-[#3A76F8]">
-                      <Image src="/assets/book_icon.svg" alt="Book" width={20} height={20} className="mr-2" />
-                      <Link href="/about/faqs">
-                        <span className="font-semibold hover:underline">faqs</span>
-                      </Link>
-                    </div>
-                    <div className="my-5">Frequently asked questions</div>
-                    <div className="rounded-full bg-[#CC5421] w-3 h-3" />
-                  </div>
-                </div>
-                <div className="my-5">
-                  <div 
-                    className="p-5 border border-[#595F6D] rounded-lg"
-                    style={{ width: 'calc(50% - 0.5rem)' }}
-                  >
+                  <div className="p-5 border border-[#595F6D] flex-1 rounded-lg">
                     <div className="flex text-[#3A76F8]">
                       <Image src="/assets/book_icon.svg" alt="Book" width={20} height={20} className="mr-2" />
                       <Link href="/about/election-guide">
@@ -135,6 +130,7 @@ export default function AboutPage() {
                     <div className="rounded-full bg-[#E7E923] w-3 h-3" />
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
