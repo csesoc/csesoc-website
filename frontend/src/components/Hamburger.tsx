@@ -64,11 +64,11 @@ export default function Hamburger() {
           </Link>
         </DropdownMenuItem>
         
-        <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
+        {/* <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
           <Link href="/events" className="w-full block">
             Events
           </Link>
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
         
         <DropdownMenuItem asChild className="text-white text-lg py-2 px-4 rounded-2xl focus:bg-white/10 hover:bg-white/10 cursor-pointer dropdown-item">
           <Link href="/resources" className="w-full block">

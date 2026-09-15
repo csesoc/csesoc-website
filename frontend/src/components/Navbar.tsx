@@ -38,9 +38,9 @@ const Navbar = () => {
           <Link href="/about">
             <div className="text-xl">{'//'} about us</div>
           </Link>
-          <Link href="/events">
+          {/* <Link href="/events">
             <div className="text-xl">{'//'} events</div>
-          </Link>
+          </Link> */}
           <Link href="/resources">
             <div className="text-xl">{'//'} resources</div>
           </Link>
