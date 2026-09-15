@@ -1,12 +1,11 @@
 import React from 'react';
-import Footer from '@/components/Footer';
 import SponsorCarousel from './SponsorCarousel';
 import { ChevronRight } from 'lucide-react';
 
 const Sponsors = () => {
   return (
     <section
-      className="flex flex-col min-h-screen py-8 xl:px-24 sm:px-10 px-8 relative mt-20"
+      className="flex flex-col py-8 xl:px-24 sm:px-10 px-8 relative mt-20"
       id="sponsors"
     >
       <div className="text-center">
@@ -27,7 +26,6 @@ const Sponsors = () => {
           </div>
         </div>
       </div>
-      <Footer />
       <img
         src="assets/sponsors_backdrop.svg"
         alt="Sponsors backdrop"
