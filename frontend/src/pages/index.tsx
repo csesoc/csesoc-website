@@ -22,7 +22,7 @@ export default function HomePage() {
         </div>
 
         <AboutHomePage />
-        <EventsBrief />
+        {/* <EventsBrief /> */}
         <Sponsors />
       </section>
     </>
