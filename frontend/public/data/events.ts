@@ -10,37 +10,29 @@ export type eventInfo = {
 
 export const events: eventInfo[] = [
   {
-    title: "Startup Spotlight Barbeque",
-    startTime: "Wednesday, 11 June 2025 12:00:00",
-    endTime: "Wednesday, 11 June 2025 14:00:00",
-    location: "John Lions Garden",
-    image: "/images/events/startup_spotlight_bbq.jpg",
-    link: "https://www.facebook.com/events/1018289650496840"
+    title: "CSESoc Annual General Meeting",
+    startTime: "Wednesday, 30 September 2026 17:00:00",
+    endTime: "Wednesday, 30 September 2026 19:00:00",
+    location: "Colombo Theatre A",
+    image: "/images/events/agm_2026.png",
+    link: "https://www.facebook.com/events/28214795838201529"
   },
-  {
-    title: "Mister Maker's Magic Table",
-    startTime: "Wednesday, 18 June 2025 13:00:00",
-    endTime: "Wednesday, 18 June 2025 15:00:00",
-    location: "UNSW Quad",
-    image: "/images/events/mister_makers_magic_table.jpg",
-    link: "https://www.facebook.com/events/1224929275882537"
-  },
-  {
-    title: "Industry Mentoring Program Launch",
-    startTime: "Wednesday, 18 June 2025 18:00:00",
-    endTime: "Wednesday, 18 June 2025 20:00:00",
-    location: "Rex Vowels Theatre",
-    image: "/images/events/industry_mentoring_program.jpg",
-    link: "https://www.facebook.com/events/1776932683235783"
-  },
-  {
-    title: "Rookie Code Rumble",
-    startTime: "Friday, 30 May 2025 18:00:00",
-    endTime: "Friday, 6 June 2025 23:59:59",
-    location: "Online (kick-off location TBD)",
-    image: "/images/events/rookie_code_rumble.jpg",
-    link: "https://www.facebook.com/events/1062484559164505"
-  }
+  // {
+  //   title: "CSESoc x BoulderSoc Bouldering Night",
+  //   startTime: "Thursday, 29 October 2026 17:00:00",
+  //   endTime: "Thursday, 29 October 2026 20:00:00",
+  //   location: "9 Degrees Waterloo",
+  //   image: "/images/events/bouldering_night.png",
+  //   link: "LINK_MISSING"
+  // },
+  // {
+  //   title: "Terraria-rium",
+  //   startTime: "Thursday, 1 October 2026 12:00:00",
+  //   endTime: "Thursday, 1 October 2026 14:00:00",
+  //   location: "UNSW Quad",
+  //   image: "/images/events/IMAGE_MISSING",
+  //   link: "https://www.facebook.com/events/911195228490836"
+  // }
 ];
 
 export const previousEvents: eventInfo[] = [
