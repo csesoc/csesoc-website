@@ -17,6 +17,14 @@ export const events: eventInfo[] = [
     image: "/images/events/agm_2026.png",
     link: "https://www.facebook.com/events/28214795838201529"
   },
+  {
+    title: "Terraria-rium",
+    startTime: "Thursday, 1 October 2026 12:00:00",
+    endTime: "Thursday, 1 October 2026 14:00:00",
+    location: "UNSW Quad",
+    image: "/images/events/terraria-rium.png",
+    link: "https://www.facebook.com/events/911195228490836"
+  }
   // {
   //   title: "CSESoc x BoulderSoc Bouldering Night",
   //   startTime: "Thursday, 29 October 2026 17:00:00",
@@ -24,14 +32,6 @@ export const events: eventInfo[] = [
   //   location: "9 Degrees Waterloo",
   //   image: "/images/events/bouldering_night.png",
   //   link: "LINK_MISSING"
-  // },
-  // {
-  //   title: "Terraria-rium",
-  //   startTime: "Thursday, 1 October 2026 12:00:00",
-  //   endTime: "Thursday, 1 October 2026 14:00:00",
-  //   location: "UNSW Quad",
-  //   image: "/images/events/IMAGE_MISSING",
-  //   link: "https://www.facebook.com/events/911195228490836"
   // }
 ];
 
