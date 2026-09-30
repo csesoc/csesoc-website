@@ -24,7 +24,7 @@ export default function HomePage() {
         </div>
 
         <AboutHomePage />
-        {/* <EventsBrief /> */}
+        <EventsBrief />
         <Sponsors />
         <section
             className="flex flex-col py-8 xl:px-24 sm:px-10 px-8 relative mt-20"
