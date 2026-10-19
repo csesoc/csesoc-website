@@ -20,10 +20,10 @@ const ExecsDirectorsSubcommitteesPage = () => {
             Execs are elected annually by CSE students at the end of the preceding year and Directors are selected by Execs.
           </p>
           <p className="text-xl my-5">
-            The CSESoc Executive and Director team for 2025:
+            The CSESoc Executive and Director team for 2026:
           </p>
           <div className="flex justify-center items-center">
-            <img src="/images/members/csesoc-2025.jpg" alt="CSESoc Team 2025" width={700} height={700} />
+            <img src="/images/members/csesoc-2026.jpg" alt="CSESoc Team 2026" width={700} height={700} />
           </div>
         </div>
 
