@@ -3,10 +3,11 @@ import PageBody from "@/components/PageBody";
 import PageTitle from "@/components/PageTitle";
 import TabTitle from 'next/head'
 import { useState } from "react";
+import AboutHistory from "@/components/About/AboutHistory";
 
 const MIN_YEAR = 2007;
-const MAX_YEAR = 2020;
-const DEFAULT_YEAR = 2020;
+const MAX_YEAR = 2026;
+const DEFAULT_YEAR = 2026;
 
 const OurHistoryPage = () => {
   const [year, setYear] = useState(DEFAULT_YEAR);
@@ -74,8 +75,8 @@ const OurHistoryPage = () => {
             <p className="mt-5">Use the slider to see the teams from past years!</p>
           )}
 
-          <div key={year} className="h-[600px] w-[600px] mt-10">
-            <img src={`/images/csesoc-team-${year}.png`} alt={`CSESoc Team ${year}`}/>
+          <div key={year} className="h-[600px] w-[90vw] mt-10">
+           <AboutHistory year={year}/>
           </div>
         </div>
       </PageBody>
